@@ -1,5 +1,9 @@
 # Bibliography and links
 
+## openWEMI
+
+Coyle, Karen. Works, Expressions, Manifestations, Items: An Ontology. Code4lib Journal, Issue 53, 2022-05-09. https://journal.code4lib.org/articles/16491
+
 ## FRBR and LRM (library models)
 
 * Riva, P., Le Boeuf, P., Žumer, M. (2017) IFLA Library Reference Model: A Conceptual Model for Bibliographic Information. Den Haag, IFLA.
@@ -44,3 +48,4 @@
 * Peroni, S. Imperial Data Ontology (IDO) https://w3id.org/ido/items/1.0.2 accessed December 14, 2019
 *  Peroni, S., and Vitali, F. (2017) Interfacing fast-fashion design industries with Semantic Web technologies The case of Imperial Fashion. Journal of Web Semantics Volume 44, May 2017, Pages 37-53 https://doi.org/10.1016/j.websem.2017.06.001
 
+*Licensed as CC-BY*
