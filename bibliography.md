@@ -48,4 +48,7 @@ Coyle, Karen. Works, Expressions, Manifestations, Items: An Ontology. Code4lib J
 * Peroni, S. Imperial Data Ontology (IDO) https://w3id.org/ido/items/1.0.2 accessed December 14, 2019
 *  Peroni, S., and Vitali, F. (2017) Interfacing fast-fashion design industries with Semantic Web technologies The case of Imperial Fashion. Journal of Web Semantics Volume 44, May 2017, Pages 37-53 https://doi.org/10.1016/j.websem.2017.06.001
 
+### Colon classification
+* Bianchini, Carlo. FRBR before FRBR. JLIS. v1, n1, pp. 11-39. https://jlis.it/index.php/jlis/article/view/361 (in Italian)
+
 *Licensed as CC-BY*
