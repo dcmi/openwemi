@@ -30,7 +30,7 @@ Coyle, Karen. Works, Expressions, Manifestations, Items: An Ontology. Code4lib J
 * Lima, J. A. O. (2006) "An Adaptation of the FRBR Model to Legal Norms" in: Biagioli, C., Francesconi, E., Sartor, G. (eds.) Proceedings of the V Legislative XML Workshop, 2006. European Press Academic Publishing, Italia (2007)
 * The OASIS LegalDocML TC. https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=legaldocml
 
-### Music metadata
+### Music & performance metadata
 * Doty, C. (2013). The difficulty of an ontology of live performance. InterActions: UCLA Journal of Education and Information Studies, 9(1).
 * Lee, Deborah (2018) "Documenting Performance and Contemporary Data Models: Positioning Performance within FRBR and LRM," Proceedings from the Document Academy: Vol. 5 : Iss. 1, Article 2. https://doi.org/10.35492/docam/5/1/2
 * Raimond, Ives, et al. (2013) Music Ontology Specification.  http://musicontology.com/specification/ Revision: 2.1.5 accessed December 11, 2019
