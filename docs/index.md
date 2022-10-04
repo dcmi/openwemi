@@ -1,4 +1,4 @@
 #  OpenWEMI IG Drafts
 
-* [FAQ.md](FAQ - Questions and Answers about openwemi)
-* [bibliography.md](Bibliography of sources)
+* [FAQ - Questions and Answers about openwemi](FAQ.md)
+* [Bibliography of sources](bibliography.md)
