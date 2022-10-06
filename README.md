@@ -5,7 +5,7 @@ The concepts first introduced in the FRBR document and known as “WEMI” (Work
 openWEMI classes are purposely defined very broadly. Experience shows that metadata models are likely to use openWEMI classes as superclasses to the more specific materials being described. 
 
 ## Documents
-* [Bibliography](bibliography.md)
+* [Bibliography](/docs/bibliography.md)
 * [FAQ](docs/faq.md)
 
 ## The Community Group
