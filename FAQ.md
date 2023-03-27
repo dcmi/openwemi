@@ -18,11 +18,12 @@ FRBR/LRM WEMI is a model for the creation of library catalog data. It defines th
 
 ## Why not use the FRBR/LRM WEMI?
 
-IFLA, the organization supporting the FRBR and Library Reference Model efforts, has not provided a machine-actionable instance of its models, which it describes as "conceptual models." These conceptual models impose constraints on WEMI that are appropriate for library data but that can be hindrances to the use of WEMI by others.
+The FRBR/LRM WEMI is suitable for a specific application: library catalog data. Library catalogs contain metadata for certain types of recorded and fixed creations. There are many types of creations that libraries either do not gather or do not include in standard catalog entries. These include commercial processes, un-recorded events, constructions and buildings, among others. The FRBR/LRM models impose constraints on WEMI that are appropriate for library data but that can be hindrances to the use of WEMI by others.
 
-An RDF version of the FRBR model was developed as a vocabulary in [vocab.org](https://vocab.org/frbr/core), but that model was created by a third party and has no official status. That vocabulary, which was intended to be used for library data, includes the same constraints from the FRBR model that openWEMI avoids.
+Even if your metadata could be analogous to the metadata modelled in FRBR/LRM, IFLA, the organization supporting the FRBR and Library Reference Model efforts, has not provided a machine-actionable instance of its models, which it describes as "conceptual models." An RDF version of the FRBR model was developed as a vocabulary in [vocab.org](https://vocab.org/frbr/core), but that model was created by a third party and has no official status. That vocabulary, which was intended to be used for library data, includes the same constraints from the FRBR model that openWEMI avoids.
 
 ## Will openWEMI promote interoperability?
 
 Only in a small way. Since it is expected that metadata designers will create their own subclasses and sub-subclasses of openWEMI for their own needs, true interoperability would require knowledge of those subclasses. However, there are some advantages in approaching metadata that is subclassed to openWEMI. For example, in searching a data store using such subclasses, even if those subclasses are not known, the superclasses of openWEMI can be used in the search, which can retrieve all subclasses. 
 
+openWEMI does little to constrain ones data in a way that would support interoperability. That latter would be the function of a metadata model or an application profile that is specific to a community or use case.
