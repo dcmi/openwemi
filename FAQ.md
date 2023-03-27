@@ -12,6 +12,10 @@ and one using the music ontology:
 
 openWEMI should provide to metadata developers ideas for possible organization of their data.
 
+## How is this different from FRBR/LRM WEMI?
+
+FRBR/LRM WEMI is a model for the creation of library catalog data. It defines the entities as they are to be implemented in library catalog data; it constrains the data that can be associated with each of the WEMI entities; and it constrains the relationship between the entities. In this sense, FRBR/LRM WEMI could be seen as an application profile based on openWEMI. 
+
 ## Why not use the FRBR/LRM WEMI?
 
 IFLA, the organization supporting the FRBR and Library Reference Model efforts, has not provided a machine-actionable instance of its models, which it describes as "conceptual models." These conceptual models impose constraints on WEMI that are appropriate for library data but that can be hindrances to the use of WEMI by others.
