@@ -7,5 +7,5 @@ A very brief look at the idea of a WEMI for the broader concept of a "created wo
 In this talk I emphasize the change in technology from FRBR (early 1990's) and today's use of RDF as a more flexible technology.
 
 Note that this slide deck is licensed as CC-BY, so you are free to make use of all or part of it, preferably with attribution.
-* [OpenWEMIBib.pdf](OpenWEMIBib.pdf)
-* [OpenWEMIBib.pptx](OpenWEMIBib.pptx)
+* [openWEMIBib.pdf](openWEMIBib.pdf)
+* [openWEMIBib.pptx](openWEMIBib.pptx)
