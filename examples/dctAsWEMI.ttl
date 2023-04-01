@@ -1,0 +1,72 @@
+# DCT as openWEMI using SKOS collections <https://github.com/dcmi/openwemi/issues/5>
+
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+prefix dct: <http://purl.org/dc/terms/>
+
+<Work> a skos:Collection ; skos:member
+    dct:abstract ,
+    dct:created ,
+    dct:creator ,
+    dct:description ,
+    dct:extent ,
+    dct:format ,
+    dct:identifier ,
+    dct:title ,
+    dct:type ,
+    dct:coverage ,
+    dct:spatial ,
+    dct:subject ,
+    dct:temporal .
+
+<Expression> a skos:Collection ; skos:member
+        dct:alternative ,
+        dct:hasPart ,
+        dct:bibliographicCitation ,
+        dct:conformsTo ,
+        dct:contributor ,
+        dct:issued ,
+        dct:license ,
+        dct:modified ,
+        dct:provenance ,
+        dct:rights ,
+        dct:rightsHolder ,
+        dct:tableOfContents ,
+        dct:valid ,
+        dct:language ,
+        dct:audience , 
+        dct:educationLevel ,
+        dct:instructionalMethod ,
+        dct:mediator .
+<Manifestation> a skos:Collection ; skos:member
+        dct:hasFormat ,
+        dct:date ,
+        dct:extent ,
+        dct:format ,
+        dct:identifier ,
+        dct:publisher ,
+        dct:title ,
+        dct:medium ,
+        dct:dateAccepted ,
+        dct:dateSubmitted ,
+        dct:references .
+        dct:accessRights ,
+        dct:dateCopyrighted ,
+        dct:accrualMethod ,
+        dct:accrualPeriodicity ,
+        dct:accrualPolicy ,
+        dct:license .
+
+<Relationships> a skos:Collection ; skos:member
+    dct:hasFormat ,
+    dct:hasPart ,
+    dct:hasVersion ,
+    dct:isFormatOf ,
+    dct:isPartOf ,
+    dct:isReferencedBy ,
+    dct:isReplacedBy ,
+    dct:isRequiredBy ,
+    dct:isVersionOf ,
+    dct:relation ,
+    dct:replaces ,
+    dct:requires ,
+    dct:source .
