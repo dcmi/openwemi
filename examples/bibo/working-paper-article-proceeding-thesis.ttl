@@ -1,0 +1,92 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://demo.talisaspire.com/resources/69BE6CEF-A3A9-88A4-658D-F8D7185F2438> dct:hasPart <http://demo.talisaspire.com/resources/B6A80040-928D-85C3-C00E-19B6C5ACF987> ;
+                                                                             rdf:type bibo:Journal ;
+                                                                             bibo:eissn "1556-5068" ;
+                                                                             dct:title "SSRN Electronic Journal" ;
+                                                                             bibo:shortTitle "SSRN Journal" .
+
+<http://demo.talisaspire.com/resources/B6A80040-928D-85C3-C00E-19B6C5ACF987/authors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/DFE1F4CF-746A-EB72-B843-6A99C27BEF8A> .
+
+<http://demo.talisaspire.com/people/DFE1F4CF-746A-EB72-B843-6A99C27BEF8A> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Daniel" ;
+                                                                          foaf:surname "Malter" .
+
+<http://demo.talisaspire.com/resources/B6A80040-928D-85C3-C00E-19B6C5ACF987> bibo:authorList <http://demo.talisaspire.com/resources/B6A80040-928D-85C3-C00E-19B6C5ACF987/authors> ;
+                                                                             rdf:type bibo:Article ;
+                                                                             dct:date "2014" ;
+                                                                             bibo:doi "10.2139/ssrn.2505184" ;
+                                                                             dct:title "Eclipsed and Confounded Identities: When High-Status Affiliations Impede Organizational Growth" ;
+                                                                             dct:source "http://doi.crossref.org/servlet/query?format=unixref&amp;id=10.2139%2Fssrn.2505184" ;
+                                                                             dct:isPartOf <http://demo.talisaspire.com/resources/69BE6CEF-A3A9-88A4-658D-F8D7185F2438> .                                                                     
+
+
+<http://demo.talisaspire.com/resources/A2C15772-8220-3CAF-DF9A-5CD28D1687E6> rdf:type bibo:Journal ;
+                                                                             dct:title "Academy of Management Proceedings" ;
+                                                                             dct:source "https://journals.aom.org/doi/abs/10.5465/ambpp.2015.14544abstract" ;
+                                                                             dct:hasPart <http://demo.talisaspire.com/resources/084B771F-90D5-4E6B-80C5-53AF196CC467> ;
+                                                                             dct:publisher <http://demo.talisaspire.com/organisations/00E405C2-426A-1DFB-FEAC-0A43C2641549> .
+
+<http://demo.talisaspire.com/organisations/00E405C2-426A-1DFB-FEAC-0A43C2641549> rdf:type foaf:Organization ;
+                                                                                 foaf:name "Academy of Management" .
+
+<http://demo.talisaspire.com/resources/084B771F-90D5-4E6B-80C5-53AF196CC467/authors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/EA40FD37-B499-67FC-1D3A-B7A27A2982B7> .
+
+<http://demo.talisaspire.com/people/EA40FD37-B499-67FC-1D3A-B7A27A2982B7> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Daniel" ;
+                                                                          foaf:surname "Malter" .
+
+<http://demo.talisaspire.com/resources/084B771F-90D5-4E6B-80C5-53AF196CC467> dct:isPartOf <http://demo.talisaspire.com/resources/A2C15772-8220-3CAF-DF9A-5CD28D1687E6> ;
+                                                                             rdf:type bibo:Article ;
+                                                                             dct:title "Eclipsed and Confounded Identities: When High-Status Affiliations Impede Organizational Growth" ;
+                                                                             bibo:authorList <http://demo.talisaspire.com/resources/084B771F-90D5-4E6B-80C5-53AF196CC467/authors> ;
+                                                                             bibo:volume "2015" ;
+                                                                             bibo:issue "1" ;
+                                                                             dct:date "January 2015" ;
+                                                                             bibo:doi "10.5465/ambpp.2015.14544abstract" ;
+                                                                             bibo:uri "https://doi.org/10.5465%2Fambpp.2015.14544abstract" .
+
+
+<http://demo.talisaspire.com/resources/9B4FB77C-83CD-3C6D-3456-D37D4B7ED9B3> rdf:type bibo:Website ;
+                                                                             dct:title "Harvard Business School Working Paper" ;
+                                                                             dct:hasPart <http://demo.talisaspire.com/resources/633A27D4-2429-3C81-96DB-E49887A125BB> .
+
+<http://demo.talisaspire.com/resources/633A27D4-2429-3C81-96DB-E49887A125BB/authors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/5977565B-4D22-2289-70E6-08541D06C88F> .
+
+<http://demo.talisaspire.com/people/5977565B-4D22-2289-70E6-08541D06C88F> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Daniel" ;
+                                                                          foaf:surname "Malter" .
+
+<http://demo.talisaspire.com/resources/633A27D4-2429-3C81-96DB-E49887A125BB> rdf:type bibo:Article ;
+                                                                             dct:source "https://www.hbs.edu/faculty/Pages/item.aspx?num=48092" ;
+                                                                             bibo:uri "https://www.hbs.edu/faculty/Pages/download.aspx?name=15-019.pdf" ;
+                                                                             dct:title "Eclipsed and Confounded Identities: When High-Status Affiliations Impede Organizational Growth" ;
+                                                                             bibo:authorList <http://demo.talisaspire.com/resources/633A27D4-2429-3C81-96DB-E49887A125BB/authors> ;
+                                                                             resourcelist:onlineResourceSource <http://purl.org/vocab/resourcelist/schema#onlineResourceLink> ;
+                                                                             resourcelist:onlineResourceLink <https://www.hbs.edu/faculty/Pages/download.aspx?name=15-019.pdf> ;
+                                                                             dct:date "October 2014" ;
+                                                                             dct:isPartOf <http://demo.talisaspire.com/resources/9B4FB77C-83CD-3C6D-3456-D37D4B7ED9B3> ;
+                                                                             bibo:number "15-019" .
+
+<http://demo.talisaspire.com/resources/EFD92267-A50A-4B57-1788-C0C622A0140C/authors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/BAC72948-DCAD-1F84-610A-82BD1298ECFE> .
+
+<http://demo.talisaspire.com/people/BAC72948-DCAD-1F84-610A-82BD1298ECFE> rdf:type foaf:Person ;
+                                                                          foaf:name "Malter, Daniel" .
+
+<http://demo.talisaspire.com/organisations/B13831B3-2B5A-5141-AFE5-EA290F54402C> rdf:type foaf:Organization ;
+                                                                                 foaf:name "University of Maryland" .
+
+<http://demo.talisaspire.com/resources/EFD92267-A50A-4B57-1788-C0C622A0140C> rdf:type bibo:Thesis ;
+                                                                             dct:title "Essays on high-status fallacies" ;
+                                                                             dct:date "2012" ;
+                                                                             bibo:authorList <http://demo.talisaspire.com/resources/EFD92267-A50A-4B57-1788-C0C622A0140C/authors> ;
+                                                                             dct:source "https://drum.lib.umd.edu/handle/1903/12623" ;
+                                                                             bibo:uri "https://drum.lib.umd.edu/handle/1903/12623" ;
+                                                                             dct:publisher <http://demo.talisaspire.com/organisations/B13831B3-2B5A-5141-AFE5-EA290F54402C> .   

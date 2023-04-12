@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://demo.talisaspire.com/resources/C214F170-6440-72C3-8A34-97FBBC154B02> bibo:editorList <http://demo.talisaspire.com/resources/C214F170-6440-72C3-8A34-97FBBC154B02/editors> ;
+                                                                             bibo:isbn13 "9781446203095" ;
+                                                                             rdf:type bibo:Book ;
+                                                                             dct:date "2015" ;
+                                                                             dct:publisher <http://demo.talisaspire.com/organisations/F800DC22-5380-8BF8-C656-42A92B31176A> .
+                                                                             dct:title "Innovations in Digital Research Methods" ;
+                                                                             dct:source "http://openlibrary.org/books/OL28504181M" ;
+                                                                             dct:hasPart <http://demo.talisaspire.com/resources/0F54FF19-ED45-5BA9-86C0-226F62C9BE9A> .
+
+<http://demo.talisaspire.com/resources/C214F170-6440-72C3-8A34-97FBBC154B02/editors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/2C9529BB-F222-1CB9-2BEB-F8E9D0FFC054> ;
+                                                                                     rdf:_2 <http://demo.talisaspire.com/people/DCBFD5C1-CDD3-5A7E-637F-AFC5D0F7A552> .
+
+<http://demo.talisaspire.com/people/2C9529BB-F222-1CB9-2BEB-F8E9D0FFC054> rdf:type foaf:Person ;
+                                                                          foaf:name "Peter J. Halfpenny" .
+
+<http://demo.talisaspire.com/people/DCBFD5C1-CDD3-5A7E-637F-AFC5D0F7A552> rdf:type foaf:Person ;
+                                                                          foaf:name "Robert Procter" .
+
+<http://demo.talisaspire.com/organisations/F800DC22-5380-8BF8-C656-42A92B31176A> rdf:type foaf:Organization ;
+                                                                                 foaf:name "SAGE Publications, Limited" .
+
+<http://demo.talisaspire.com/resources/0F54FF19-ED45-5BA9-86C0-226F62C9BE9A/authors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/AB6ACF95-5154-2B8A-3EA9-80F8DEED6BF2> ;
+                                                                                     rdf:_2 <http://demo.talisaspire.com/people/067C37C3-FF00-D0BA-D430-1E431F7F9428> ;
+                                                                                     rdf:_3 <http://demo.talisaspire.com/people/BDA02B02-502B-C0C6-CF9D-87270C41B484> ;
+                                                                                     rdf:_4 <http://demo.talisaspire.com/people/8B46623B-54A4-D3FB-7787-6568259E0EF1> .
+
+<http://demo.talisaspire.com/people/AB6ACF95-5154-2B8A-3EA9-80F8DEED6BF2> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Andrew" ;
+                                                                          foaf:surname "Chadwick" .
+
+<http://demo.talisaspire.com/people/067C37C3-FF00-D0BA-D430-1E431F7F9428> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Lawrence" ;
+                                                                          foaf:surname "Ampofo" .
+
+<http://demo.talisaspire.com/people/BDA02B02-502B-C0C6-CF9D-87270C41B484> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Simon" ;
+                                                                          foaf:surname "Collister" .
+
+<http://demo.talisaspire.com/people/8B46623B-54A4-D3FB-7787-6568259E0EF1> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Ben" ;
+                                                                          foaf:surname "O'Loughlin" .
+
+<http://demo.talisaspire.com/resources/0F54FF19-ED45-5BA9-86C0-226F62C9BE9A> dct:isPartOf <http://demo.talisaspire.com/resources/C214F170-6440-72C3-8A34-97FBBC154B02> ;
+                                                                             rdf:type bibo:Chapter ;
+                                                                             dct:title "Text mining and social media: when quantitative meets qualitative, and software meets humans" ;
+                                                                             bibo:authorList <http://demo.talisaspire.com/resources/0F54FF19-ED45-5BA9-86C0-226F62C9BE9A/authors> .
+
+<http://demo.talisaspire.com/resources/663EAD3D-195D-2587-69B7-8DDA7DCAC18C> rdf:type bibo:Document ;
+                                                                             dct:title "Text mining and social media: when quantitative meets qualitative, and software meets humans [Working paper]" ;
+                                                                             dct:date "2013"
+                                                                             dct:source "https://repository.lboro.ac.uk/articles/preprint/Text_mining_and_social_media_when_quantitative_meets_qualitative_and_software_meets_humans_Working_paper_/9477536" ;
+                                                                             bibo:uri "https://repository.lboro.ac.uk/articles/preprint/Text_mining_and_social_media_when_quantitative_meets_qualitative_and_software_meets_humans_Working_paper_/9477536" ;
+                                                                             bibo:authorList <http://demo.talisaspire.com/resources/0F54FF19-ED45-5BA9-86C0-226F62C9BE9A/authors> .

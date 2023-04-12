@@ -1,0 +1,32 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix spec: <http://rdfs.org/sioc/spec/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix elements: <http://rdvocab.info/elements/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+
+<http://demo.talisaspire.com/resources/B7BD6CAA-69E7-10BF-DF6A-130ECBEB9707/authors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/29C0ACA7-9D78-95DD-5FED-B04470F85C74> .
+
+<http://demo.talisaspire.com/people/29C0ACA7-9D78-95DD-5FED-B04470F85C74> rdf:type foaf:Person ;
+                                                                          foaf:name "Kundu, T." .
+
+<http://demo.talisaspire.com/organisations/18559CE7-BE7E-1EF3-8AD2-BAF75E7C6E27> rdf:type foaf:Organization ;
+                                                                                 foaf:name "CRC" .
+
+<http://demo.talisaspire.com/organisations/2F5B3A1E-51E4-30B0-4059-A3EAD6131775> rdf:type foaf:Organization ;
+                                                                                 foaf:name "Taylor & Francis [distributor]" .
+
+<http://demo.talisaspire.com/resources/B7BD6CAA-69E7-10BF-DF6A-130ECBEB9707> dct:title "Fundamentals of fracture mechanics" ;
+                                                                             rdf:type bibo:Book ;
+                                                                             bibo:authorList <http://demo.talisaspire.com/resources/B7BD6CAA-69E7-10BF-DF6A-130ECBEB9707/authors> ;
+                                                                             dct:publisher <http://demo.talisaspire.com/organisations/18559CE7-BE7E-1EF3-8AD2-BAF75E7C6E27> ,
+                                                                                           <http://demo.talisaspire.com/organisations/2F5B3A1E-51E4-30B0-4059-A3EAD6131775> ;
+                                                                             elements:placeOfPublication "Boca Raton, Fla" ,
+                                                                                                         "London" ;
+                                                                             dct:date "c2008" ;
+                                                                             bibo:isbn10 "084938432X" ;
+                                                                             bibo:isbn13 "9780849384325" ;
+                                                                             dc:subject "Fracture mechanics." .
