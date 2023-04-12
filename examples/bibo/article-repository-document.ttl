@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix spec: <http://rdfs.org/sioc/spec/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://demo.talisaspire.com/resources/14C012FA-F4E0-EBCF-ED9A-DFFA5EBA831E> dct:hasPart <http://demo.talisaspire.com/resources/EE1A1B20-6D4B-BE5C-A5BB-086C8BC7C594> ;
+                                                                             rdf:type bibo:Journal ;
+                                                                             bibo:issn "01482963" ;
+                                                                             dct:title "Journal of Business Research" ;
+                                                                             bibo:shortTitle "Journal of Business Research" .
+
+<http://demo.talisaspire.com/resources/EE1A1B20-6D4B-BE5C-A5BB-086C8BC7C594/authors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/DCCC5C13-9B39-4088-66BE-33E078C62A9F> ;
+                                                                                     rdf:_2 <http://demo.talisaspire.com/people/FC510404-7DD2-F5E6-91EA-4D16B10EED81> ;
+                                                                                     rdf:_3 <http://demo.talisaspire.com/people/4D2D8D1C-98BB-7E2B-3C86-87FFA49A09C9> .
+
+<http://demo.talisaspire.com/people/DCCC5C13-9B39-4088-66BE-33E078C62A9F> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Nina" ;
+                                                                          foaf:surname "Michaelidou" .
+
+<http://demo.talisaspire.com/people/FC510404-7DD2-F5E6-91EA-4D16B10EED81> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Milena" ;
+                                                                          foaf:surname "Micevski" .
+
+<http://demo.talisaspire.com/people/4D2D8D1C-98BB-7E2B-3C86-87FFA49A09C9> rdf:type foaf:Person ;
+                                                                          foaf:firstName "John W." ;
+                                                                          foaf:surname "Cadogan" .
+
+<http://demo.talisaspire.com/resources/EE1A1B20-6D4B-BE5C-A5BB-086C8BC7C594> bibo:authorList <http://demo.talisaspire.com/resources/EE1A1B20-6D4B-BE5C-A5BB-086C8BC7C594/authors> ;
+                                                                             rdf:type bibo:Article;
+                                                                             dct:date "2021-01" ;
+                                                                             bibo:doi "10.1016/j.jbusres.2020.03.005" ;
+                                                                             bibo:pageEnd "694" ;
+                                                                             bibo:pageStart "684" ;
+                                                                             dct:title "Users’ ethical perceptions of social media research: Conceptualisation and measurement" ;
+                                                                             bibo:volume "124" ;
+                                                                             dct:source "http://doi.crossref.org/servlet/query?format=unixref&amp;id=10.1016%2Fj.jbusres.2020.03.005" ;
+                                                                             dct:isPartOf <http://demo.talisaspire.com/resources/14C012FA-F4E0-EBCF-ED9A-DFFA5EBA831E> ;
+                                                                             bibo:uri <https://www.sciencedirect.com/science/article/abs/pii/S0148296320301612> ;
+
+<http://demo.talisaspire.com/resources/1234> bibo:authorList <http://demo.talisaspire.com/resources/EE1A1B20-6D4B-BE5C-A5BB-086C8BC7C594/authors> ;
+                                                                             rdf:type bibo:Document;
+                                                                             dct:title "Users’ ethical perceptions of social media research: Conceptualisation and measurement" ;
+                                                                             bibo:uri <https://figshare.com/articles/journal_contribution/Users_ethical_perceptions_of_social_media_research_Conceptualisation_and_measurement/11932866/1/files/21905997.pdf> ;                                                                             

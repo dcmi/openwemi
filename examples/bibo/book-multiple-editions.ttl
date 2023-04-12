@@ -1,0 +1,53 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix elements: <http://rdvocab.info/elements/> .
+
+
+<http://demo.talisaspire.com/resources/9B491DDC-E3BF-5E63-3F63-D88C449BC35D/authors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/A9104FDC-F615-95D2-A691-0B65976D35C7> ;
+                                                                                     rdf:_2 <http://demo.talisaspire.com/people/537CADC8-1D57-054D-2C14-60CFE6F7E4DB> .
+
+<http://demo.talisaspire.com/people/A9104FDC-F615-95D2-A691-0B65976D35C7> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Tom" ;
+                                                                          foaf:surname "Burns" .
+
+<http://demo.talisaspire.com/people/537CADC8-1D57-054D-2C14-60CFE6F7E4DB> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Sandra" ;
+                                                                          foaf:surname "Sinfield" .
+
+<http://demo.talisaspire.com/organisations/D5138F3E-CE86-5B52-A3A1-DE07AF62C54F> rdf:type foaf:Organization ;
+                                                                                 foaf:name "SAGE Publications Ltd" .
+
+<http://demo.talisaspire.com/resources/9B491DDC-E3BF-5E63-3F63-D88C449BC35D> bibo:authorList <http://demo.talisaspire.com/resources/9B491DDC-E3BF-5E63-3F63-D88C449BC35D/authors> ;
+                                                                             bibo:isbn13 "9781446258569" ;
+                                                                             rdf:type bibo:Book ;
+                                                                             dct:date "2012-08-07" ;
+                                                                             bibo:edition "3rd Revised edition" ;
+                                                                             dct:publisher <http://demo.talisaspire.com/organisations/D5138F3E-CE86-5B52-A3A1-DE07AF62C54F> ;
+                                                                             elements:placeOfPublication "London" ;
+                                                                             dct:title "Essential Study Skills" .
+
+
+<http://demo.talisaspire.com/resources/0611C080-69C7-4220-F71D-FABD5D9ED64C/authors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/D4A783E6-68A2-D085-3B36-D496A6C039F3> ;
+                                                                                     rdf:_2 <http://demo.talisaspire.com/people/7F93F83E-71FD-321C-75A0-53AAEEFC89D1> .
+
+<http://demo.talisaspire.com/people/D4A783E6-68A2-D085-3B36-D496A6C039F3> rdf:type foaf:Person ;
+                                                                          foaf:name "Tom Burns" .
+
+<http://demo.talisaspire.com/people/7F93F83E-71FD-321C-75A0-53AAEEFC89D1> rdf:type foaf:Person ;
+                                                                          foaf:name "Sandra Sinfield" .
+
+<http://demo.talisaspire.com/organisations/23B63532-1E69-5150-631D-60DF35EF6956> rdf:type foaf:Organization ;
+                                                                                 foaf:name "SAGE Publications Ltd" .
+
+<http://demo.talisaspire.com/resources/0611C080-69C7-4220-F71D-FABD5D9ED64C> bibo:authorList <http://demo.talisaspire.com/resources/0611C080-69C7-4220-F71D-FABD5D9ED64C/authors> ;
+                                                                             bibo:isbn10 "1473919029" ;
+                                                                             bibo:isbn13 "9781529783643" ;
+                                                                             rdf:type bibo:Book ;
+                                                                             dct:date "Apr 18, 2016" ;
+                                                                             dct:publisher <http://demo.talisaspire.com/organisations/23B63532-1E69-5150-631D-60DF35EF6956> ;
+                                                                             dct:title "Essential Study Skills: The Complete Guide to Success at University (Student Success)" ;
+                                                                             bibo:edition "5th" .                                                                             

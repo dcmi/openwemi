@@ -1,0 +1,49 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<http://demo.talisaspire.com/resources/F92ED4E1-6279-3D27-8AF4-5639F801F85F> rdf:type bibo:Proceedings ;
+                                                                             dct:title "Proceedings of the International Conference on Dublin Core and Metadata Applications" ;
+                                                                             dct:hasPart <http://demo.talisaspire.com/resources/9338230A-0307-1A78-36B4-2DF7F297920E> .
+
+<http://demo.talisaspire.com/resources/9338230A-0307-1A78-36B4-2DF7F297920E/authors> rdf:type rdf:Seq ;
+                                                                                     rdf:_1 <http://demo.talisaspire.com/people/742CCEDD-C33F-471C-4DFA-98A5D478DDC0> ;
+                                                                                     rdf:_2 <http://demo.talisaspire.com/people/AF67CF3F-B97F-1BDE-C532-B6FC15479798> ;
+                                                                                     rdf:_3 <http://demo.talisaspire.com/people/B25B5774-F4CE-B67D-38EF-5A8F25B2B8A3> .
+
+<http://demo.talisaspire.com/people/742CCEDD-C33F-471C-4DFA-98A5D478DDC0> rdf:type foaf:Person ;
+                                                                          foaf:name "Phillips, Mark Edward" .
+
+<http://demo.talisaspire.com/people/AF67CF3F-B97F-1BDE-C532-B6FC15479798> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Oksana" ;
+                                                                          foaf:surname "Tavalina" .
+
+<http://demo.talisaspire.com/people/B25B5774-F4CE-B67D-38EF-5A8F25B2B8A3> rdf:type foaf:Person ;
+                                                                          foaf:firstName "Hannah" ;
+                                                                          foaf:surname "Tarver" .
+
+<http://demo.talisaspire.com/resources/9338230A-0307-1A78-36B4-2DF7F297920E> rdf:type bibo:Article ;
+                                                                             dct:title "Using Metadata Record Graphs to Understand Digital Library Metadata" ;
+                                                                             dct:isPartOf <http://demo.talisaspire.com/resources/F92ED4E1-6279-3D27-8AF4-5639F801F85F> ;
+                                                                             bibo:pageEnd "58" ;
+                                                                             bibo:pageStart "49" ;
+                                                                             bibo:authorList <http://demo.talisaspire.com/resources/9338230A-0307-1A78-36B4-2DF7F297920E/authors> ;
+                                                                             dct:source "https://digital.library.unt.edu/ark:/67531/metadc1616551/" ;
+                                                                             bibo:uri "https://digital.library.unt.edu/ark:/67531/metadc1616551/" ;
+                                                                             dct:date "September 2019" .           
+
+<info:ark/67531/metadc1625077>
+    dc:creator "Phillips, Mark Edward" ;
+    dc:date "2019-09" ;
+    dc:description "Presentation discussing the evaluation of network analysis (with Metadata Record Graphs) for metadata in six digital library collections, to determine the usefulness of network-based metrics compared to other statistical data." ;
+    dc:format <https://digital2.library.unt.edu/vocabularies/formats/#image>, "59 p." ;
+    dc:identifier <https://digital.library.unt.edu/ark:/67531/metadc1625077/>, "ark: ark:/67531/metadc1625077", "local-cont-no: 2019-09-23_dcmi" ;
+    dc:language <https://digital2.library.unt.edu/vocabularies/languages/#eng> ;
+    dc:relation "Metadata Record Graphs for Six Collections from the UNT Libraries' Digital Collections, ark:/67531/metadc1532397", "Using Metadata Record Graphs to Understand Digital Library Metadata [Paper], ark:/67531/metadc1616551" ;
+    dc:rights <https://digital2.library.unt.edu/vocabularies/rights-access/#public> ;
+    dc:source "Dublin Core Metadata Initiative (DCMI) Annual Conference, 2019, Seoul, South Korea" ;
+    dc:subject "Metadata Record Graphs", "digital libraries", "metadata analysis", "metadata quality", "network analysis", "networking metrics" ;
+    dc:title "Using Metadata Record Graphs to Understand Digital Library Metadata" ;
+    dc:type <https://digital2.library.unt.edu/vocabularies/resource-types/#image_presentation> .       
