@@ -17,11 +17,12 @@ The minimal WEMI set has these classes and subclasses:
 * ResponsibleEntity
 
 It has these properties which define the primary relationships between WEMI:
-  * expresses (range: Work)
-  * manifests (range: Work or Expression)
-  * instantiates (range: Work or Expression or Manifestation)
+  * expresses (range: Work or Expression)
+  * manifests (range: Work or Expression or Manifestation)
+  * instantiates (range: Work or Expression or Manifestation or Item)
 Which is expressed in this diagram:
-![openRels](https://user-images.githubusercontent.com/1564129/231013915-9a9f60fc-ba10-41e0-b837-e26a81ba2de5.jpg)
+![openRels2](https://user-images.githubusercontent.com/1564129/231845216-bc842bb0-de35-4778-8066-32947af26781.jpg)
+
 
 This proposal does not include the FRBR Group2 or Group3 entities (responsible bodies and subjects). It does include the superclass Endeavor, which is not part of the FRBR group of entities but was added by the authors of FRBR core. 
 
