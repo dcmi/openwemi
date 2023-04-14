@@ -2,7 +2,8 @@
     "@context": {
       "openWEMI": "https://example.org/openWEMI/",
       "schema": "https://schema.org/",
-      "comics": "https://comics.org/issue/",
+      "comics": "https://www.comics.org/issue/",
+      "comics-creator": "https://www.comics.org/creator/",
       "cbo":"https://comicmeta.org/cbo/",
       "@base": "https://comicmeta.org/example/"
     },
@@ -23,7 +24,29 @@
                 {
                     "@id":"comics:23651",
                     "@type":["openWEMI:Manifestation","schema:ComicIssue","cbo:Issue"],
-                    "schema:issueNumber":67,
+                    "cbo:issueNumber":67,
+                    "cbo:writer": [
+                        { 
+                            "@id":"comics-creator:11642",
+                            "schema:name":"Roy Thomas"
+                        }
+                    ],
+                    "cbo:penciller": [
+                        {
+                            "@id":"comics-creator:4713",
+                            "schema:name":"Gene Colan"
+                        }
+                    ],
+                    "openWEMI:responsibleFor":[
+                        { 
+                            "@id":"comics-creator:11642",
+                            "schema:name":"Roy Thomas"
+                        },
+                        { 
+                            "@id":"comics-creator:4713",
+                            "schema:name":"Gene Colan"
+                        }
+                    ],
                     "openWEMI:instantiates": [
                         {
                             "@id":"#daredevil_v1_67_gd",
@@ -61,7 +84,7 @@
                 {
                     "@id":"comics:505288",
                     "@type":["openWEMI:Manifestation","schema:ComicIssue"],
-                    "schema:issueNumber":67
+                    "cbo:issueNumber":67
                 }
             ]
         }
