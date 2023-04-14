@@ -1,7 +1,8 @@
 {
     "@context": {
       "openWEMI": "https://example.org/openWEMI/",
-      "comics": "https://comics.org/issue/",
+      "comics": "https://www.comics.org/issue/",
+      "comics-creator": "https://www.comics.org/creator/",
       "@base": "https://comicmeta.org/example/"
     },
     "@id": "#daredevil_v1_67",
@@ -14,6 +15,14 @@
                 {
                     "@id":"comics:23651",
                     "@type":"openWEMI:Manifestation",
+                    "openWEMI:responsibleFor":[
+                        {
+                            "@id":"comics-creator:11642"
+                        },
+                        {
+                            "@id":"comics-creator:4713"
+                        }
+                    ],
                     "openWEMI:instantiates": [
                         {
                             "@id":"#daredevil_v1_67_gd",
