@@ -1,0 +1,81 @@
+comics:Work
+    subclassOf openwemi:Work
+    
+comics:Expression
+    subclassOf openwemi:Expression
+
+comics:Manifestation
+    subclassOf openwemi:Manifestation
+    
+comics:Item
+    subclassOf openwemi:Item
+
+comics:mainTitle
+    domain comics:Work
+    
+comics:issueTitle
+    domain comics:Expression
+    
+comics:inker
+    domain comics:Expression
+    range sdo:Person
+    
+comics:penciler
+    domain comics:Expression
+    range sdo:Person
+    
+comics:letterer
+    domain comics:Expression
+    range sdo:Person
+
+comics:colorist
+    domain comics:Expression
+    range sdo:Person
+
+comics:genre
+    domain comics:Work
+
+comics:character
+    domain comics:Work
+    range: comics:Character
+    
+comics:distributor
+    domain comics:Manifestation
+    range sdo:Organization
+    
+comics:publisher
+    domain comics:Manifestation
+    range sdo:Organization
+
+comics:series
+    domain comics:Manifestation
+
+comics:volume
+    domain comics:Manifestation
+    
+comics:cover
+    domain comics:Manifestation
+
+comics:number
+    domain comics:Manifestation
+
+comics:pubDate
+    domain comics:Manifestation
+    
+***** Instance *****
+
+comics:mainTitle "Daredevil" ##work
+
+comics:character "Daredevil" ##work
+
+comics:penciler "Marie Severn" ##Expression
+
+comics:inker "Bill Everett" ##Expression
+
+comics:volume "1" ##Manifestation
+
+comics:publisher https://www.comics.org/indicia_publisher/81/ ##Manifestation
+
+comics:distributor https://www.comics.org/brand_emblem/35/ ##Manifestation
+
+comics:cover https://www.comics.org/brand_emblem/35/ ##Manifestation
