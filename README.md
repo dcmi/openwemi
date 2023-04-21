@@ -17,9 +17,9 @@ The minimal WEMI set has these classes and subclasses:
 * ResponsibleEntity
 
 It has these properties which define the primary relationships between WEMI:
-  * expresses (range: Work or Expression)
-  * manifests (range: Work or Expression or Manifestation)
-  * instantiates (range: Work or Expression or Manifestation or Item)
+  * expresses (range: Work)
+  * manifests (range: Work or Expression)
+  * instantiates (range: Work or Expression or Manifestation)
 Which is expressed in this diagram:
 ![openRels2](https://user-images.githubusercontent.com/1564129/231845216-bc842bb0-de35-4778-8066-32947af26781.jpg)
 
