@@ -32,7 +32,7 @@ Which is expressed in this diagram:
 
 The relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the work to the item. Where these relationships in FRBR and in the Library Reference Model are strictly linear, from work to expression to manifestation to item, openWEMI allows 
 
-The model assumes that other relationships can exist, in particular relationships between entities of the same type: Work/Work, Expression/Expression, Manifestation/Manifestation, and Item/Item. Those relationships, however, are not included in the core model.
+The model assumes that properties expressing other relationships can exist, in particular relationships between entities of the same type: Work/Work, Expression/Expression, Manifestation/Manifestation, and Item/Item. Such properties, however, are not included in the core model.
 ![openRels2](https://user-images.githubusercontent.com/1564129/231845216-bc842bb0-de35-4778-8066-32947af26781.jpg)
 
 
