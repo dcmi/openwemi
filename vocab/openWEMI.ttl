@@ -22,21 +22,21 @@
 <http://example.org/openWEMI/Expression>
   a owl:Class ;
   rdfs:label "expression"@en ;
-  skos:definition "An expression of a work in signs."@en ;
+  skos:definition "A perceivable form of the creation."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
   rdfs:subClassOf <http://example.org/openWEMI/Endeavor>  .
 
 <http://example.org/openWEMI/Manifestation>
     a owl:Class ;
     rdfs:label "manifestation"@en ;
-    skos:definition "The physical embodiment of one or more expressions."@en ;
+    skos:definition "The physical embodiment of a creation."@en ;
     rdfs:isDefinedBy <http://example.org/openWEMI/> ;
     rdfs:subClassOf <http://example.org/openWEMI/Endeavor> .
   
 <http://example.org/openWEMI/Item>
   a owl:Class ;
   rdfs:label "item"@en ;
-  skos:definition "An exemplar of a single manifestation."@en ;
+  skos:definition "An exemplar of a creation."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
   rdfs:subClassOf <http://example.org/openWEMI/Endeavor>  .
 
