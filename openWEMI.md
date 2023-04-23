@@ -5,9 +5,14 @@ The concepts first introduced in the FRBR document and known as “WEMI” (Work
 openWEMI classes are purposely defined very broadly. Experience shows that metadata models are likely to use openWEMI classes as superclasses to the more specific materials being described. The proposal includes the superclass Endeavor, which is not part of the FRBR group of entities but was added by the authors of FRBR core and is deemed to be needed to create a coherent grouping of the entities. It also would be useful should any new high-order entities be added in the future. 
 
 ## WEMI
-An analysis of existing library catalog data revealed a multi-level structure within the catalog entries. This structure was inherent in the data but did not inform the structure of the catalog itself. Within the analysis was the development of a 4-layer model that could be applied to every catalog entry:
+An analysis of existing library catalog data revealed a multi-level structure within the catalog entries. This structure was inherent in the data but did not inform the structure of the catalog itself. Within the analysis was the development of a 4-layer model of metadata that could be applied to every catalog entry:
 1. Work, the most abstract layer that represented the conceptual aspect of a creation
-2. Expression, the cr
+2. Expression, the perceptible version using some form of communication like text, musical notation, film, or sound recording
+3. Manifestation, the physical realization, which can be a manufactured product in multiple copies or a single realization
+4. Item, an individual instance of the creation, often having a location in the world, including electronic locations
+
+This proposal includes one other class which is a super-class over the WEMI classes: Endeavor. 
+5. Endeavor is a creation that may be described by any of the WEMI classes, as appropriate to the nature of the creation and the use cases addressed by the metadata
 
 ## The proposal
 
