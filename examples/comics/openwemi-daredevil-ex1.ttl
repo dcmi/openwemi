@@ -1,0 +1,73 @@
+@prefix openwemi: <https://example.org/openwemi/> .
+@prefix schema: <https://schema.org/> .
+@prefix cbo: <https://comicmeta.org/cbo/> .
+@prefix ex: <https://example.org/> .
+
+# a comics series
+
+ex:Daredevil a cbo:ComicSeries ;
+    schema:name "Daredevil" ;
+    cbo:volume ex:Daredevil_v1 .
+
+# a comics volume, which may overlap with the concept of a series
+
+ex:Daredevil_v1 a cbo:ComicVolume ;
+    schema:name "Daredevil, Volume 1" ;
+    cbo:issue ex:Daredevil_v1_67 ;
+    cbo:volumeNumber 1 ;
+    cbo:seriesYear 1964 .
+
+# an issue in the series/volume
+
+ex:Daredevil_v1_67 a cbo:ComicIssue ;
+    cbo:issueNumber 67 ;
+    cbo:page ex:Daredevil_v1_67_Cover ;
+    cbo:story ex:DareDevil_v1_67_Story ;
+    schema:name "Daredevil #67" .
+
+# copies of an issue in various physical condition with price
+
+ex:Daredevil_v1_67_gd a cbo:Copy ;
+    cbo:price 4.00 ;
+    cbo:condition cbo:GD .
+
+ex:Daredevil_v1_67_vg a cbo:Copy ;
+    cbo:price 8.00 ;
+    cbo:condition cbo:VG .
+
+ex:Daredevil_v1_67_fn a cbo:Copy ;
+    cbo:price 12.00 ;
+    cbo:condition cbo:FN .
+
+# a specific, physical copy that has been professionally graded
+
+ex:Daredevil_v1_67_MyCopy a cbo:Copy ;
+    cbo:certNumber "0198524001" ;
+    cbo:grade cbo:3.5 ;
+    cbo:owner <https://sean.petiya.com/#me> .
+
+# a page of original artwork
+
+ex:Daredevil_v1_67_Cover a cbo:Page ;
+    cbo:artwork <https://comics.ha.com/itm/original-comic-art/covers/marie-severin-and-bill-everett-daredevil-67-cover-original-art-with-stan-lee-letter-marvel-1970-/a/7244-92158.s> .
+
+# a story
+
+ex:DareDevil_v1_67_Story a cbo:Story ;
+    schema:name "Stilt-Man Stalks the Soundstage" .
+
+# a reprint/translation of the original work
+
+ex:Diabolico a cbo:ComicSeries ;
+    schema:name "Diabolico" ;
+    cbo:volume ex:Diabolico_v1 .
+
+ex:Diabolico_v1 a cbo:ComicVolume ;
+    cbo:issue ex:Diabolico_v1_67 ;
+    cbo:volumeNumber 1 ;
+    cbo:seriesYear 1981 .
+
+ex:Diabolico_v1_67 a cbo:ComicIssue ;
+    cbo:issueNumber 67 ;
+    cbo:reprints ex:Daredevil_v1_67 ;
+    schema:name "Diabolico #67" .
