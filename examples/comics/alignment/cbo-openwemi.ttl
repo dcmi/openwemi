@@ -1,5 +1,5 @@
-@prefix openwemi: <https://example.org/openwemi/> .
-@prefix cbo: <https://comicmeta.org/cbo/> .
+@prefix openwemi: <http://example.org/openwemi/> .
+@prefix cbo: <http://comicmeta.org/cbo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 # poc alignment with openwemi

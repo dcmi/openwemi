@@ -1,7 +1,7 @@
-@prefix openwemi: <https://example.org/openwemi/> .
+@prefix openwemi: <http://example.org/openwemi/> .
 @prefix schema: <https://schema.org/> .
-@prefix cbo: <https://comicmeta.org/cbo/> .
-@prefix ex: <https://example.org/> .
+@prefix cbo: <http://comicmeta.org/cbo/> .
+@prefix ex: <http://example.org/> .
 
 # a comics series
 
