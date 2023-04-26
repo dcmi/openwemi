@@ -4,10 +4,6 @@
 
 openWEMI example for Daredevil (1964) #67
 
-* ex1 - openWEMI
-* ex2 - openWEMI + Schema.org
-* ex3 - openWEMI + Schema.org + CBO
-
 ## References
 
 * [Daredevil (1964) #67 (GCD)](https://www.comics.org/issue/23651/)
