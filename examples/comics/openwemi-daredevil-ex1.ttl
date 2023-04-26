@@ -1,4 +1,4 @@
-@prefix openwemi: <http://example.org/openwemi/> .
+@prefix openwemi: <http://example.org/openWEMI/> .
 @prefix schema: <https://schema.org/> .
 @prefix cbo: <http://comicmeta.org/cbo/> .
 @prefix ex: <http://example.org/> .

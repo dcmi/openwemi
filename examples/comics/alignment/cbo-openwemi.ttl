@@ -1,4 +1,4 @@
-@prefix openwemi: <http://example.org/openwemi/> .
+@prefix openwemi: <http://example.org/openWEMI/> .
 @prefix cbo: <http://comicmeta.org/cbo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
