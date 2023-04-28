@@ -1,17 +1,17 @@
-@prefix openwemi: <https://example.org/openwemi/> .
+@prefix openwemi: <http://example.org/openWEMI/> .
 @prefix schema: <https://schema.org/> .
-@prefix cbo: <https://comicmeta.org/cbo/> .
-@prefix ex: <https://example.org/> .
+@prefix cbo: <http://comicmeta.org/cbo/> .
+@prefix ex: <http://example.org/> .
 
 # a comics series
 
-ex:Daredevil a cbo:ComicSeries ;
+ex:Daredevil a cbo:Series ;
     schema:name "Daredevil" ;
     cbo:volume ex:Daredevil_v1 .
 
 # a comics volume, which may overlap with the concept of a series
 
-ex:Daredevil_v1 a cbo:ComicVolume ;
+ex:Daredevil_v1 a cbo:Volume ;
     schema:name "Daredevil, Volume 1" ;
     cbo:issue ex:Daredevil_v1_67 ;
     cbo:volumeNumber 1 ;
@@ -19,7 +19,7 @@ ex:Daredevil_v1 a cbo:ComicVolume ;
 
 # an issue in the series/volume
 
-ex:Daredevil_v1_67 a cbo:ComicIssue ;
+ex:Daredevil_v1_67 a cbo:Issue ;
     cbo:issueNumber 67 ;
     cbo:page ex:Daredevil_v1_67_Cover ;
     cbo:story ex:DareDevil_v1_67_Story ;
@@ -58,16 +58,16 @@ ex:DareDevil_v1_67_Story a cbo:Story ;
 
 # a reprint/translation of the original work
 
-ex:Diabolico a cbo:ComicSeries ;
+ex:Diabolico a cbo:Series ;
     schema:name "Diabolico" ;
     cbo:volume ex:Diabolico_v1 .
 
-ex:Diabolico_v1 a cbo:ComicVolume ;
+ex:Diabolico_v1 a cbo:Volume ;
     cbo:issue ex:Diabolico_v1_67 ;
     cbo:volumeNumber 1 ;
     cbo:seriesYear 1981 .
 
-ex:Diabolico_v1_67 a cbo:ComicIssue ;
+ex:Diabolico_v1_67 a cbo:Issue ;
     cbo:issueNumber 67 ;
     cbo:reprints ex:Daredevil_v1_67 ;
     schema:name "Diabolico #67" .

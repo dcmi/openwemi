@@ -1,5 +1,5 @@
-@prefix openwemi: <https://example.org/openwemi/> .
-@prefix cbo: <https://comicmeta.org/cbo/> .
+@prefix openwemi: <http://example.org/openWEMI/> .
+@prefix cbo: <http://comicmeta.org/cbo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 # poc alignment with openwemi
@@ -18,9 +18,9 @@ cbo:Page rdfs:subClassOf openwemi:Work, openwemi:Expression .
 
 ## work / manifestation
 
-cbo:ComicSeries rdfs:subClassOf openwemi:Work, openwemi:Manifestation .
-cbo:ComicVolume rdfs:subClassOf openwemi:Work, openwemi:Manifestation .
-cbo:ComicIssue rdfs:subClassOf openwemi:Work, openwemi:Manifestation .
+cbo:Series rdfs:subClassOf openwemi:Work, openwemi:Manifestation .
+cbo:Volume rdfs:subClassOf openwemi:Work, openwemi:Manifestation .
+cbo:Issue rdfs:subClassOf openwemi:Work, openwemi:Manifestation .
 
 ## item
 
