@@ -49,7 +49,41 @@
   a rdfs:Property ;
   rdfs:label "related endeavor"@en ;
   skos:definition "Another endeavor that is related in some way to an endeavor."@en ;
-  rdfs:isDefinedBy <http://example.org/openWEMI/>  .
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:domain <http://example.org/openWEMI/Endeavor> ;
+  rdfs:range <http://example.org/openWEMI/Endeavor> .
+
+<http://example.org/openWEMI/relatedWork>
+  a rdfs:Property ;
+  rdfs:label "related work"@en ;
+  skos:definition "Another work that is related in some way to a work."@en ;
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:domain <http://example.org/openWEMI/Work> ;
+  rdfs:range <http://example.org/openWEMI/Work> .  
+
+<http://example.org/openWEMI/relatedExpression>
+  a rdfs:Property ;
+  rdfs:label "related expression"@en ;
+  skos:definition "Another expression that is related in some way to an expression."@en ;
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:domain <http://example.org/openWEMI/Expression> ;
+  rdfs:range <http://example.org/openWEMI/Expression> .  
+
+<http://example.org/openWEMI/relatedManifestation>
+  a rdfs:Property ;
+  rdfs:label "related manifestation"@en ;
+  skos:definition "Another manifestation that is related in some way to a manifestation."@en ;
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:domain <http://example.org/openWEMI/Manifestation> ;
+  rdfs:range <http://example.org/openWEMI/Manifestation> .  
+
+<http://example.org/openWEMI/relatedItem>
+  a rdfs:Property ;
+  rdfs:label "related item"@en ;
+  skos:definition "Another item that is related in some way to an item."@en ;
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:domain <http://example.org/openWEMI/Item> ;
+  rdfs:range <http://example.org/openWEMI/Item> .  
 
 <http://example.org/openWEMI/expresses>
   a owl:ObjectProperty ;
