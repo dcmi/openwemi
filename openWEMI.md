@@ -25,6 +25,21 @@ The minimal WEMI set has these classes and subclasses:
   * Manifestation
   * Item
 * ResponsibleEntity
+
+```mermaid
+    flowchart BT
+    subgraph Endeavor
+    E((Endeavor))
+    end
+    R((ResponsibleEntity))-->E
+    subgraph WEMI
+    I((Item))-->|subclass|E
+    M((Manifestation))-->|subclass|E
+    X((Expression))-->|subclass|E
+    W((Work))--> |subclass|E 
+    end
+```
+
 These are defined as:
 * Endeavor: "A creation"
 * Work: "An abstract notion of an artistic or intellectual creation."
@@ -32,19 +47,39 @@ These are defined as:
 * Manifestation: "The physical embodiment of a creation"
 * Item: "An exemplar of a creation."
 * ResponsibleEntity: "An agent with some responsibility related to a creation."
+
+
 ### Relationship properties
-It has these properties which define the primary relationships between WEMI:
+These properties define the primary relationships between WEMI:
   * expresses (range: Work)
   * manifests (range: Work or Expression)
   * instantiates (range: Work or Expression or Manifestation)
 Which is expressed in this diagram:
-![openRels1](https://user-images.githubusercontent.com/1564129/233729616-fa92d8c1-322a-4b6d-9ec9-ad532a209f6d.jpg)
+```mermaid
+flowchart LR
+subgraph Work
+W((Work))
+end 
+subgraph Expression
+E((Expression))
+end
+subgraph Manifestation
+M((Manifestation))
+end
+subgraph Item
+I((Item))
+end
+Item-->|instantiates|Manifestation
+Item-->|instantiates|Expression
+Item-->|instantiates|Work
+Manifestation-->|realizes|Work
+Manifestation-->|realizes|Expression
+Expression-->|expresses|Work
+```
 
 The relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the work to the item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from work to expression to manifestation to item, openWEMI allows all relationships that maintain the overall semantics of the classes.
 
-The model assumes that properties expressing other relationships can exist, in particular relationships between entities of the same type: Work/Work, Expression/Expression, Manifestation/Manifestation, and Item/Item. For example, a text and the translation of the text could have an Expression/Expression relationship. A reprint of printed document could be a Manifestation of a Manifestation. Such properties, however, are not included in the core model, which only definesrelationships between the .
-
-![openRels2](https://user-images.githubusercontent.com/1564129/231845216-bc842bb0-de35-4778-8066-32947af26781.jpg)
+The model assumes that properties expressing relationships between entities of the same type: Work/Work, Expression/Expression, Manifestation/Manifestation, and Item/Item will exist6. For example, a text and the translation of the text could have an Expression/Expression relationship. A reprint of printed document could be a Manifestation of a Manifestation. 
 
 ## Using and Extending openWEMI
 
