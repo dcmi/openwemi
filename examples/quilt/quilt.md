@@ -1,0 +1,3 @@
+![wemiQuilt](https://user-images.githubusercontent.com/1564129/235373824-8e9542fd-1c24-4149-b4fb-83385d26592d.jpg)
+
+I could also imagine the black and white design for the quilt to be the expression, or a combination of work and expression. If it is the expression then the work would then be very abstract but would have the name of the creator of the design and any title that had been given to the design. What strikes me is that where Work is very important for things like books/stories it is much harder to define them for visual and manufactured items. We don't have a good vocabulary for things that don't use a vocabulary.
