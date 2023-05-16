@@ -1,0 +1,331 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdvocab: <http://rdvocab.info/elements/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bibframe: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bflc: <http://id.loc.gov/ontologies/bflc/> .
+@prefix lclocal: <http://id.loc.gov/ontologies/lclocal/> .
+@prefix datatypes: <http://id.loc.gov/datatypes/> .
+@prefix mads: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix wemi: <http://example.org/openWEMI> .
+@prefix og: <http://ogp.me/ns#> .
+@prefix video: <video:> .
+@prefix twitter: <twitter:> .
+
+<http://cst.training.talisaspire.com/resources/8CEE9536-256F-03CB-7027-94C5C988C95E/authors>
+  a rdf:Seq ;
+  rdf:_1 <http://cst.training.talisaspire.com/people/D1C913FA-76EA-2698-33AC-AF4F901D14F6> .
+
+<http://cst.training.talisaspire.com/people/D1C913FA-76EA-2698-33AC-AF4F901D14F6>
+  a foaf:Person ;
+  foaf:name "Burke, James" .
+
+<http://cst.training.talisaspire.com/organisations/FAA68C51-3D8A-4EAD-5043-23B7BCBF6222>
+  a foaf:Organization ;
+  foaf:name "Macmillan" .
+
+<http://cst.training.talisaspire.com/resources/8CEE9536-256F-03CB-7027-94C5C988C95E>
+  bibo:authorList <http://cst.training.talisaspire.com/resources/8CEE9536-256F-03CB-7027-94C5C988C95E/authors> ;
+  bibo:isbn10 "0333248279" ;
+  a bibo:Book, wemi:Manifestation ;
+  dc:date "1978" ;
+  dc:publisher <http://cst.training.talisaspire.com/organisations/FAA68C51-3D8A-4EAD-5043-23B7BCBF6222> ;
+  rdvocab:placeOfPublication "London" ;
+  dc:title "Connections" ;
+  dc:language "eng" ;
+  wemi:relatedManifestation <http://id.loc.gov/resources/instances/4178199> ;
+  wemi:manifests <http://id.loc.gov/resources/works/4178199> ;
+  wemi:relatedWork <https://archive.org/details/ConnectionsByJamesBurke> ;
+  dc:source "http://openlibrary.org/books/OL4475047M" .
+
+<http://id.loc.gov/vocabulary/countries/enk>
+  a <http://id.loc.gov/ontologies/bibframe/Place> ;
+  rdfs:label "England"@en .
+
+<http://id.loc.gov/resources/works/4178199>
+  a <http://id.loc.gov/ontologies/bibframe/Work>, wemi:Work ;
+  bibframe:contribution [
+    a bibframe:Contribution, <http://id.loc.gov/ontologies/bflc/PrimaryContribution> ;
+    bibframe:agent [
+      a bibframe:Agent, bibframe:Person ;
+      rdfs:label "Burke, James, 1936-"^^xsd:string
+    ] ;
+    bibframe:role <http://id.loc.gov/vocabulary/relators/ctb>
+  ] ;
+  bibframe:title [
+    a bibframe:Title ;
+    bibframe:mainTitle "Connections"^^xsd:string ;
+    rdfs:label "Connections"^^xsd:string
+  ] ;
+  rdfs:label "Burke, James, 1936- Connections"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/organizations/dlc>
+  a bibframe:Organization, <http://www.loc.gov/mads/rdf/v1#CorporateName> ;
+  rdfs:label "United States, Library of Congress"^^xsd:string .
+
+<http://id.loc.gov/resources/instances/4178199>
+  a bibframe:Instance, bibframe:Print, wemi:Manifestation ;
+  bibframe:acquisitionTerms "£7.95"^^xsd:string ;
+  bibframe:adminMetadata [
+    a bibframe:AdminMetadata ;
+    bflc:encodingLevel <http://id.loc.gov/vocabulary/menclvl/f> ;
+    bibframe:assigner <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bibframe:changeDate "2016-08-08T11:21:57"^^xsd:dateTime ;
+    bibframe:creationDate "1979-03-20"^^xsd:date ;
+    bibframe:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/isbd> ;
+    bibframe:descriptionModifier <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bibframe:generationProcess [
+      a bibframe:GenerationProcess ;
+      bibframe:generationDate "2021-08-04T23:31:24-04:00"^^xsd:dateTime ;
+      rdfs:label "DLC marc2bibframe2 v1.7.0-SNAPSHOT"^^xsd:string
+    ] ;
+    bibframe:identifiedBy [
+      a bibframe:Local ;
+      bibframe:assigner <http://id.loc.gov/vocabulary/organizations/dlc> ;
+      rdf:value "4178199"^^xsd:string
+    ] ;
+    bibframe:status [
+      a bibframe:Status ;
+      bibframe:code "c"^^xsd:string ;
+      rdfs:label "corrected or revised"^^xsd:string
+    ] ;
+    lclocal:d906 "=906     $a 7 $b cbc $c orignew $d 3 $e ncip $f 19 $g y-gencatlg"^^xsd:string ;
+    lclocal:d925 "=925  0  $a acquire $b 1 shelf copy $x policy default"^^xsd:string
+  ] ;
+  bibframe:carrier <http://id.loc.gov/vocabulary/carriers/nc> ;
+  bibframe:dimensions "27 cm."^^xsd:string ;
+  bibframe:extent [
+    a bibframe:Extent ;
+    rdfs:label "304 p."^^xsd:string
+  ] ;
+  bibframe:hasItem <http://id.loc.gov/resources/items/4178199-050-12> ;
+  bibframe:identifiedBy [
+    a bibframe:Lccn ;
+    rdf:value "   79302513 "^^xsd:string
+  ], [
+    a bibframe:Nbn ;
+    rdf:value "GB***"^^xsd:string
+  ], [
+    a bibframe:Isbn ;
+    rdf:value "0333248279"^^xsd:string
+  ] ;
+  bibframe:instanceOf <http://id.loc.gov/resources/works/4178199> ;
+  bibframe:issuance <http://id.loc.gov/vocabulary/issuance/mono> ;
+  bibframe:media <http://id.loc.gov/vocabulary/mediaTypes/n> ;
+  bibframe:note [
+    a bibframe:Note, <https://id.loc.gov/resources/instances/4178199.json> ;
+    rdfs:label "ill."^^xsd:string
+  ], [
+    a bibframe:Note ;
+    rdfs:label "Includes index."^^xsd:string
+  ] ;
+  bibframe:provisionActivity [
+    a bibframe:ProvisionActivity, bibframe:Publication ;
+    bibframe:date "1978"^^datatypes:edtf ;
+    bibframe:place <http://id.loc.gov/vocabulary/countries/enk>
+  ], [
+    a bibframe:ProvisionActivity, bibframe:Publication ;
+    bibframe:agent [
+      a bibframe:Agent ;
+      rdfs:label "Macmillan"^^xsd:string
+    ] ;
+    bibframe:date "1978"^^xsd:string ;
+    bibframe:place [
+      a bibframe:Place ;
+      rdfs:label "London"^^xsd:string
+    ]
+  ] ;
+  bibframe:provisionActivityStatement "London : Macmillan, 1978."^^xsd:string ;
+  bibframe:responsibilityStatement "James Burke"^^xsd:string ;
+  bibframe:title [
+    a bibframe:Title ;
+    bibframe:mainTitle "Connections"^^xsd:string ;
+    rdfs:label "Connections"^^xsd:string
+  ] ;
+  dc:isPartOf <http://id.loc.gov/resources/instances> ;
+  rdfs:label "Connections"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/carriers/nc>
+  a bibframe:Carrier ;
+  rdfs:label "volume"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/issuance/mono>
+  a bibframe:Issuance ;
+  rdfs:label "single unit"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/mediaTypes/n>
+  a bibframe:Media ;
+  rdfs:label "unmediated"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/menclvl/f>
+  a bflc:EncodingLevel ;
+  rdfs:label "full"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/relators/ctb> a bibframe:Role .
+<http://id.loc.gov/vocabulary/descriptionConventions/isbd>
+  a bibframe:DescriptionConventions ;
+  rdfs:label "ISBD: International standard bibliographic description"^^xsd:string .
+
+<http://id.loc.gov/rwo/agents/n83017173>
+  a <http://id.loc.gov/ontologies/bibframe/Agent> ;
+  blfc:marcKey "1001 $aBurke, James,$d1936-"^^xsd:string ;
+  rdfs:label "Burke, James, 1936-"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/relators/ctb>
+  a <http://id.loc.gov/ontologies/bibframe/Role> ;
+  rdfs:label "Contributor"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/millus/ill>
+  a <http://id.loc.gov/ontologies/bibframe/Illustration> ;
+  rdfs:label "Illustrations"^^xsd:string .
+
+<http://id.loc.gov/authorities/subjects/sh99005024>
+  a <http://www.loc.gov/mads/rdf/v1#Topic> ;
+  blfc:marcKey "180  $xHistory"^^xsd:string ;
+  rdfs:label "History"@en .
+
+<http://id.loc.gov/vocabulary/organizations/dlc>
+  a <http://id.loc.gov/ontologies/bibframe/Organization>, <http://www.loc.gov/mads/rdf/v1#CorporateName> ;
+  rdfs:label "United States, Library of Congress"^^xsd:string .
+
+<http://id.loc.gov/resources/works/4178199>
+  a <http://id.loc.gov/ontologies/bibframe/Work>, <http://id.loc.gov/ontologies/bibframe/Text> ;
+  blfc:aap "Burke, James, 1936- Connections"^^xsd:string ;
+  blfc:aap-normalized "burkejames1936connections"^^xsd:string ;
+  bibframe:adminMetadata [
+    a bibframe:AdminMetadata ;
+    blfc:encodingLevel <http://id.loc.gov/vocabulary/menclvl/f> ;
+    bibframe:assigner <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bibframe:changeDate "2016-08-08T11:21:57"^^xsd:dateTime ;
+    bibframe:creationDate "1979-03-20"^^xsd:date ;
+    bibframe:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/isbd> ;
+    bibframe:descriptionModifier <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bibframe:generationProcess [
+      a bibframe:GenerationProcess ;
+      bibframe:generationDate "2021-08-04T23:31:24-04:00"^^xsd:dateTime ;
+      rdfs:label "DLC marc2bibframe2 v1.7.0-SNAPSHOT"^^xsd:string
+    ] ;
+    bibframe:identifiedBy [
+      a bibframe:Local ;
+      bibframe:assigner <http://id.loc.gov/vocabulary/organizations/dlc> ;
+      rdf:value "4178199"^^xsd:string
+    ] ;
+    bibframe:status [
+      a bibframe:Status ;
+      bibframe:code "c"^^xsd:string ;
+      rdfs:label "corrected or revised"^^xsd:string
+    ] ;
+    lclocal:d906 "=906     $a 7 $b cbc $c orignew $d 3 $e ncip $f 19 $g y-gencatlg"^^xsd:string ;
+    lclocal:d925 "=925  0  $a acquire $b 1 shelf copy $x policy default"^^xsd:string
+  ] ;
+  bibframe:classification [
+    a bibframe:ClassificationLcc ;
+    bibframe:assigner <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bibframe:classificationPortion "T15"^^xsd:string ;
+    bibframe:itemPortion ".B76 1978b"^^xsd:string
+  ], [
+    a bibframe:ClassificationDdc ;
+    bibframe:assigner <http://id.loc.gov/vocabulary/organizations/dlc> ;
+    bibframe:classificationPortion "609"^^xsd:string ;
+    bibframe:edition "full"^^xsd:string
+  ] ;
+  bibframe:content <http://id.loc.gov/vocabulary/contentTypes/txt> ;
+  bibframe:contribution [
+    a bibframe:Contribution, blfc:PrimaryContribution ;
+    bibframe:agent <http://id.loc.gov/rwo/agents/n83017173> ;
+    bibframe:role <http://id.loc.gov/vocabulary/relators/ctb>
+  ] ;
+  bibframe:hasInstance <http://id.loc.gov/resources/instances/4178199> ;
+  bibframe:illustrativeContent <http://id.loc.gov/vocabulary/millus/ill> ;
+  bibframe:language <http://id.loc.gov/vocabulary/languages/eng> ;
+  bibframe:subject [
+    a bibframe:Topic, <http://www.loc.gov/mads/rdf/v1#ComplexSubject> ;
+    blfc:aap-normalized "technologyhistory"^^xsd:string ;
+    mads:authoritativeLabel "Technology--History."^^xsd:string ;
+    mads:componentList (
+     <http://id.loc.gov/authorities/subjects/sh85133147>
+     <http://id.loc.gov/authorities/subjects/sh99005024>
+   ) ;
+    mads:isMemberOfMADSScheme <http://id.loc.gov/authorities/subjects> ;
+    rdfs:label "Technology--History."^^xsd:string
+  ] ;
+  bibframe:supplementaryContent <http://id.loc.gov/vocabulary/msupplcont/bibliography>, <http://id.loc.gov/vocabulary/msupplcont/index>, [
+    a bibframe:SupplementaryContent ;
+    rdfs:label "Bibliography: p. 296-298."^^xsd:string
+  ] ;
+  bibframe:title [
+    a bibframe:Title ;
+    bibframe:mainTitle "Connections"^^xsd:string ;
+    rdfs:label "Connections"^^xsd:string
+  ] ;
+  dc:isPartOf <http://id.loc.gov/resources/works> ;
+  rdfs:label "Connections"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/contentTypes/txt>
+  a bibframe:Content ;
+  rdfs:label "text"^^xsd:string .
+
+<http://id.loc.gov/resources/instances/4178199>
+  a bibframe:Instance ;
+  bibframe:provisionActivityStatement "London : Macmillan, 1978."^^xsd:string ;
+  bibframe:title [
+    a bibframe:Title ;
+    bibframe:mainTitle "Connections"^^xsd:string ;
+    rdfs:label "Connections"^^xsd:string
+  ] ;
+  rdfs:label "Connections"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/languages/eng>
+  a bibframe:Language ;
+  rdfs:label "English"@en .
+
+<http://id.loc.gov/vocabulary/msupplcont/bibliography>
+  a bibframe:SupplementaryContent ;
+  rdfs:label "bibliography"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/msupplcont/index>
+  a bibframe:SupplementaryContent ;
+  rdfs:label "index"^^xsd:string .
+
+<http://id.loc.gov/authorities/subjects/sh85133147>
+  a mads:Topic ;
+  blfc:marcKey "150 0$aTechnology"^^xsd:string ;
+  rdfs:label "Technology"@en .
+
+<http://id.loc.gov/vocabulary/menclvl/f>
+  a blfc:EncodingLevel ;
+  rdfs:label "full"^^xsd:string .
+
+<http://id.loc.gov/vocabulary/descriptionConventions/isbd>
+  a bibframe:DescriptionConventions ;
+  rdfs:label "ISBD: International standard bibliographic description"^^xsd:string .
+
+<http://id.loc.gov/authorities/subjects>
+  a mads:MADSScheme ;
+  rdfs:label """Library of
+            Congress Subject Headings"""@en .
+
+<https://archive.org/details/ConnectionsByJamesBurke>
+  og:title "Connections by James Burke (Seasons 1-3) : James Burke (BBC) : Free Download, Borrow, and Streaming : Internet Archive"@en ;
+  og:description "Connections explores an Alternative View of Change that rejects the conventional linear and teleological view of historical progress. Burke contends that..."@en ;
+  og:site_name "Internet Archive"@en ;
+  og:type "video.movie"@en ;
+  og:image "https://archive.org/download/ConnectionsByJamesBurke/ConnectionsByJamesBurke.thumbs/Connections/Season 1/Connections S01E01 - The Trigger Effect_000806.jpg"@en ;
+  og:video "https://archive.org/download/ConnectionsByJamesBurke/Connections/Season 1/Connections S01E01 - The Trigger Effect.ogv"@en ;
+  og:video:width "407"@en ;
+  og:video:height "300"@en ;
+  video:duration "2970"@en ;
+  og:video:type "video/mp4"@en ;
+  twitter:card "player"@en ;
+  twitter:site "@internetarchive"@en ;
+  twitter:account_id "18957805"@en ;
+  twitter:description "Connections explores an Alternative View of Change that rejects the conventional linear and teleological view of historical progress. Burke contends that..."@en ;
+  twitter:title "Connections by James Burke (Seasons 1-3) : James Burke (BBC) : Free Download, Borrow, and Streaming : Internet Archive"@en ;
+  twitter:image "https://archive.org/services/img/ConnectionsByJamesBurke/full/pct:200/0/default.jpg"@en ;
+  twitter:url "https://archive.org/details/ConnectionsByJamesBurke"@en ;
+  twitter:player "https://archive.org/embed/ConnectionsByJamesBurke/Connections/Season 1/Connections S01E01 - The Trigger Effect.mp4"@en ;
+  twitter:player:width "407"@en ;
+  twitter:player:height "300"@en .            
