@@ -40,11 +40,13 @@
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
   rdfs:subClassOf <http://example.org/openWEMI/Endeavor>  .
 
-<http://example.org/openWEMI/ResponsibleEntity>
-  a owl:Class ;
+<http://example.org/openWEMI/responsibleEntity>
+  a rdfs:Property ;
   rdfs:label "responsible entity"@en ;
-  skos:definition "One responsible for the creation, production, distribution or maintenance of a created entity."@en  .
-  
+  skos:definition "One responsible for the creation, production, distribution, maintenance, or ownership of a created entity."@en  .
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:domain <http://example.org/openWEMI/Endeavor> .  
+      
 <http://example.org/openWEMI/relatedEndeavor>
   a rdfs:Property ;
   rdfs:label "related endeavor"@en ;
