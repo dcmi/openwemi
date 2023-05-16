@@ -13,3 +13,6 @@ AGREED: Endeavor is useful; keep it
 4-26
 * AGREED: Endeavor will be defined as "A creation"
 * AGREED: Use verb forms of predicates ("expresses")
+
+5-10
+* Drop `ResponsibleEntity` class, but add `responsibleEntity` property
