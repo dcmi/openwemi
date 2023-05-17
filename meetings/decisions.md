@@ -16,3 +16,9 @@ AGREED: Endeavor is useful; keep it
 
 5-10
 * Drop `ResponsibleEntity` class, but add `responsibleEntity` property
+
+5-17
+* Decided: May 17. Use "responsibleEntity" property, but define broadly enough that "responsible" fits a wide variety of relationships.
+* Decided: will need inverse relationships
+* Relationship of Endeavor and Work: The group agrees that the appropriate relationship is "subclass" and that Endeavor is a kind of organizing "bucket".
+* 
