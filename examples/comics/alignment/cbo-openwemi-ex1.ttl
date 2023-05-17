@@ -8,6 +8,7 @@
 
 <http://www.example.org/ex1> rdf:type owl:Ontology ;
                               owl:imports <http://comicmeta.org/cbo/> ,
+                                          <https://raw.githubusercontent.com/dcmi/openwemi/main/vocab/openWEMI.ttl>,
                                           <https://raw.githubusercontent.com/dcmi/openwemi/main/examples/comics/openwemi-daredevil-ex1.ttl> ,
                                           <https://raw.githubusercontent.com/dcmi/openwemi/main/examples/comics/alignment/cbo-openwemi.ttl> .
 
