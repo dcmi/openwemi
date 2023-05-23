@@ -53,7 +53,7 @@ It also includes a same-entity relationship property for each entity:
 This proposal does not include the FRBR Group2 or Group3 entities (responsible bodies and subjects). It does include the superclass Endeavor, which is not part of the FRBR group of entities but was added by the authors of FRBR core. 
 
 ## Examples
-See the [Examples](examples.md) directory for examples of possible uses of openWEMI.
+See the [Examples](examples) directory for examples of possible uses of openWEMI.
 
 ## Files
 
@@ -62,7 +62,7 @@ See the [Examples](examples.md) directory for examples of possible uses of openW
 ## Documents
 * [openWEMI](openWEMI.md)
 * [Bibliography](bibliography.md)
-* [FAQ](docs/faq.md)
+* [FAQ](FAQ.md)
 
 ## The Community Group
 
