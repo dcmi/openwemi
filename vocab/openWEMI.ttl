@@ -91,15 +91,27 @@
   a owl:ObjectProperty ;
   rdfs:label "expresses"@en ;
   skos:definition "An endeavor that expresses a work."@en ;
+  owl:inverseOf <http://example.org/openWEMI/expressedBy> ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
   rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
   rdfs:domain <http://example.org/openWEMI/Expression> ;
   rdfs:range <http://example.org/openWEMI/Work>  .
 
+ <http://example.org/openWEMI/expressedBy>
+  a owl:ObjectProperty ;
+  rdfs:label "expressed by"@en ;
+  skos:definition "An expression of a work."@en ;
+  owl:inverseOf <http://example.org/openWEMI/expresses> ;
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
+  rdfs:domain <http://example.org/openWEMI/Work> ;
+  rdfs:range <http://example.org/openWEMI/Expression>  . 
+
 <http://example.org/openWEMI/manifests>
     a owl:ObjectProperty ;
     rdfs:label "manifests"@en ;
     skos:definition "An endeavor that manifests an expression or a work."@en ;
+    owl:inverseOf <http://example.org/openWEMI/manifestedBy> ;
     rdfs:isDefinedBy <http://example.org/openWEMI/> ;
     rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
     rdfs:domain <http://example.org/openWEMI/Manifestation> ;
@@ -110,11 +122,28 @@
        <http://example.org/openWEMI/Expression>
      )
     ]  .
+
+ <http://example.org/openWEMI/manifestedBy>
+  a owl:ObjectProperty ;
+  rdfs:label "manifested by"@en ;
+  skos:definition "A manifestation of a work or an expression."@en ;
+  owl:inverseOf <http://example.org/openWEMI/manifests> ;
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+       <http://example.org/openWEMI/Work> 
+       <http://example.org/openWEMI/Expression>
+     )
+    ] ;
+  rdfs:range <http://example.org/openWEMI/Manifestation>  . 
     
 <http://example.org/openWEMI/instantiates>
   a owl:ObjectProperty ;
   rdfs:label "instantiates"@en ;
   skos:definition "An endeavor that instantiates a manifestation, an expression or a work."@en ;
+  owl:inverseOf <http://example.org/openWEMI/instantiatedBy> ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
   rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
   rdfs:domain <http://example.org/openWEMI/Item> ;
@@ -126,4 +155,21 @@
     <http://example.org/openWEMI/Manifestation>
          )
         ]  .
+
+ <http://example.org/openWEMI/instantiatedBy>
+  a owl:ObjectProperty ;
+  rdfs:label "instantiated by"@en ;
+  skos:definition "An instatiation of a manifestation, an expression or a work."@en ;
+  owl:inverseOf <http://example.org/openWEMI/instantiates> ;
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+       <http://example.org/openWEMI/Work> 
+       <http://example.org/openWEMI/Expression>
+       <http://example.org/openWEMI/Manifestation>
+     )
+    ] ;
+  rdfs:range <http://example.org/openWEMI/Item>  . 
 
