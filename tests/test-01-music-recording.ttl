@@ -17,7 +17,7 @@
     openWEMI:expresses <#Song> .
 
 <#ReleaseOfSong>
-    a owl:Thing ;OfRecordingO
+    a owl:Thing ;
     rdfs:label "Release of Song"@en ;
     rdfs:comment "A release of a recording of a song."@en ;
     openWEMI:manifests <#RecordingOfSong> .
