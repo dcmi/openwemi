@@ -4,46 +4,46 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://example.org/openWEMI/>  a owl:Ontology ;
-   rdfs:label  "openWEMI ontology" .
+  rdfs:label  "openWEMI ontology" .
 
 <http://example.org/openWEMI/Endeavor>
   a owl:Class ;
   rdfs:label "endeavour"@en ;
   skos:definition "The conceptual or intellectual aspect of a creation."@en ;
-  rdfs:isDefinedBy <http://example.org/openWEMI/>  .
+  rdfs:isDefinedBy <http://example.org/openWEMI/> .
   
 <http://example.org/openWEMI/Work>
-    a owl:Class ;
-    rdfs:label "work"@en ;
-    skos:definition "An abstract notion of an artistic or intellectual creation."@en ;
-    rdfs:isDefinedBy <http://example.org/openWEMI/> ;
-    rdfs:subClassOf <http://example.org/openWEMI/Endeavor> .
+  a owl:Class ;
+  rdfs:label "work"@en ;
+  skos:definition "An abstract notion of an artistic or intellectual creation."@en ;
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:subClassOf <http://example.org/openWEMI/Endeavor> .
 
 <http://example.org/openWEMI/Expression>
   a owl:Class ;
   rdfs:label "expression"@en ;
   skos:definition "A perceivable form of the creation."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
-  rdfs:subClassOf <http://example.org/openWEMI/Endeavor>  .
+  rdfs:subClassOf <http://example.org/openWEMI/Endeavor> .
 
 <http://example.org/openWEMI/Manifestation>
-    a owl:Class ;
-    rdfs:label "manifestation"@en ;
-    skos:definition "The physical embodiment of a creation."@en ;
-    rdfs:isDefinedBy <http://example.org/openWEMI/> ;
-    rdfs:subClassOf <http://example.org/openWEMI/Endeavor> .
+  a owl:Class ;
+  rdfs:label "manifestation"@en ;
+  skos:definition "The physical embodiment of a creation."@en ;
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:subClassOf <http://example.org/openWEMI/Endeavor> .
   
 <http://example.org/openWEMI/Item>
   a owl:Class ;
   rdfs:label "item"@en ;
   skos:definition "An exemplar of a creation."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
-  rdfs:subClassOf <http://example.org/openWEMI/Endeavor>  .
+  rdfs:subClassOf <http://example.org/openWEMI/Endeavor> .
 
 <http://example.org/openWEMI/responsibleEntity>
   a rdfs:Property ;
   rdfs:label "responsible entity"@en ;
-  skos:definition "One responsible for the creation, production, distribution, maintenance, or ownership of a created entity."@en  .
+  skos:definition "One responsible for the creation, production, distribution, maintenance, or ownership of a created entity."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
   rdfs:domain <http://example.org/openWEMI/Endeavor> .  
       
@@ -94,22 +94,22 @@
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
   rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
   rdfs:domain <http://example.org/openWEMI/Expression> ;
-  rdfs:range <http://example.org/openWEMI/Work>  .
+  rdfs:range <http://example.org/openWEMI/Work> .
 
 <http://example.org/openWEMI/manifests>
-    a owl:ObjectProperty ;
-    rdfs:label "manifests"@en ;
-    skos:definition "An endeavor that manifests an expression or a work."@en ;
-    rdfs:isDefinedBy <http://example.org/openWEMI/> ;
-    rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
-    rdfs:domain <http://example.org/openWEMI/Manifestation> ;
-    rdfs:range [
-      a owl:Class ;
-      owl:unionOf (
-       <http://example.org/openWEMI/Work> 
-       <http://example.org/openWEMI/Expression>
-     )
-    ]  .
+  a owl:ObjectProperty ;
+  rdfs:label "manifests"@en ;
+  skos:definition "An endeavor that manifests an expression or a work."@en ;
+  rdfs:isDefinedBy <http://example.org/openWEMI/> ;
+  rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
+  rdfs:domain <http://example.org/openWEMI/Manifestation> ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf (
+      <http://example.org/openWEMI/Work> 
+      <http://example.org/openWEMI/Expression>
+    )
+  ] .
     
 <http://example.org/openWEMI/instantiates>
   a owl:ObjectProperty ;
@@ -121,9 +121,9 @@
   rdfs:range [
     a owl:Class ;
     owl:unionOf (
-    <http://example.org/openWEMI/Work>
-    <http://example.org/openWEMI/Expression>
-    <http://example.org/openWEMI/Manifestation>
-         )
-        ]  .
+      <http://example.org/openWEMI/Work>
+      <http://example.org/openWEMI/Expression>
+      <http://example.org/openWEMI/Manifestation>
+    )
+  ] .
 
