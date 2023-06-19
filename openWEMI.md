@@ -80,6 +80,20 @@ Expression-->|expresses|Work
 
 The relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the work to the item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from work to expression to manifestation to item, openWEMI allows all relationships that maintain the overall semantics of the classes.
 
+### Same entity relationships
+
+The model assumes that properties expressing relationships between entities of the same type: Work/Work, Expression/Expression, Manifestation/Manifestation, and Item/Item will exist6. For example, a text and the translation of the text could have an Expression/Expression relationship. A reprint of printed document could be a Manifestation of a Manifestation. 
+<p><img src="https://user-images.githubusercontent.com/1564129/235207690-16689d69-a227-4a9a-8144-0400c5f7b687.png" width="400" height="200" /></p>
+These properties are:
+
+* relatedEndeavor
+* relatedWork
+* relatedExpression
+* relatedManifestation
+* relatedItem
+  
+The type of relationship is purposely not defined in openWEMI with the intention that implementing vocabularies will define more specific relationships as needed. For example, in a vocabulary that describes both books and movies, a vocabulary term that relates a book Work and a movie Work could subclass a term meaning "based on" to `relatedWork` that would be used to related movies that are based on books.
+
 ### Domains and ranges
 RDF vocabularies have semantic qualities called **domains** and **ranges**. Domains and ranges are RDF classes. An RDF domain asserts that the subject of the property is a member of that class. An RDF range, when it is defined as a class, means that the object is a member of that class. Classes are expressed always as IRIs, that is identifiers that begin with "http://". 
 
@@ -98,7 +112,7 @@ E((A)) --> |expresses| W((B))
 ```
 infers that A is a member of the class Expression, and B is a member of the class Work.  
 
-Because classes in RDF are IRIs, the object of an openWEMI expression must be an identifier, not a string. Where the only data available for a statement is a string, a blank node is used as the object of the statement, which in turn has an arc to the string:
+Because classes in RDF are IRIs, the object of an openWEMI property must be an identifier, not a string. Where the only data available for a statement is a string, a blank node is used as the object of the statement, which in turn has an arc to the string:
 
 As the vocabulary is defined today, this requires the use of a blank node:
 ```mermaid
@@ -108,14 +122,9 @@ E((Book3)) --> |expresses|B((work bnode)) --> |work title| W[Война и ми�
 
 A statement that uses a string as the object of an openWEMI triple is formally incorrect. Although RDF itself does not provide validation of data, if a statement does not adhere to the vocabulary's definition the downstream results are unpredictable. 
 
-### Same entity relationships
-
-The model assumes that properties expressing relationships between entities of the same type: Work/Work, Expression/Expression, Manifestation/Manifestation, and Item/Item will exist6. For example, a text and the translation of the text could have an Expression/Expression relationship. A reprint of printed document could be a Manifestation of a Manifestation. 
-<p><img src="https://user-images.githubusercontent.com/1564129/235207690-16689d69-a227-4a9a-8144-0400c5f7b687.png" width="600" height="400" /></p>
-
 ## Using openWEMI in RDF
 ### Vocabulary method
-It is not expected that most uses of openWEMI will use the classes and properties directly although that is not in any way prohibited. The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-elements in the metadata vocabulary that are specific to the resources being described. Metadata describing recorded music might define subclasses such as:
+It is not expected that most uses of openWEMI will use the classes and properties directly although that is not in any way prohibited. The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances by defining sub-elements in the metadata vocabulary that are specific to the resources being described. Metadata describing recorded music might define subclasses such as:
 
 | openWEMI | recorded music  |
 |-|-|
