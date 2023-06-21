@@ -1,0 +1,156 @@
+@prefix : <http://example.org/openWEMI/tests/music-recording#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/openWEMI/tests/music-recording> .
+
+<http://example.org/openWEMI/tests/music-recording> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/openWEMI/expresses
+<http://example.org/openWEMI/expresses> rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/openWEMI/instantiates
+<http://example.org/openWEMI/instantiates> rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/openWEMI/manifests
+<http://example.org/openWEMI/manifests> rdf:type owl:ObjectProperty .
+
+
+###  http://example.org/openWEMI/relatedEndeavor
+<http://example.org/openWEMI/relatedEndeavor> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/openWEMI/Endeavor
+<http://example.org/openWEMI/Endeavor> rdf:type owl:Class .
+
+
+###  http://example.org/openWEMI/Expression
+<http://example.org/openWEMI/Expression> rdf:type owl:Class .
+
+
+###  http://example.org/openWEMI/Item
+<http://example.org/openWEMI/Item> rdf:type owl:Class .
+
+
+###  http://example.org/openWEMI/Manifestation
+<http://example.org/openWEMI/Manifestation> rdf:type owl:Class .
+
+
+###  http://example.org/openWEMI/Work
+<http://example.org/openWEMI/Work> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Property
+rdfs:Property rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/openWEMI/relatedEndeavor
+<http://example.org/openWEMI/relatedEndeavor> rdf:type owl:NamedIndividual ,
+                                                       rdfs:Property .
+
+
+###  http://example.org/openWEMI/relatedExpression
+<http://example.org/openWEMI/relatedExpression> rdf:type owl:NamedIndividual ,
+                                                         rdfs:Property .
+
+
+###  http://example.org/openWEMI/relatedItem
+<http://example.org/openWEMI/relatedItem> rdf:type owl:NamedIndividual ,
+                                                   rdfs:Property .
+
+
+###  http://example.org/openWEMI/relatedManifestation
+<http://example.org/openWEMI/relatedManifestation> rdf:type owl:NamedIndividual ,
+                                                            rdfs:Property .
+
+
+###  http://example.org/openWEMI/relatedWork
+<http://example.org/openWEMI/relatedWork> rdf:type owl:NamedIndividual ,
+                                                   rdfs:Property .
+
+
+###  http://example.org/openWEMI/responsibleEntity
+<http://example.org/openWEMI/responsibleEntity> rdf:type owl:NamedIndividual ,
+                                                         rdfs:Property .
+
+
+###  http://example.org/openWEMI/tests/#DigitalReleaseOfSong
+<http://example.org/openWEMI/tests/#DigitalReleaseOfSong> rdf:type owl:NamedIndividual ,
+                                                                   <http://example.org/openWEMI/Endeavor> ,
+                                                                   <http://example.org/openWEMI/Item> ;
+                                                          <http://example.org/openWEMI/instantiates> <http://example.org/openWEMI/tests/#ReleaseOfSong> ;
+                                                          <http://example.org/openWEMI/relatedEndeavor> <http://example.org/openWEMI/tests/#ReleaseOfSong> .
+
+
+###  http://example.org/openWEMI/tests/#RecordingOfRemixOfSong
+<http://example.org/openWEMI/tests/#RecordingOfRemixOfSong> rdf:type owl:NamedIndividual ,
+                                                                     <http://example.org/openWEMI/Endeavor> ,
+                                                                     <http://example.org/openWEMI/Expression> ;
+                                                            <http://example.org/openWEMI/expresses> <http://example.org/openWEMI/tests/#RemixOfSong> ;
+                                                            <http://example.org/openWEMI/relatedEndeavor> <http://example.org/openWEMI/tests/#RemixOfSong> .
+
+
+###  http://example.org/openWEMI/tests/#RecordingOfSong
+<http://example.org/openWEMI/tests/#RecordingOfSong> rdf:type owl:NamedIndividual ,
+                                                              <http://example.org/openWEMI/Endeavor> ,
+                                                              <http://example.org/openWEMI/Expression> ;
+                                                     <http://example.org/openWEMI/expresses> <http://example.org/openWEMI/tests/#Song> ;
+                                                     <http://example.org/openWEMI/relatedEndeavor> <http://example.org/openWEMI/tests/#Song> .
+
+
+###  http://example.org/openWEMI/tests/#ReleaseOfRemixOfSong
+<http://example.org/openWEMI/tests/#ReleaseOfRemixOfSong> rdf:type owl:NamedIndividual ,
+                                                                   <http://example.org/openWEMI/Endeavor> ,
+                                                                   <http://example.org/openWEMI/Manifestation> ;
+                                                          <http://example.org/openWEMI/manifests> <http://example.org/openWEMI/tests/#RecordingOfRemixOfSong> ;
+                                                          <http://example.org/openWEMI/relatedEndeavor> <http://example.org/openWEMI/tests/#RecordingOfRemixOfSong> .
+
+
+###  http://example.org/openWEMI/tests/#ReleaseOfSong
+<http://example.org/openWEMI/tests/#ReleaseOfSong> rdf:type owl:NamedIndividual ,
+                                                            <http://example.org/openWEMI/Endeavor> ,
+                                                            <http://example.org/openWEMI/Manifestation> ;
+                                                   <http://example.org/openWEMI/manifests> <http://example.org/openWEMI/tests/#RecordingOfSong> ;
+                                                   <http://example.org/openWEMI/relatedEndeavor> <http://example.org/openWEMI/tests/#RecordingOfSong> .
+
+
+###  http://example.org/openWEMI/tests/#RemixOfSong
+<http://example.org/openWEMI/tests/#RemixOfSong> rdf:type owl:NamedIndividual ,
+                                                          <http://example.org/openWEMI/Endeavor> ,
+                                                          <http://example.org/openWEMI/Expression> ,
+                                                          <http://example.org/openWEMI/Work> ;
+                                                 <http://example.org/openWEMI/expresses> <http://example.org/openWEMI/tests/#Song> ;
+                                                 <http://example.org/openWEMI/relatedEndeavor> <http://example.org/openWEMI/tests/#Song> .
+
+
+###  http://example.org/openWEMI/tests/#Song
+<http://example.org/openWEMI/tests/#Song> rdf:type owl:NamedIndividual ,
+                                                   <http://example.org/openWEMI/Endeavor> ,
+                                                   <http://example.org/openWEMI/Work> .
+
+
+###  http://example.org/openWEMI/tests/#VinylReleaseOfSong
+<http://example.org/openWEMI/tests/#VinylReleaseOfSong> rdf:type owl:NamedIndividual ,
+                                                                 <http://example.org/openWEMI/Endeavor> ,
+                                                                 <http://example.org/openWEMI/Item> ;
+                                                        <http://example.org/openWEMI/instantiates> <http://example.org/openWEMI/tests/#ReleaseOfSong> ;
+                                                        <http://example.org/openWEMI/relatedEndeavor> <http://example.org/openWEMI/tests/#ReleaseOfSong> .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
