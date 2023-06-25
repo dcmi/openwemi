@@ -88,7 +88,7 @@
   rdfs:range <http://example.org/openWEMI/Item> .  
 
 <http://example.org/openWEMI/expresses>
-  a owl:ObjectProperty ;
+  a rdfs:Property ;
   rdfs:label "expresses"@en ;
   skos:definition "An endeavor that expresses a work."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
@@ -97,7 +97,7 @@
   rdfs:range <http://example.org/openWEMI/Work> .
 
 <http://example.org/openWEMI/manifests>
-  a owl:ObjectProperty ;
+  a rdfs:Property ;
   rdfs:label "manifests"@en ;
   skos:definition "An endeavor that manifests an expression or a work."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
@@ -112,7 +112,7 @@
   ] .
     
 <http://example.org/openWEMI/instantiates>
-  a owl:ObjectProperty ;
+  a rdfs:Property ;
   rdfs:label "instantiates"@en ;
   skos:definition "An endeavor that instantiates a manifestation, an expression or a work."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
