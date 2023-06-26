@@ -3,6 +3,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
+
 <http://example.org/openWEMI/> a owl:Ontology ;
   rdfs:label "openWEMI ontology" .
 
@@ -96,6 +97,7 @@
   rdfs:domain <http://example.org/openWEMI/Expression> ;
   rdfs:range <http://example.org/openWEMI/Work> .
 
+
  <http://example.org/openWEMI/expressedBy>
   a rdfs:Property ;
   rdfs:label "expressed by"@en ;
@@ -105,6 +107,7 @@
   rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
   rdfs:domain <http://example.org/openWEMI/Work> ;
   rdfs:range <http://example.org/openWEMI/Expression> . 
+
 
 <http://example.org/openWEMI/manifests>
   a rdfs:Property ;
@@ -136,6 +139,7 @@
      )
     ] ;
   rdfs:range <http://example.org/openWEMI/Manifestation> . 
+
     
 <http://example.org/openWEMI/instantiates>
   a rdfs:Property ;
@@ -153,6 +157,7 @@
     )
   ] .
 
+
 <http://example.org/openWEMI/instantiatedBy>
   a rdfs:Property ;
   rdfs:label "instantiated by"@en ;
@@ -169,6 +174,7 @@
      )
     ] ;
   rdfs:range <http://example.org/openWEMI/Item> . 
+
 
 
 
