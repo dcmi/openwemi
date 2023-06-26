@@ -24,3 +24,7 @@ AGREED: Endeavor is useful; keep it
 
 6-14
 * Decided: properties will have domains and ranges; documentation will explain the potential use of strings as objects.
+
+6-21
+* Yes, define properties as RDFs, not OWL:ObjectProperty
+* Yes to inverse relationships, and define them as OWL:inverse
