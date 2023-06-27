@@ -12,13 +12,23 @@ The minimal WEMI set has these classes and subclasses:
   * Item
 * ResponsibleEntity
 
-It has these properties which define the primary relationships between WEMI:
-* related endeavor
-  * expresses (range: Work)
-  * manifests (range: Work or Expression)
-  * instantiates (range: Work or Expression or Manifestation)
+Properties which define the primary relationships between WEMI entities are presented in two "directions": from most concrete (Item) to most abstract (Work), and the inverse from the abstract to the concrete. 
 
-It does not include the FRBR Group2 or Group3 entities (responsible bodies and subjects). It does include the superclass Endeavor, which is not part of the FRBR group of entities but was added by the authors of FRBR core. 
+  * expresses (domain: Expression, range: Work)
+  * expressedBy (domain: Work, range: Expression)
+  * manifests (domain: Manifestation, range: Work or Expression)
+  * manifestedBy (domain: Expression or Work, range: Manifestation)
+  * instantiates (domain: Item, range: Work or Expression or Manifestation)
+  * instantiatedBy (domain: Work or Expression or Manifestation, range:Item)
+
+It also provides properties that describe relationships between entities of the same type:
+  * relatedEndeavor (domain:Endeavor, range:Endeavor)
+  * relatedWork (domain:Work, range:Work)
+  * relatedExpression (domain:Expression, range:Expression)
+  * relatedManifestation (domain:Manifestation, range:Manifestation)
+  * relatedItem (domain:Item, range:Item)
+
+Classes and properties are intended as a foundation for more specific vocabularies that would be related to openWEMI through sub-classes and sub-properties.
 
 ## Files
 
