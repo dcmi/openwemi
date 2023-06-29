@@ -28,3 +28,11 @@ AGREED: Endeavor is useful; keep it
 6-21
 * Yes, define properties as RDFs, not OWL:ObjectProperty
 * Yes to inverse relationships, and define them as OWL:inverse
+
+6-28
+* replace owl:Class with rdfs:Class
+* No range on `responsibleEntity`
+* Keep owl:unionOf
+* Keep owl:Ontology
+* Add fuller descriptions to that vocabulary is self-documenting
+
