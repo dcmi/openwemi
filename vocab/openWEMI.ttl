@@ -10,7 +10,7 @@
 <http://example.org/openWEMI/Endeavor>
   a owl:Class ;
   rdfs:label "endeavour"@en ;
-  skos:definition "The conceptual or intellectual aspect of a creation."@en ;
+  skos:definition "A creation."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> .
   
 <http://example.org/openWEMI/Work>
