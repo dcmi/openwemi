@@ -3,39 +3,38 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-
 <http://example.org/openWEMI/> a owl:Ontology ;
   rdfs:label "openWEMI ontology" .
 
 <http://example.org/openWEMI/Endeavor>
-  a owl:Class ;
+  a rdfs:Class ;
   rdfs:label "endeavour"@en ;
   skos:definition "A creation."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> .
   
 <http://example.org/openWEMI/Work>
-  a owl:Class ;
+  a rdfs:Class ;
   rdfs:label "work"@en ;
   skos:definition "An abstract notion of an artistic or intellectual creation."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
   rdfs:subClassOf <http://example.org/openWEMI/Endeavor> .
 
 <http://example.org/openWEMI/Expression>
-  a owl:Class ;
+  a rdfs:Class ;
   rdfs:label "expression"@en ;
   skos:definition "A perceivable form of the creation."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
   rdfs:subClassOf <http://example.org/openWEMI/Endeavor> .
 
 <http://example.org/openWEMI/Manifestation>
-  a owl:Class ;
+  a rdfs:Class ;
   rdfs:label "manifestation"@en ;
   skos:definition "The physical embodiment of a creation."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
   rdfs:subClassOf <http://example.org/openWEMI/Endeavor> .
   
 <http://example.org/openWEMI/Item>
-  a owl:Class ;
+  a rdfs:Class ;
   rdfs:label "item"@en ;
   skos:definition "An exemplar of a creation."@en ;
   rdfs:isDefinedBy <http://example.org/openWEMI/> ;
@@ -97,7 +96,6 @@
   rdfs:domain <http://example.org/openWEMI/Expression> ;
   rdfs:range <http://example.org/openWEMI/Work> .
 
-
  <http://example.org/openWEMI/expressedBy>
   a rdfs:Property ;
   rdfs:label "expressed by"@en ;
@@ -107,7 +105,6 @@
   rdfs:subPropertyOf <http://example.org/openWEMI/relatedEndeavor> ;
   rdfs:domain <http://example.org/openWEMI/Work> ;
   rdfs:range <http://example.org/openWEMI/Expression> . 
-
 
 <http://example.org/openWEMI/manifests>
   a rdfs:Property ;
@@ -140,7 +137,6 @@
     ] ;
   rdfs:range <http://example.org/openWEMI/Manifestation> . 
 
-    
 <http://example.org/openWEMI/instantiates>
   a rdfs:Property ;
   rdfs:label "instantiates"@en ;
@@ -157,7 +153,6 @@
     )
   ] .
 
-
 <http://example.org/openWEMI/instantiatedBy>
   a rdfs:Property ;
   rdfs:label "instantiated by"@en ;
@@ -173,9 +168,4 @@
        <http://example.org/openWEMI/Manifestation>
      )
     ] ;
-  rdfs:range <http://example.org/openWEMI/Item> . 
-
-
-
-
-
+  rdfs:range <http://example.org/openWEMI/Item> .
