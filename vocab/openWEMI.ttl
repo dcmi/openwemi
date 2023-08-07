@@ -9,34 +9,34 @@ openwemi: a owl:Ontology ;
 
 openwemi:Endeavor
   a rdfs:Class ;
-  rdfs:label "endeavour"@en ;
+  rdfs:label "Endeavor"@en ;
   skos:definition "A creation."@en ;
   rdfs:isDefinedBy openwemi: .
   
 openwemi:Work
   a rdfs:Class ;
-  rdfs:label "work"@en ;
+  rdfs:label "Work"@en ;
   skos:definition "An abstract notion of an artistic or intellectual creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:Expression
   a rdfs:Class ;
-  rdfs:label "expression"@en ;
+  rdfs:label "Expression"@en ;
   skos:definition "A perceivable form of the creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:Manifestation
   a rdfs:Class ;
-  rdfs:label "manifestation"@en ;
+  rdfs:label "Manifestation"@en ;
   skos:definition "The physical embodiment of a creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
   
 openwemi:Item
   a rdfs:Class ;
-  rdfs:label "item"@en ;
+  rdfs:label "Item"@en ;
   skos:definition "An exemplar of a creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
@@ -51,39 +51,39 @@ openwemi:responsibleEntity
 openwemi:relatedEndeavor
   a rdf:Property ;
   rdfs:label "related endeavor"@en ;
-  skos:definition "Another endeavor that is related in some way to an endeavor."@en ;
+  skos:definition "Another Endeavor that is related in some way to an Endeavor."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:domain openwemi:Endeavor ;
   rdfs:range openwemi:Endeavor .
 
 openwemi:relatedWork
   a rdf:Property ;
-  rdfs:label "related work"@en ;
-  skos:definition "Another work that is related in some way to a work."@en ;
+  rdfs:label "related Work"@en ;
+  skos:definition "Another Work that is related in some way to a Work."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:domain openwemi:Work ;
   rdfs:range openwemi:Work .
 
 openwemi:relatedExpression
   a rdf:Property ;
-  rdfs:label "related expression"@en ;
-  skos:definition "Another expression that is related in some way to an expression."@en ;
+  rdfs:label "related Expression"@en ;
+  skos:definition "Another Expression that is related in some way to an Expression."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:domain openwemi:Expression ;
   rdfs:range openwemi:Expression .
 
 openwemi:relatedManifestation
   a rdf:Property ;
-  rdfs:label "related manifestation"@en ;
-  skos:definition "Another manifestation that is related in some way to a manifestation."@en ;
+  rdfs:label "related Manifestation"@en ;
+  skos:definition "Another Manifestation that is related in some way to a Manifestation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:domain openwemi:Manifestation ;
   rdfs:range openwemi:Manifestation .
 
 openwemi:relatedItem
   a rdf:Property ;
-  rdfs:label "related item"@en ;
-  skos:definition "Another item that is related in some way to an item."@en ;
+  rdfs:label "related Item"@en ;
+  skos:definition "Another Item that is related in some way to an Item."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:domain openwemi:Item ;
   rdfs:range openwemi:Item .
@@ -91,7 +91,7 @@ openwemi:relatedItem
 openwemi:expresses
   a rdf:Property ;
   rdfs:label "expresses"@en ;
-  skos:definition "An endeavor that expresses a work."@en ;
+  skos:definition "An Endeavor that expresses a Work."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf openwemi:relatedEndeavor ;
   rdfs:domain openwemi:Expression ;
@@ -100,7 +100,7 @@ openwemi:expresses
  openwemi:expressedBy
   a rdf:Property ;
   rdfs:label "expressed by"@en ;
-  skos:definition "An expression of a work."@en ;
+  skos:definition "An Expression of a Work."@en ;
   owl:inverseOf openwemi:expresses ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf openwemi:relatedEndeavor ;
@@ -110,7 +110,7 @@ openwemi:expresses
 openwemi:manifests
   a rdf:Property ;
   rdfs:label "manifests"@en ;
-  skos:definition "An endeavor that manifests an expression or a work."@en ;
+  skos:definition "An Endeavor that manifests an Expression or a Work."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf openwemi:relatedEndeavor ;
   rdfs:domain openwemi:Manifestation ;
@@ -125,7 +125,7 @@ openwemi:manifests
 openwemi:manifestedBy
   a rdf:Property ;
   rdfs:label "manifested by"@en ;
-  skos:definition "A manifestation of a work or an expression."@en ;
+  skos:definition "A Manifestation of a Work or an Expression."@en ;
   owl:inverseOf openwemi:manifests ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf openwemi:relatedEndeavor ;
@@ -141,7 +141,7 @@ openwemi:manifestedBy
 openwemi:instantiates
   a rdf:Property ;
   rdfs:label "instantiates"@en ;
-  skos:definition "An endeavor that instantiates a manifestation, an expression or a work."@en ;
+  skos:definition "An Endeavor that instantiates a Manifestation, an Expression or a Work."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf openwemi:relatedEndeavor ;
   rdfs:domain openwemi:Item ;
@@ -157,7 +157,7 @@ openwemi:instantiates
 openwemi:instantiatedBy
   a rdf:Property ;
   rdfs:label "instantiated by"@en ;
-  skos:definition "An instatiation of a manifestation, an expression or a work."@en ;
+  skos:definition "An instantiation of a Manifestation, an Expression or a Work."@en ;
   owl:inverseOf openwemi:instantiates ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf openwemi:relatedEndeavor ;
