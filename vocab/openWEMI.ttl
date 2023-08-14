@@ -8,34 +8,34 @@ openwemi: a owl:Ontology ;
   rdfs:label "openWEMI ontology" .
 
 openwemi:Endeavor
-  a rdfs:Class ;
+  a rdfs:Class, owl:Class ;
   rdfs:label "Endeavor"@en ;
   skos:definition "A creation."@en ;
   rdfs:isDefinedBy openwemi: .
   
 openwemi:Work
-  a rdfs:Class ;
+  a rdfs:Class, owl:Class ;
   rdfs:label "Work"@en ;
   skos:definition "An abstract notion of an artistic or intellectual creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:Expression
-  a rdfs:Class ;
+  a rdfs:Class, owl:Class ;
   rdfs:label "Expression"@en ;
   skos:definition "A perceivable form of the creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:Manifestation
-  a rdfs:Class ;
+  a rdfs:Class, owl:Class ;
   rdfs:label "Manifestation"@en ;
   skos:definition "The physical embodiment of a creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
   
 openwemi:Item
-  a rdfs:Class ;
+  a rdfs:Class, owl:Class ;
   rdfs:label "Item"@en ;
   skos:definition "An exemplar of a creation."@en ;
   rdfs:isDefinedBy openwemi: ;
