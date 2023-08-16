@@ -49,15 +49,6 @@ openwemi:responsibleEntity
   rdfs:isDefinedBy openwemi: ;
   rdfs:domain openwemi:Endeavor .
       
-openwemi:relatedEndeavor
-  a rdf:Property ;
-  rdfs:label "related endeavor"@en ;
-  skos:definition "Another Endeavor that is related in some way to an Endeavor."@en ;
-  rdfs:isDefinedBy openwemi: ;
-  rdfs:subPropertyOf dct:relation ;
-  rdfs:domain openwemi:Endeavor ;
-  rdfs:range openwemi:Endeavor .
-
 openwemi:relatedWork
   a rdf:Property ;
   rdfs:label "related Work"@en ;
