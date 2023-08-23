@@ -36,3 +36,6 @@ AGREED: Endeavor is useful; keep it
 * Keep owl:Ontology
 * Add fuller descriptions to that vocabulary is self-documenting
 
+8-13
+* make properties sub-property to dct:relation
+* add commonX - as owl:equivalentProperty to vocab.org
