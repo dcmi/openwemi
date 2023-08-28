@@ -6,53 +6,53 @@
 @prefix openwemi: <https://dcmi.github.io/openwemi/ns#> .
 
 openwemi: a owl:Ontology ;
-  rdfs:label "openWEMI ontology" .
+  rdfs:label "openWEMI Vocabulary" .
 
 openwemi:Endeavor
   a rdfs:Class, owl:Class ;
   rdfs:label "Endeavor"@en ;
-  skos:definition "A creation."@en ;
+  rdfs:comment "A creation."@en ;
   rdfs:isDefinedBy openwemi: .
   
 openwemi:Work
   a rdfs:Class, owl:Class ;
   rdfs:label "Work"@en ;
-  skos:definition "An abstract notion of an artistic or intellectual creation."@en ;
+  rdfs:comment "An abstract notion of an artistic or intellectual creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:Expression
   a rdfs:Class, owl:Class ;
   rdfs:label "Expression"@en ;
-  skos:definition "A perceivable form of the creation."@en ;
+  rdfs:comment "A perceivable form of the creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:Manifestation
   a rdfs:Class, owl:Class ;
   rdfs:label "Manifestation"@en ;
-  skos:definition "The physical embodiment of a creation."@en ;
+  rdfs:comment "The physical embodiment of a creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
   
 openwemi:Item
   a rdfs:Class, owl:Class ;
   rdfs:label "Item"@en ;
-  skos:definition "An exemplar of a creation."@en ;
+  rdfs:comment "An exemplar of a creation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:responsibleEntity
   a rdf:Property ;
   rdfs:label "responsible entity"@en ;
-  skos:definition "One responsible for the creation, production, distribution, maintenance, or ownership of a created entity."@en ;
+  rdfs:comment "One responsible for the creation, production, distribution, maintenance, or ownership of a created entity."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:domain openwemi:Endeavor .
       
 openwemi:relatedWork
   a rdf:Property ;
   rdfs:label "related Work"@en ;
-  skos:definition "Another Work that is related in some way to a Work."@en ;
+  rdfs:comment "Another Work that is related in some way to a Work."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Work ;
@@ -61,7 +61,7 @@ openwemi:relatedWork
 openwemi:relatedExpression
   a rdf:Property ;
   rdfs:label "related Expression"@en ;
-  skos:definition "Another Expression that is related in some way to an Expression."@en ;
+  rdfs:comment "Another Expression that is related in some way to an Expression."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Expression ;
@@ -70,7 +70,7 @@ openwemi:relatedExpression
 openwemi:relatedManifestation
   a rdf:Property ;
   rdfs:label "related Manifestation"@en ;
-  skos:definition "Another Manifestation that is related in some way to a Manifestation."@en ;
+  rdfs:comment "Another Manifestation that is related in some way to a Manifestation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Manifestation ;
@@ -79,7 +79,7 @@ openwemi:relatedManifestation
 openwemi:relatedItem
   a rdf:Property ;
   rdfs:label "related Item"@en ;
-  skos:definition "Another Item that is related in some way to an Item."@en ;
+  rdfs:comment "Another Item that is related in some way to an Item."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Item ;
@@ -88,7 +88,7 @@ openwemi:relatedItem
 openwemi:expresses
   a rdf:Property ;
   rdfs:label "expresses"@en ;
-  skos:definition "An Endeavor that expresses a Work."@en ;
+  rdfs:comment "An Endeavor that expresses a Work."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Expression ;
@@ -97,7 +97,7 @@ openwemi:expresses
  openwemi:expressedBy
   a rdf:Property ;
   rdfs:label "expressed by"@en ;
-  skos:definition "An Expression of a Work."@en ;
+  rdfs:comment "An Expression of a Work."@en ;
   owl:inverseOf openwemi:expresses ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
@@ -107,7 +107,7 @@ openwemi:expresses
 openwemi:manifests
   a rdf:Property ;
   rdfs:label "manifests"@en ;
-  skos:definition "An Endeavor that manifests an Expression or a Work."@en ;
+  rdfs:comment "An Endeavor that manifests an Expression or a Work."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Manifestation ;
@@ -122,7 +122,7 @@ openwemi:manifests
 openwemi:manifestedBy
   a rdf:Property ;
   rdfs:label "manifested by"@en ;
-  skos:definition "A Manifestation of a Work or an Expression."@en ;
+  rdfs:comment "A Manifestation of a Work or an Expression."@en ;
   owl:inverseOf openwemi:manifests ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
@@ -138,7 +138,7 @@ openwemi:manifestedBy
 openwemi:instantiates
   a rdf:Property ;
   rdfs:label "instantiates"@en ;
-  skos:definition "An Endeavor that instantiates a Manifestation, an Expression or a Work."@en ;
+  rdfs:comment "An Endeavor that instantiates a Manifestation, an Expression or a Work."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Item ;
@@ -154,7 +154,7 @@ openwemi:instantiates
 openwemi:instantiatedBy
   a rdf:Property ;
   rdfs:label "instantiated by"@en ;
-  skos:definition "An instantiation of a Manifestation, an Expression or a Work."@en ;
+  rdfs:comment "An instantiation of a Manifestation, an Expression or a Work."@en ;
   owl:inverseOf openwemi:instantiates ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
@@ -172,38 +172,38 @@ openwemi:commonEndeavor
     a rdf:Property ;
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Endeavor"@en ;
-    skos:definition "Relates any two resources that are or contain the same endeavor." ;
-    rdfs:comment "commonEndeavour is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
+    rdfs:comment "Relates any two resources that are or contain the same endeavor." ;
+    dct:description "commonEndeavour is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
     owl:equivalentProperty <http://open.vocab.org/terms/commonEndeavour> .
     
 openwemi:commonWork
     a rdf:Property ;
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Work"@en ;
-    skos:definition "Relates any two resources that are or contain the same Work." ;
-    rdfs:comment "commonWork is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
+    rdfs:comment "Relates any two resources that are or contain the same Work." ;
+    dct:description "commonWork is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
         owl:equivalentProperty <http://open.vocab.org/terms/commonWork> .
         
 openwemi:commonExpression
     a rdf:Property ;
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Expression"@en ;
-    skos:definition "Relates any two resources that are or contain the same Expression." ;
-    rdfs:comment "commonExpression is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
+    rdfs:comment "Relates any two resources that are or contain the same Expression." ;
+    dct:description "commonExpression is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
     owl:equivalentProperty <http://open.vocab.org/terms/commonExpression> .
 
 openwemi:commonManifestation
     a rdf:Property ;
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Manifestation"@en ;
-    skos:definition "Relates any two resources that are or contain the same Manifestation." ;
-    rdfs:comment "commonWork is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
+    rdfs:comment "Relates any two resources that are or contain the same Manifestation." ;
+    dct:description "commonWork is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
     owl:equivalentProperty <http://open.vocab.org/terms/commonManifestation> .
 
 openwemi:commonItem
     a rdf:Property ;
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Item"@en ;
-    skos:definition "Relates any two resources that are or contain the same Item." ;
-    rdfs:comment "commonWork is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
+    rdfs:comment "Relates any two resources that are or contain the same Item." ;
+    dct:description "commonWork is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
     owl:equivalentProperty <http://open.vocab.org/terms/commonItem> .
