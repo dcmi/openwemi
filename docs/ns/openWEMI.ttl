@@ -19,6 +19,7 @@ openwemi:Work
   rdfs:label "Work"@en ;
   rdfs:comment "An abstract notion of an artistic or intellectual creation."@en ;
   rdfs:isDefinedBy openwemi: ;
+  dct:description "A work is an abstraction that represents the concepts behind a creation. Each metadata community will have a different definition of Work, but it should be the broadest definition of the creations being described."@en ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:Expression
@@ -26,6 +27,7 @@ openwemi:Expression
   rdfs:label "Expression"@en ;
   rdfs:comment "A perceivable form of the creation."@en ;
   rdfs:isDefinedBy openwemi: ;
+  dct:description "Creations are made tangible through some kind of expression, such as text, sound, or a visual form. There may be more than one expression of a work of the same type or of different types."@en ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:Manifestation
@@ -33,6 +35,7 @@ openwemi:Manifestation
   rdfs:label "Manifestation"@en ;
   rdfs:comment "The physical embodiment of a creation."@en ;
   rdfs:isDefinedBy openwemi: ;
+  dct:description "A manifestation is a creation that has been realized in some physical or digital form. A manifestation may be a single realization or a realization that is produced in multiple copies such as the publication of a music compact disk or the manufacture of a shirt."@en ;
   rdfs:subClassOf openwemi:Endeavor .
   
 openwemi:Item
@@ -40,6 +43,7 @@ openwemi:Item
   rdfs:label "Item"@en ;
   rdfs:comment "An exemplar of a creation."@en ;
   rdfs:isDefinedBy openwemi: ;
+  dct:description "An Item is a single instance of the creation, something that can have a place on a shelf or a location online."@en ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:responsibleEntity
@@ -47,42 +51,47 @@ openwemi:responsibleEntity
   rdfs:label "responsible entity"@en ;
   rdfs:comment "One responsible for the creation, production, distribution, maintenance, or ownership of a created entity."@en ;
   rdfs:isDefinedBy openwemi: ;
+  dct:description "It is assumed that creations have been affected by an agent with the ability to act. The types of agents is very broad and not constrained by this property."@en ;
   rdfs:domain openwemi:Endeavor .
       
 openwemi:relatedWork
   a rdf:Property ;
   rdfs:label "related Work"@en ;
-  rdfs:comment "Another Work that is related in some way to a Work."@en ;
+  rdfs:comment "A Work that is related in some way to another Work."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Work ;
+  dct:description "This provides a non-specific relationship between two Works. The specific relationship type can be defined as a sub-property of relatedWork."@en ;
   rdfs:range openwemi:Work .
 
 openwemi:relatedExpression
   a rdf:Property ;
   rdfs:label "related Expression"@en ;
-  rdfs:comment "Another Expression that is related in some way to an Expression."@en ;
+  rdfs:comment "An Expression that is related in some way to another Expression."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Expression ;
+  dct:description "This provides a non-specific relationship between two Expressions. The specific relationship type can be defined as a sub-property of relatedExpression."@en ;
   rdfs:range openwemi:Expression .
 
 openwemi:relatedManifestation
   a rdf:Property ;
   rdfs:label "related Manifestation"@en ;
-  rdfs:comment "Another Manifestation that is related in some way to a Manifestation."@en ;
+  rdfs:comment "A Manifestation that is related in some way to another Manifestation."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Manifestation ;
+  dct:description "This provides a non-specific relationship between two Manifestations. The specific relationship type can be defined as a sub-property of relatedManifestation."@en ;
   rdfs:range openwemi:Manifestation .
 
 openwemi:relatedItem
   a rdf:Property ;
   rdfs:label "related Item"@en ;
-  rdfs:comment "Another Item that is related in some way to an Item."@en ;
+  rdfs:comment "An Item that is related in some way to another Item."@en ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Item ;
+  dct:description "This provides a non-specific relationship between two Items. The specific relationship type can be defined as a sub-property of relatedItem."@en ;
   rdfs:range openwemi:Item .
 
 openwemi:expresses
@@ -92,6 +101,7 @@ openwemi:expresses
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Expression ;
+  dct:description "A relationship asserted from an Expression to a Work that it expresses."@en ;
   rdfs:range openwemi:Work .
 
  openwemi:expressedBy
@@ -102,6 +112,7 @@ openwemi:expresses
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Work ;
+  dct:description "A relationship asserted from a Work to an Expression that expresses the Work."@en ;
   rdfs:range openwemi:Expression . 
 
 openwemi:manifests
@@ -111,6 +122,7 @@ openwemi:manifests
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Manifestation ;
+  dct:description "A relationship asserted from a Manifestation to an Expression or a Work."@en ;
   rdfs:range [
     a owl:Class ;
     owl:unionOf (
@@ -126,6 +138,7 @@ openwemi:manifestedBy
   owl:inverseOf openwemi:manifests ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
+  dct:description "A relationship asserted from a Work or an Expression to a Manifestation."@en ;
   rdfs:domain [
       a owl:Class ;
       owl:unionOf (
@@ -142,6 +155,7 @@ openwemi:instantiates
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
   rdfs:domain openwemi:Item ;
+  dct:description "A relationship asserted from an Item to a Manifestation, an Expression, or a Work."@en ;
   rdfs:range [
     a owl:Class ;
     owl:unionOf (
@@ -158,6 +172,7 @@ openwemi:instantiatedBy
   owl:inverseOf openwemi:instantiates ;
   rdfs:isDefinedBy openwemi: ;
   rdfs:subPropertyOf dct:relation ;
+  dct:description "A relationship asserted from a Work, an Expression, or a Manifestation to an Item."@en ;
   rdfs:domain [
       a owl:Class ;
       owl:unionOf (
