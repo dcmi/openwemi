@@ -33,19 +33,8 @@ The minimal WEMI set has these classes and subclasses:
   * Item
 * ResponsibleEntity
 
-```mermaid
-    flowchart BT
-    subgraph Endeavor
-    E((Endeavor))
-    end
-    R((ResponsibleEntity))-->E
-    subgraph WEMI
-    I((Item))-->|subclass|E
-    M((Manifestation))-->|subclass|E
-    X((Expression))-->|subclass|E
-    W((Work))--> |subclass|E 
-    end
-```
+![Screenshot 2023-09-07 at 8 55 42 AM](https://github.com/dcmi/openwemi/assets/1564129/fa993378-921f-42b4-8585-c149fae574a1)
+
 
 These are defined in the vocabulary as:
 * Endeavor: "A creation"
