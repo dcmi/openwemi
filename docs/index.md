@@ -21,8 +21,7 @@ The original analysis by the FRBR Working Group produced of a 4-layer model of m
 
 *Work* is the most abstract layer that represented the conceptual aspect of a creation. Expression is a perceptible version using some form of communication like text, sound, or a visual display. *Manifestation* is the realization, which can be a manufactured product in multiple copies or a single object. *Item* is an individual instance of the creation, often having a location in the world, including electronic locations
 
-This proposal includes one other class which is a super-class over each of the WEMI classes and serves to provide them. 
-5. Endeavor is a creation that may be described by any of the WEMI classes, as appropriate to the nature of the creation and the use cases addressed by the metadata
+This proposal includes one other class which is a super-class over each of the WEMI classes and serves to provide them. *Endeavor* is a creation that may be described by any of the WEMI classes, as appropriate to the nature of the creation and the use cases addressed by the metadata
 
 ## The proposal
 ### Classes
