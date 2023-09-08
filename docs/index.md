@@ -36,7 +36,6 @@ The minimal WEMI set has these classes and subclasses:
 
 ![Screenshot 2023-09-07 at 8 55 42 AM](https://github.com/dcmi/openwemi/assets/1564129/fa993378-921f-42b4-8585-c149fae574a1)
 
-
 These are defined in the vocabulary as:
 * Endeavor: "A creation"
 * Work: "An abstract notion of an artistic or intellectual creation."
@@ -55,6 +54,7 @@ These properties define the primary relationships between WEMI:
   * instantiatedBy (range: Item)
 Which is expressed in this diagram:
 
+![relationships](https://github.com/dcmi/openwemi/assets/1564129/a32c7c61-a8a9-424f-8f66-e9552a81dddd)
 
 The primary relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the work to the item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from work to expression to manifestation to item, openWEMI allows all relationships that maintain the overall semantics of the classes.
 
