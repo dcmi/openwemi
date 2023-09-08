@@ -3,9 +3,10 @@
 
 openWEMI is an RDF vocabulary based on the concepts of Work, Expression, Manifestation, and Item that were first introduced in the Functional Requirements for Bibliographic Records (FRBR) document that was produced by a working group of the International Federation of Library Associations (IFLA). 
 
-* IRI (temporary): [https://dcmi.github.io/openwemi/ns#](https://dcmi.github.io/openwemi/ns#)
-* HTML: [https://dcmi.github.io/openwemi/ns/openWEMI.html](https://dcmi.github.io/openwemi/ns/openWEMI.html)
-* Turtle: [https://dcmi.github.io/openwemi/ns/openWEMI.ttl](https://dcmi.github.io/openwemi/ns/openWEMI.ttl)
+For the purposes of this draft, the vocabulary is using the namespace https://dcmi.github.io/openwemi/ns#. It is anticipated that a true namespace will be assigned after review by the DCMI Usage Board.
+
+* Human-friendly documentation: [https://dcmi.github.io/openwemi/ns/openWEMI.html](https://dcmi.github.io/openwemi/ns/openWEMI.html)
+* Vocabulary in turtle: [https://dcmi.github.io/openwemi/ns/openWEMI.ttl](https://dcmi.github.io/openwemi/ns/openWEMI.ttl)
 
 The concepts introduced in FRBR document have been employed in metadata for resources quite different from those in the library bibliographic catalog, and often ignoring some of the restrictions built in to the original definition. (More in this [article](https://journal.code4lib.org/articles/16491) and see the [bibliography](bibliography.md)). This is evidence that a definition of similar classes that are more general than those developed for library usage would benefit metadata developers broadly. 
 
