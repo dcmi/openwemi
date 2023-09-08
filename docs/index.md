@@ -47,8 +47,11 @@ These are defined in the vocabulary as:
 ### Relationship properties
 These properties define the primary relationships between WEMI:
   * expresses (range: Work)
+  * expressedBy (range: Expression)
   * manifests (range: Work or Expression)
+  * manifestedBy (range Manifestation)
   * instantiates (range: Work or Expression or Manifestation)
+  * instantiatedBy (range: Item)
 Which is expressed in this diagram:
 ```mermaid
 flowchart LR
@@ -72,10 +75,22 @@ Manifestation-->|realizes|Expression
 Expression-->|expresses|Work
 ```
 
-The relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the work to the item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from work to expression to manifestation to item, openWEMI allows all relationships that maintain the overall semantics of the classes.
+The primary relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the work to the item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from work to expression to manifestation to item, openWEMI allows all relationships that maintain the overall semantics of the classes.
 
-The model assumes that properties expressing relationships between entities of the same type: Work/Work, Expression/Expression, Manifestation/Manifestation, and Item/Item will exist6. For example, a text and the translation of the text could have an Expression/Expression relationship. A reprint of printed document could be a Manifestation of a Manifestation. 
+The model also provides properties expressing relationships between entities of the same type
+* relatedWork (range: Work)
+* relatedExpression (range: Expression)
+* relatedManifestation (range: Manifestation)
+* relatedItem (range: Item)
+For example, a text and the translation of the text could have an Expression/Expression relationship. A generated copy of a printed document could be a Manifestation of a Manifestation. 
 <p><img src="https://user-images.githubusercontent.com/1564129/235207690-16689d69-a227-4a9a-8144-0400c5f7b687.png" width="600" height="400" /></p>
+
+In addition to these relationships there are properties that can be used to indicate that two resources represent or contain the same openWEMI entity:
+* commonEndeavor
+* commonWork
+* commonExpression
+* commonManifestation
+* commonItem
 
 ## Using openWEMI in RDF
 ### Vocabulary method
