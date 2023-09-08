@@ -54,27 +54,7 @@ These properties define the primary relationships between WEMI:
   * instantiates (range: Work or Expression or Manifestation)
   * instantiatedBy (range: Item)
 Which is expressed in this diagram:
-```mermaid
-flowchart LR
-subgraph Work
-W((Work))
-end 
-subgraph Expression
-E((Expression))
-end
-subgraph Manifestation
-M((Manifestation))
-end
-subgraph Item
-I((Item))
-end
-Item-->|instantiates|Manifestation
-Item-->|instantiates|Expression
-Item-->|instantiates|Work
-Manifestation-->|realizes|Work
-Manifestation-->|realizes|Expression
-Expression-->|expresses|Work
-```
+
 
 The primary relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the work to the item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from work to expression to manifestation to item, openWEMI allows all relationships that maintain the overall semantics of the classes.
 
