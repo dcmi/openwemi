@@ -53,8 +53,8 @@ These properties define the primary relationships between WEMI:
   * instantiates (range: Work or Expression or Manifestation)
   * instantiatedBy (range: Item)
 Which is expressed in this diagram:
+![relationships](https://github.com/dcmi/openwemi/assets/1564129/74b70a1f-ccd1-4294-827c-1c6703fc495e)
 
-![relationships](https://github.com/dcmi/openwemi/assets/1564129/a32c7c61-a8a9-424f-8f66-e9552a81dddd)
 
 The primary relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the work to the item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from work to expression to manifestation to item, openWEMI allows all relationships that maintain the overall semantics of the classes.
 
