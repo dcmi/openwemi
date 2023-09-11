@@ -1,4 +1,4 @@
-# openWEMI
+# openWEMI Primer
 ### A minimally constrained vocabulary for Work, Expression, Manifestation, and Item
 
 openWEMI is an RDF vocabulary based on the concepts of Work, Expression, Manifestation, and Item that were first introduced in the Functional Requirements for Bibliographic Records (FRBR) document that was produced by a working group of the International Federation of Library Associations (IFLA). 
