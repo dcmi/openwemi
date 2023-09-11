@@ -55,7 +55,6 @@ These properties define the primary relationships between WEMI:
 Which is expressed in this diagram:
 ![relationships](https://github.com/dcmi/openwemi/assets/1564129/74b70a1f-ccd1-4294-827c-1c6703fc495e)
 
-
 The primary relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the work to the item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from work to expression to manifestation to item, openWEMI allows all relationships that maintain the overall semantics of the classes.
 
 The model also provides properties expressing relationships between entities of the same type
@@ -63,8 +62,12 @@ The model also provides properties expressing relationships between entities of 
 * relatedExpression (range: Expression)
 * relatedManifestation (range: Manifestation)
 * relatedItem (range: Item)
-For example, a text and the translation of the text could have an Expression/Expression relationship. A generated copy of a printed document could be a Manifestation of a Manifestation. 
-<p><img src="https://user-images.githubusercontent.com/1564129/235207690-16689d69-a227-4a9a-8144-0400c5f7b687.png" width="600" height="400" /></p>
+
+What counts as "related" depends entirely on the area of the metadata description and the needs of the constituents. For example, famous works of art are often copied in different and even quite varied forms, like this:
+
+Depending on ones' need, these could be considered related works. Some artworks are created in multiple copies that are considered distinct. These might be viewed as related manifestations, or even as related copies.
+
+In the fashion industry, designs are re-purposed by different brands, creating what could be seen as related works.
 
 In addition to these relationships there are properties that can be used to indicate that two resources represent or contain the same openWEMI entity:
 * commonEndeavor
