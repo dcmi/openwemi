@@ -64,10 +64,14 @@ The model also provides properties expressing relationships between entities of 
 * relatedItem (range: Item)
 
 What counts as "related" depends entirely on the area of the metadata description and the needs of the constituents. For example, famous works of art are often copied in different and even quite varied forms, like this:
+![‎thewave](https://github.com/dcmi/openwemi/assets/1564129/53322a03-4611-46eb-ad01-a48c32f4c00d)
+
 
 Depending on ones' need, these could be considered related works. Some artworks are created in multiple copies that are considered distinct. These might be viewed as related manifestations, or even as related copies.
+![Screenshot 2023-09-10 at 9 21 33 AM](https://github.com/dcmi/openwemi/assets/1564129/2aaff76f-da7b-42aa-a231-8de0fea7697e)
 
 In the fashion industry, designs are re-purposed by different brands, creating what could be seen as related works.
+![glasses](https://github.com/dcmi/openwemi/assets/1564129/2e8ec556-e43e-422f-aace-435a7052ab73)
 
 In addition to these relationships there are properties that can be used to indicate that two resources represent or contain the same openWEMI entity:
 * commonEndeavor
@@ -75,6 +79,7 @@ In addition to these relationships there are properties that can be used to indi
 * commonExpression
 * commonManifestation
 * commonItem
+There are no ranges or domains for these properties so that they could be used without making a class inference about either resource. They can be used to describe relationships between resources or resource representations that do not otherwise make use of the WEMI concepts.
 
 ## Using openWEMI in RDF
 ### Vocabulary method
