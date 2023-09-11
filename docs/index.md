@@ -55,7 +55,7 @@ These properties define the primary relationships between WEMI:
 Which is expressed in this diagram:
 ![relationships](https://github.com/dcmi/openwemi/assets/1564129/74b70a1f-ccd1-4294-827c-1c6703fc495e)
 
-The primary relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the work to the item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from work to expression to manifestation to item, openWEMI allows all relationships that maintain the overall semantics of the classes.
+The primary relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the Work to the Item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from Work to Expression to Manifestation to Item, openWEMI allows all relationships that maintain the overall semantics of the classes.
 
 The model also provides properties expressing relationships between entities of the same type
 * relatedWork (range: Work)
