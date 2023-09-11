@@ -108,20 +108,8 @@ Properties can also be sub-defined to the openWEMI properties, and may be rename
 | openWEMI:expresses | rm:mixes |
 
 This could look like:
-```mermaid
-flowchart TD
-    A[Let it Be] --> |session|B(MasterA)
-  A --> |sesson|P(Practice sesson)
-    A --> |session|M(MasterB)
-    B --> |mix|C(Mix1)
-    B --> |mix|F(Mix2)
-    F --> |mix|G(Mix3)
-    C -->  |mix|G(Mix3)
-    M --> |product|R("Let it Be" soundtrack)
-    C -->|product| D[Album]
-    C -->|product| E[Single]
-    G --> |product|H(naked version)
-```
+
+![Screenshot 2023-09-11 at 7 23 32 AM](https://github.com/dcmi/openwemi/assets/1564129/b99c569c-0874-48f8-9861-817dff554de2)
 
 Alternately, because there is no prohibition against adding new classes or properties to the basic model, one could create other classes and properties that do not have an equivalent in openWEMI.
 
