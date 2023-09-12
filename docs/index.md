@@ -85,7 +85,7 @@ There are no ranges or domains for these properties so that they could be used w
 ### Vocabulary method
 It is not expected that most uses of openWEMI will use the classes and properties directly although that is not in any way prohibited. The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-elements in the metadata vocabulary that are specific to the resources being described. Metadata describing recorded music might define subclasses such as:
 
-| openWEMI | recorded music  |
+| openWEMI class| recorded music subclass |
 |-|-|
 | openWEMI:Work | rm:Work  |
 | openWEMI:Expression | rm:Session  |
@@ -93,7 +93,7 @@ It is not expected that most uses of openWEMI will use the classes and propertie
 
 It is not required that sub-elements be one-to-one with openWEMI. openWEMI is a starting point on which one can define additional concepts for the metadata in question. As an example, recorded music may have specific expressions that are derived from other expressions, and therefore could define
 
-| openWEMI | recorded music  |
+| openWEMI class| recorded music subclass |
 |-|-|
 | openWEMI:Work | rm:Work  |
 | openWEMI:Expression | rm:Session  |
@@ -102,7 +102,7 @@ It is not required that sub-elements be one-to-one with openWEMI. openWEMI is a 
 
 Properties can also be sub-defined to the openWEMI properties, and may be renamed to be specific to the resources being described. 
 
-| openWEMI | recorded music  |
+| openWEMI property| recorded music subproperty |
 |-|-|
 | openWEMI:expresses | rm:records  |
 | openWEMI:expresses | rm:mixes |
@@ -126,5 +126,5 @@ Alternately, because there is no prohibition against adding new classes or prope
 Whether one subdefines all elements to an openWEMI element or adds elements beyond those of the openWEMI model depends on the use cases one is addressing. If it is desirable to search on the broad openWEMI elements then defining elements with subordinate relationships to openWEMI in the vocabulary is useful.
 
 For those with existing vocabularies who for their own reasons do not want to make direct connections between the vocabulary and openWEMI, openWEMI elements can be used directly in metadata.
---example here--
+
 
