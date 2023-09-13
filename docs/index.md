@@ -79,6 +79,7 @@ In addition to these relationships there are properties that can be used to indi
 * commonExpression
 * commonManifestation
 * commonItem
+  
 There are no ranges or domains for these properties so that they could be used without making a class inference about either resource. They can be used to describe relationships between resources or resource representations that do not otherwise make use of the WEMI concepts.
 
 ## Using openWEMI in RDF
@@ -113,13 +114,15 @@ This could look like:
 
 Alternately, because there is no prohibition against adding new classes or properties to the basic model, one could create other classes and properties that do not have an equivalent in openWEMI.
 
-| openWEMI | recorded music  |
+| openWEMI class| recorded music  class|
 |-|-|
 | openWEMI:Work | rm:Work  |
 | openWEMI:Expression | rm:Session  |
 |  | rm: Mix |
 | openWEMI:Manifestation | rm:Product  |
-| openWEMI | recorded music  |
+
+| openWEMI property| recorded music  property|
+|--|--|
 | openWEMI:expresses | rm:records  |
 |  | rm:mixes |
 
