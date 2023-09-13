@@ -1,5 +1,13 @@
 # openWEMI Primer
-### A minimally constrained vocabulary for Work, Expression, Manifestation, and Item
+**A minimally constrained vocabulary for Work, Expression, Manifestation, and Item**
+
+## About this specification
+This document and the related resources are the work of the Dublin Core Metadata Initiative's openWEMI Community Group. The group uses github for its work, and welcomes comments on the work. All resources are open for viewing and github issues can be created by anyone with a github account. The email list is self-subscribe. 
+
+* The [openWEMI mailing list](https://lists.dublincore.org/mailman/listinfo/openwemi)
+* [openWEMI on github](https://github.com/dcmi/openwemi)
+
+## Introduction
 
 openWEMI is an RDF vocabulary based on the concepts of Work, Expression, Manifestation, and Item that were first introduced in the Functional Requirements for Bibliographic Records (FRBR) document that was produced by a working group of the International Federation of Library Associations (IFLA). 
 
