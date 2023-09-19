@@ -100,6 +100,8 @@ It is not expected that most uses of openWEMI will use the classes and propertie
 | openWEMI:Expression | rm:Session  |
 | openWEMI:Manifestation | rm:Product  |
 
+![musicSubclasses drawio](https://github.com/dcmi/openwemi/assets/1564129/1d54cc54-8c54-4e65-a83b-596c16aa77f5)
+
 It is not required that sub-elements be one-to-one with openWEMI. openWEMI is a starting point on which one can define additional concepts for the metadata in question. As an example, recorded music may have specific expressions that are derived from other expressions, and therefore could define
 
 | openWEMI class| recorded music subclass |
@@ -108,6 +110,10 @@ It is not required that sub-elements be one-to-one with openWEMI. openWEMI is a 
 | openWEMI:Expression | rm:Session  |
 | openWEMI:Expression | rm: Mix |
 | openWEMI:Manifestation | rm:Product  |
+
+
+![musicSubclasses2 drawio](https://github.com/dcmi/openwemi/assets/1564129/0693938c-4446-4a99-bb8a-81f12d5fbeac)
+
 
 Properties can also be sub-defined to the openWEMI properties, and may be renamed to be specific to the resources being described. 
 
