@@ -118,7 +118,8 @@ Properties can also be sub-defined to the openWEMI properties, and may be rename
 
 This could look like:
 
-![Screenshot 2023-09-11 at 7 23 32 AM](https://github.com/dcmi/openwemi/assets/1564129/b99c569c-0874-48f8-9861-817dff554de2)
+![Concept map creation worksheet - Color](https://github.com/dcmi/openwemi/assets/1564129/77ee7e5c-f945-4bc7-9f25-3503542003da)
+
 
 Alternately, because there is no prohibition against adding new classes or properties to the basic model, one could create other classes and properties that do not have an equivalent in openWEMI.
 
