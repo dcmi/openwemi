@@ -143,6 +143,42 @@ Alternately, because there is no prohibition against adding new classes or prope
 
 Whether one subdefines all elements to an openWEMI element or adds elements beyond those of the openWEMI model depends on the use cases one is addressing. If it is desirable to search on the broad openWEMI elements then defining elements with subordinate relationships to openWEMI in the vocabulary is useful.
 
-For those with existing vocabularies who for their own reasons do not want to make direct connections between the vocabulary and openWEMI, openWEMI elements can be used directly in metadata.
+Elements of the openWEMI vocabulary can be implemented into or used alongside other metadata vocabularies, such as [Schema.org](https://schema.org), and incorporated directly into existing metadata. The snippets below present two approaches for aligning `openwemi:Work` with `schema:CreativeWork` and `openwemi:Item` with `schema:IndividualProduct` in simple JSON-LD examples for *Let It Be*.
 
+<details>
+  <summary>Example 1: Let it Be (openwemi:Work/schema:CreativeWork)</summary>
+  
+  ```json
+  {
+    "@context": {
+      "openwemi": "https://dcmi.github.io/openwemi/ns#",
+      "schema": "https://schema.org/"
+    },
+    "@type": [
+      "openwemi:Work",
+      "schema:CreativeWork"
+    ],
+    "schema:name": "Let It Be"
+  }
+  ```
+</details>
+
+<details>
+  <summary>Example 2: Let it Be (openwemi:Item/schema:IndividualProduct)</summary>
+  
+  ```json
+{
+  "@context": {
+    "openwemi": "https://dcmi.github.io/openwemi/ns#",
+    "schema": "https://schema.org/"
+  },
+  "@type": [
+    "openwemi:Item",
+    "schema:IndividualProduct"
+  ],
+  "schema:name": "Let It Be",
+  "schema:asin": "B097CKL5BT"
+}
+  ```
+</details>
 
