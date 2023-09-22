@@ -72,14 +72,15 @@ The model also provides properties expressing relationships between entities of 
 * relatedItem (range: Item)
 
 What counts as "related" depends entirely on the area of the metadata description and the needs of the constituents. For example, famous works of art are often copied in different and even quite varied forms, like this:
-![‎thewave](https://github.com/dcmi/openwemi/assets/1564129/53322a03-4611-46eb-ad01-a48c32f4c00d)
+<!-- ![‎thewave](https://github.com/dcmi/openwemi/assets/1564129/53322a03-4611-46eb-ad01-a48c32f4c00d) -->
+ <img src="https://github.com/dcmi/openwemi/assets/1564129/53322a03-4611-46eb-ad01-a48c32f4c00d" alt="Examples of The Wave" style="width:500px;"> 
 
 
 Depending on ones' need, these could be considered related works. Some artworks are created in multiple copies that are considered distinct. These might be viewed as related manifestations, or even as related copies.
 ![Screenshot 2023-09-10 at 9 21 33 AM](https://github.com/dcmi/openwemi/assets/1564129/2aaff76f-da7b-42aa-a231-8de0fea7697e)
 
 In the fashion industry, designs are re-purposed by different brands, creating what could be seen as related works.
-![glasses](https://github.com/dcmi/openwemi/assets/1564129/2e8ec556-e43e-422f-aace-435a7052ab73)
+ <img src="https://github.com/dcmi/openwemi/assets/1564129/2e8ec556-e43e-422f-aace-435a7052ab73" alt="fashion glasses" style="width:500px;"> 
 
 In addition to these relationships there are properties that can be used to indicate that two resources represent or contain the same openWEMI entity:
 * commonEndeavor
@@ -94,26 +95,11 @@ There are no ranges or domains for these properties so that they could be used w
 ### Vocabulary method
 It is not expected that most uses of openWEMI will use the classes and properties directly although that is not in any way prohibited. The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-elements in the metadata vocabulary that are specific to the resources being described. Metadata describing recorded music might define subclasses such as:
 
-| openWEMI class| recorded music subclass |
-|-|-|
-| openWEMI:Work | rm:Work  |
-| openWEMI:Expression | rm:Session  |
-| openWEMI:Manifestation | rm:Product  |
-
-![musicSubclasses drawio](https://github.com/dcmi/openwemi/assets/1564129/1d54cc54-8c54-4e65-a83b-596c16aa77f5)
+<img src="https://github.com/dcmi/openwemi/assets/1564129/1d54cc54-8c54-4e65-a83b-596c16aa77f5" style="width=200">
 
 It is not required that sub-elements be one-to-one with openWEMI. openWEMI is a starting point on which one can define additional concepts for the metadata in question. As an example, recorded music may have specific expressions that are derived from other expressions, and therefore could define
 
-| openWEMI class| recorded music subclass |
-|-|-|
-| openWEMI:Work | rm:Work  |
-| openWEMI:Expression | rm:Session  |
-| openWEMI:Expression | rm: Mix |
-| openWEMI:Manifestation | rm:Product  |
-
-
-![musicSubclasses2 drawio](https://github.com/dcmi/openwemi/assets/1564129/0693938c-4446-4a99-bb8a-81f12d5fbeac)
-
+<img src="https://github.com/dcmi/openwemi/assets/1564129/0693938c-4446-4a99-bb8a-81f12d5fbeac" style="width=200">
 
 Properties can also be sub-defined to the openWEMI properties, and may be renamed to be specific to the resources being described. 
 
@@ -122,10 +108,9 @@ Properties can also be sub-defined to the openWEMI properties, and may be rename
 | openWEMI:expresses | rm:records  |
 | openWEMI:expresses | rm:mixes |
 
-This could look like:
+An analysis for music recording metadata using WEMI concepts might look like:
 
-![Concept map creation worksheet - Color](https://github.com/dcmi/openwemi/assets/1564129/77ee7e5c-f945-4bc7-9f25-3503542003da)
-
+ <img src="https://github.com/dcmi/openwemi/assets/1564129/77ee7e5c-f945-4bc7-9f25-3503542003da" alt="music metadata diagram" style="width:500px;"> 
 
 Alternately, because there is no prohibition against adding new classes or properties to the basic model, one could create other classes and properties that do not have an equivalent in openWEMI.
 
