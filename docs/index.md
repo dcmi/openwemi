@@ -94,12 +94,11 @@ There are no ranges or domains for these properties so that they could be used w
 ## Using openWEMI in RDF
 ### Vocabulary method
 It is not expected that most uses of openWEMI will use the classes and properties directly although that is not in any way prohibited. The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-elements in the metadata vocabulary that are specific to the resources being described. Metadata describing recorded music might define subclasses such as:
+![songWEMI1](https://github.com/dcmi/openwemi/assets/1564129/9b17ccd8-c5aa-47ba-ad59-a3997a48f470)
 
-<img src="https://github.com/dcmi/openwemi/assets/1564129/1d54cc54-8c54-4e65-a83b-596c16aa77f5" style="width=200">
+It is not required that sub-elements be one-to-one with openWEMI. openWEMI is a starting point on which one can define additional concepts for the metadata in question. As an example, recorded music may have specific expressions that are derived from other expressions.
 
-It is not required that sub-elements be one-to-one with openWEMI. openWEMI is a starting point on which one can define additional concepts for the metadata in question. As an example, recorded music may have specific expressions that are derived from other expressions, and therefore could define
-
-<img src="https://github.com/dcmi/openwemi/assets/1564129/0693938c-4446-4a99-bb8a-81f12d5fbeac" style="width=200">
+![songWEMI](https://github.com/dcmi/openwemi/assets/1564129/ab73b2ed-a044-42e0-8d94-cdd359c2b795)
 
 Properties can also be sub-defined to the openWEMI properties, and may be renamed to be specific to the resources being described. 
 
