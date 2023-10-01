@@ -6,7 +6,11 @@
 @prefix openwemi: <https://dcmi.github.io/openwemi/ns#> .
 
 openwemi: a owl:Ontology ;
-  rdfs:label "openWEMI Vocabulary" .
+   dct:title "openWEMI vocabulary" ;
+   dct:creator "Dublin Core Metadata Initiative, openWEMI Working Group" ;
+   dct:date "2023/09/26" ;
+   dct:description "openWEMI is a minimally constrained vocabulary for describing created resources using the concepts of Work, Expression, Manifestation, Item." .
+
 
 openwemi:Endeavor
   a rdfs:Class, owl:Class ;
