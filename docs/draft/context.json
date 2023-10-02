@@ -1,0 +1,35 @@
+{
+    "@context": {
+        "wemi": "https://dcmi.github.io/openwemi/ns#",
+        "wemi:relatedWork" : {
+            "@type": "@id"
+        },
+        "wemi:relatedExpression" : {
+            "@type": "@id"
+        },
+        "wemi:relatedManifestation" : {
+            "@type": "@id"
+        },
+        "wemi:relatedItem" : {
+            "@type": "@id"
+        },
+        "wemi:expresses" : {
+            "@type": "@id"
+        },
+        "wemi:expressedBy" : {
+            "@type": "@id"
+        },
+        "wemi:manifests" : {
+            "@type": "@id"
+        },
+        "wemi:manifestedBy" : {
+            "@type": "@id"
+        },
+        "wemi:instantiates" : {
+            "@type": "@id"
+        },
+        "wemi:instantiatedBy" : {
+            "@type": "@id"
+        }
+    }
+}
