@@ -1,0 +1,150 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+prefix rm: <http://example.org/RecordedMusic/ns#>
+prefix wemi:	<https://dcmi.github.io/openwemi/ns#>
+
+rm: a owl:Ontology ; 
+  dct:description "Example vocabulary that refines openWEMI. Only intended for informative sections of the openWEMI Primer" ;
+  .
+
+## Recorded Music classes related to WEMI classes
+rm:Song 
+  a rdfs:Class, owl:Class ;
+  rdfs:subClassOf wemi:Work ;
+  rdfs:label "Song"@en ;
+  rdfs:comment "A lyrical creation."@en ;
+  rdfs:isDefinedBy rm: ;
+  .    
+
+rm:Session 
+  a rdfs:Class, owl:Class ;
+  rdfs:subClassOf wemi:Expression ;
+  rdfs:label "Session"@en ;
+  rdfs:comment "A recorded musical performance."@en ;
+  rdfs:isDefinedBy rm: ;
+  .
+
+rm:Single 
+  a rdfs:Class, owl:Class ;
+  rdfs:subClassOf wemi:Manifestation ;
+  rdfs:label "Single"@en ;
+  rdfs:comment "A release of (typically) one or two recorded songs."@en ;
+  rdfs:isDefinedBy rm: ;
+  .
+
+rm:Mix 
+  a rdfs:Class, owl:Class ;
+  rdfs:subClassOf wemi:Work ;
+  rdfs:label "Mix"@en ;
+  rdfs:comment "A combination of recordings from one or more sessions."@en ;
+  rdfs:isDefinedBy rm: ;
+  .
+
+## Object properties for relationships between Recorded Music entites
+rm:records
+  a rdfs:Property ;
+  rdfs:subPropertyOf wemi:expresses ;
+  rdfs:label "records"@en ;
+  rdfs:comment "A song recorded in a session."@en ;
+  rdfs:domain rm:Session ;
+  rdfs:range rm:Song ;
+  .
+
+rm:mixes
+  a rdfs:Property ;
+  rdfs:subPropertyOf wemi:expresses ;
+  rdfs:label "mixes"@en ;
+  rdfs:comment "A session included in a mix."@en ;
+  rdfs:domain rm:Mix ;
+  rdfs:range rm:Session ;
+  .
+
+rm:releasedAs
+  a rdfs:Property ;
+  rdfs:subPropertyOf wemi:manifestedBy ;
+  rdfs:label "released as"@en ;
+  rdfs:comment "A release of a recording mix as a single."@en ;
+  rdfs:domain rm:Mix ;
+  rdfs:range rm:Single ;
+  .
+
+rm:releaseOf
+  a rdfs:Property ;
+  rdfs:subPropertyOf wemi:manifests ;
+  rdfs:label "release of"@en ;
+  rdfs:comment "A session recording included in a single release."@en ;
+  rdfs:domain rm:Single ;
+  rdfs:range rm:Session ;
+  .
+
+rm:title
+  a rdfs:Property ;
+  rdfs:label "title"@en ;
+  rdfs:comment "The name of a song."@en ;
+  rdfs:domain rm:Song ;
+  .
+
+rm:composer
+  a rdfs:Property ;
+  rdfs:label "composer"@en ;
+  rdfs:comment "The creator of a song."@en ;
+  rdfs:domain rm:Song ;
+  .
+
+rm:lyrics
+  a rdfs:Property ;
+  rdfs:label "lyrics"@en ;
+  rdfs:comment "The words of a song."@en ;
+  rdfs:domain rm:Song ;
+  .
+
+rm:band
+  a rdfs:Property ;
+  rdfs:label "band"@en ;
+  rdfs:comment "The group performing in a session."@en ;
+  rdfs:domain rm:Session ;
+  .
+
+rm:sessionEngineer
+  a rdfs:Property ;
+  rdfs:label "session engineer"@en ;
+  rdfs:comment "A person with technical input to a session."@en ;
+  rdfs:domain rm:Session ;
+  .
+
+rm:dateTime
+  a rdfs:Property ;
+  rdfs:label "date and time"@en ;
+  rdfs:comment "When a session happened."@en ;
+  rdfs:domain rm:Session ;
+  .
+
+rm:dateTime
+  a rdfs:Property ;
+  rdfs:label "date and time"@en ;
+  rdfs:comment "When a session happened."@en ;
+  rdfs:domain rm:Session ;
+  .
+
+rm:publisher
+  a rdfs:Property ;
+  rdfs:label "publisher"@en ;
+  rdfs:comment "The entity making a single available."@en ;
+  rdfs:domain rm:Single ;
+  .
+
+rm:coverArt
+  a rdfs:Property ;
+  rdfs:label "cover art"@en ;
+  rdfs:comment "The artwork on the sleeve of a single"@en ;
+  rdfs:domain rm:Single ;
+  .
+
+rm:date
+  a rdfs:Property ;
+  rdfs:label "date"@en ;
+  rdfs:comment "The release date of a single."@en ;
+  rdfs:domain rm:Single ;
+  .
