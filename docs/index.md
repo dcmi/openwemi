@@ -134,7 +134,7 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
 <details>
   <summary>Example 1: Let it Be (openwemi:Work/schema:CreativeWork)</summary>
   
-  ```json
+  <code lang="json">
   {
     "@context": {
       "openwemi": "https://dcmi.github.io/openwemi/ns#",
@@ -146,13 +146,13 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
     ],
     "schema:name": "Let It Be"
   }
-  ```
+  </code>
 </details>
 
 <details>
   <summary>Example 2: Let it Be (openwemi:Item/schema:IndividualProduct)</summary>
   
-  ```json
+  <code lang="json">
 {
   "@context": {
     "openwemi": "https://dcmi.github.io/openwemi/ns#",
@@ -165,6 +165,6 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
   "schema:name": "Let It Be",
   "schema:asin": "B097CKL5BT"
 }
-  ```
+  </code>
 </details>
 
