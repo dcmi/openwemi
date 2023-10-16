@@ -104,8 +104,8 @@ Properties can also be sub-defined to the openWEMI properties, and may be rename
 
 | openWEMI property| recorded music subproperty |
 |-|-|
-| openWEMI:expresses | rm:records  |
-| openWEMI:expresses | rm:mixes |
+| openwemi:expresses | rm:records  |
+| openwemi:expresses | rm:mixes |
 
 An analysis for music recording metadata using WEMI concepts might look like:
 
@@ -115,14 +115,14 @@ Alternately, because there is no prohibition against adding new classes or prope
 
 | openWEMI class| recorded music  class|
 |-|-|
-| openWEMI:Work | rm:Work  |
-| openWEMI:Expression | rm:Session  |
+| openwemi:Work | rm:Work  |
+| openwemi:Expression | rm:Session  |
 |  | rm: Mix |
-| openWEMI:Manifestation | rm:Product  |
+| openwemi:Manifestation | rm:Product  |
 
 | openWEMI property| recorded music  property|
 |--|--|
-| openWEMI:expresses | rm:records  |
+| openwemi:expresses | rm:records  |
 |  | rm:mixes |
 
 Whether one subdefines all elements to an openWEMI element or adds elements beyond those of the openWEMI model depends on the use cases one is addressing. If it is desirable to search on the broad openWEMI elements then defining elements with subordinate relationships to openWEMI in the vocabulary is useful.
