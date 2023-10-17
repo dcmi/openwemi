@@ -54,7 +54,7 @@ rm:records
 
 rm:mixes
   a rdfs:Property ;
-  rdfs:subPropertyOf wemi:expresses ;
+  rdfs:subPropertyOf wemi:relatedExpression ;
   rdfs:label "mixes"@en ;
   rdfs:comment "A session included in a mix."@en ;
   rdfs:domain rm:Mix ;

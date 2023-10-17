@@ -96,12 +96,35 @@ There are no ranges or domains for these properties so that they could be used w
 It is not expected that most uses of openWEMI will use the classes and properties directly although that is not in any way prohibited. The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-elements in the metadata vocabulary that are specific to the resources being described. Metadata describing recorded music might define subclasses such as:
 ![songWEMI1](https://github.com/dcmi/openwemi/assets/1564129/9b17ccd8-c5aa-47ba-ad59-a3997a48f470)
 
-It is not required that sub-elements be one-to-one with openWEMI. openWEMI is a starting point on which one can define additional concepts for the metadata in question. As an example, recorded music may have specific expressions that are derived from other expressions.
+### Refining openWEMI for specific uses
+The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-classes and sub-properties in the metadata vocabulary that are specific to the resources being described. It is not required that there be a one-to-one relationship with openWEMI terms. openWEMI is a starting point on which one can define additional concepts for the metadata in question. 
 
-![songWEMI](https://github.com/dcmi/openwemi/assets/1564129/ab73b2ed-a044-42e0-8d94-cdd359c2b795)
+For example, metadata describing recorded music might define subclasses such as:
 
-Properties can also be sub-defined to the openWEMI properties, and may be renamed to be specific to the resources being described. 
+![Four classes: Song, Session, Mix and Single are shown as related entities.](images/wemi4rm-rm.png)
 
+
+This is a very simplified example showing that a song may be recorded in a session; that recorded session may be used in a mix and a single may be released based on that mix. Other typical properties for the each of the entity types might be:
+
+* for Song: title, composer, lyrics.
+* for Expression: band, session engineer, output format (e.g. analog or digital), date and time.
+* for Mix: mixing engineer, output format (e.g. analog or digital), data and time.
+* for Single: publisher, cover art, date.
+
+The additional properties are out of scope for openWEMI, but hopefully the give some indication of why these specific entities might be important within the recording industry.
+
+In order to use openWemi one would relate the recorded music entity types and the properties that link them to those from openWEMI as sub-classes and sub-properties. There may be more than one view on what are the best relationships; for example is a Mix a new Work based on one or more session recordings, or is it another Expression of the same work: in the diagram below we illustrate the latter option.
+
+![Song is shown as a rdfs:subClassOf openwemi:Work, Session and Mix are rdfs:subClassOf openwemi:Expression and Single is a rdfs:subClassOf openwemi:Manifestation](images/wemi4rm-ClassRelations.png)
+
+Taking into account the class relationships we can create relationships between the recorded music properties and those in openwemi:
+
+| Record Music | relationship | openWEMI |
+|--------------|-----------------------|-----------|
+| rm:records | -rdfs:subPropertyOf→ | openwemi:expresses |
+| rm:mixes | -rdfs:subPropertyOf→ | openwemi:relatedExpression |
+| rm:releaseOf | -rdfs:subPropertyOf→ | openwemi:instantiates |
+=======
 | openWEMI property| recorded music subproperty |
 |-|-|
 | openwemi:expresses | rm:records  |
@@ -134,7 +157,7 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
 <details>
   <summary>Example 1: Let it Be (openwemi:Work/schema:CreativeWork)</summary>
   
-  ```json
+  <code lang="json">
   {
     "@context": {
       "openwemi": "https://dcmi.github.io/openwemi/ns#",
@@ -146,13 +169,13 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
     ],
     "schema:name": "Let It Be"
   }
-  ```
+  </code>
 </details>
 
 <details>
   <summary>Example 2: Let it Be (openwemi:Item/schema:IndividualProduct)</summary>
   
-  ```json
+  <code lang="json">
 {
   "@context": {
     "openwemi": "https://dcmi.github.io/openwemi/ns#",
@@ -165,6 +188,6 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
   "schema:name": "Let It Be",
   "schema:asin": "B097CKL5BT"
 }
-  ```
+  </code>
 </details>
 
