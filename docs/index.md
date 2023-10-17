@@ -94,6 +94,7 @@ There are no ranges or domains for these properties so that they could be used w
 ## Modeling decisions
 ### Vocabulary method
 It is not expected that most uses of openWEMI will use the classes and properties directly although that is not in any way prohibited. The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-elements in the metadata vocabulary that are specific to the resources being described. Metadata describing recorded music might define subclasses such as:
+
 ![songWEMI1](https://github.com/dcmi/openwemi/assets/1564129/9b17ccd8-c5aa-47ba-ad59-a3997a48f470)
 
 ### Refining openWEMI for specific uses
