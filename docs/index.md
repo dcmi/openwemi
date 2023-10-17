@@ -91,8 +91,10 @@ In addition to these relationships there are properties that can be used to indi
   
 There are no ranges or domains for these properties so that they could be used without making a class inference about either resource. They can be used to describe relationships between resources or resource representations that do not otherwise make use of the WEMI concepts.
 
-## Modelling with openWEMI in RDF
-It is not expected that most uses of openWEMI will use the classes and properties directly although that is not in any way prohibited. 
+## Modeling decisions
+### Vocabulary method
+It is not expected that most uses of openWEMI will use the classes and properties directly although that is not in any way prohibited. The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-elements in the metadata vocabulary that are specific to the resources being described. Metadata describing recorded music might define subclasses such as:
+![songWEMI1](https://github.com/dcmi/openwemi/assets/1564129/9b17ccd8-c5aa-47ba-ad59-a3997a48f470)
 
 ### Refining openWEMI for specific uses
 The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-classes and sub-properties in the metadata vocabulary that are specific to the resources being described. It is not required that there be a one-to-one relationship with openWEMI terms. openWEMI is a starting point on which one can define additional concepts for the metadata in question. 
@@ -100,6 +102,7 @@ The openWEMI elements are defined very broadly with the intention of encouraging
 For example, metadata describing recorded music might define subclasses such as:
 
 ![Four classes: Song, Session, Mix and Single are shown as related entities.](images/wemi4rm-rm.png)
+
 
 This is a very simplified example showing that a song may be recorded in a session; that recorded session may be used in a mix and a single may be released based on that mix. Other typical properties for the each of the entity types might be:
 
@@ -121,6 +124,11 @@ Taking into account the class relationships we can create relationships between 
 | rm:records | -rdfs:subPropertyOf→ | openwemi:expresses |
 | rm:mixes | -rdfs:subPropertyOf→ | openwemi:relatedExpression |
 | rm:releaseOf | -rdfs:subPropertyOf→ | openwemi:instantiates |
+=======
+| openWEMI property| recorded music subproperty |
+|-|-|
+| openwemi:expresses | rm:records  |
+| openwemi:expresses | rm:mixes |
 
 An analysis for music recording metadata using WEMI concepts might look like:
 
@@ -130,14 +138,14 @@ Alternately, because there is no prohibition against adding new classes or prope
 
 | openWEMI class| recorded music  class|
 |-|-|
-| openWEMI:Work | rm:Work  |
-| openWEMI:Expression | rm:Session  |
+| openwemi:Work | rm:Work  |
+| openwemi:Expression | rm:Session  |
 |  | rm: Mix |
-| openWEMI:Manifestation | rm:Product  |
+| openwemi:Manifestation | rm:Product  |
 
 | openWEMI property| recorded music  property|
 |--|--|
-| openWEMI:expresses | rm:records  |
+| openwemi:expresses | rm:records  |
 |  | rm:mixes |
 
 Whether one subdefines all elements to an openWEMI element or adds elements beyond those of the openWEMI model depends on the use cases one is addressing. If it is desirable to search on the broad openWEMI elements then defining elements with subordinate relationships to openWEMI in the vocabulary is useful.
