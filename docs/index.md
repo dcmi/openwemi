@@ -118,16 +118,17 @@ In order to use openWemi one would relate the recorded music entity types and th
 
 ![Song is shown as a rdfs:subClassOf openwemi:Work, Session and Mix are rdfs:subClassOf openwemi:Expression and Single is a rdfs:subClassOf openwemi:Manifestation](images/wemi4rm-ClassRelations.png)
 
-Taking into account the class relationships we can create relationships between the recorded music properties and those in openwemi:
+Taking into account the class relationships we can create relationships between the recorded music properties and those in openWEMI:
 
-| Record Music | relationship | openWEMI |
+| Recorded Music | relationship | openWEMI |
 |--------------|-----------------------|-----------|
-| rm:records | -rdfs:subPropertyOf→ | openwemi:expresses |
-| rm:mixes | -rdfs:subPropertyOf→ | openwemi:relatedExpression |
-| rm:releaseOf | -rdfs:subPropertyOf→ | openwemi:instantiates |
-=======
+| rm:records | rdfs:subPropertyOf | openwemi:expresses |
+| rm:mixes | rdfs:subPropertyOf | openwemi:relatedExpression |
+| rm:releaseOf | rdfs:subPropertyOf | openwemi:instantiates |
+
+We can also create sub-property relationships between the openWEMI properties and local properties, to be consistent with the relationships between the openWEMI entities.
 | openWEMI property| recorded music subproperty |
-|-|-|
+|- |- |
 | openwemi:expresses | rm:records  |
 | openwemi:expresses | rm:mixes |
 
