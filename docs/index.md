@@ -195,4 +195,5 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
 ## References
 
 * IFLA Study Group on the Functional Requirements for Bibliographic Records. (2009) Functional Requirements for Bibliographic Records. Den Haag. http://archive.ifla.org/VII/s13/frbr/frbr_2008.pdf
+* Coyle, Karen. (2022) Works, Expressions, Manifestations, Items: An Ontology. Code4lib Journal, Issue 53, 2022-05-09. https://journal.code4lib.org/articles/16491
 * Davis, Ian and Richard Newman. (2005) FRBR Core http://purl.org/vocab/frbr/core
