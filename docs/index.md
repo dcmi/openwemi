@@ -158,26 +158,24 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
 <details>
   <summary>Example 1: Let it Be (openwemi:Work/schema:CreativeWork)</summary>
   
-  <code lang="json">
-  {
-    "@context": {
-      "openwemi": "https://dcmi.github.io/openwemi/ns#",
-      "schema": "https://schema.org/"
-    },
-    "@type": [
-      "openwemi:Work",
-      "schema:CreativeWork"
-    ],
-    "schema:name": "Let It Be"
-  }
-  </code>
+  <pre>{
+  "@context": {
+    "openwemi": "https://dcmi.github.io/openwemi/ns#",
+    "schema": "https://schema.org/"
+  },
+  "@type": [
+    "openwemi:Work",
+    "schema:CreativeWork"
+  ],
+  "schema:name": "Let It Be"
+}</pre>
+
 </details>
 
 <details>
   <summary>Example 2: Let it Be (openwemi:Item/schema:IndividualProduct)</summary>
   
-  <code lang="json">
-{
+  <pre>{
   "@context": {
     "openwemi": "https://dcmi.github.io/openwemi/ns#",
     "schema": "https://schema.org/"
@@ -188,8 +186,7 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
   ],
   "schema:name": "Let It Be",
   "schema:asin": "B097CKL5BT"
-}
-  </code>
+}</pre>
 </details>
 
 ## References
