@@ -126,27 +126,6 @@ Taking into account the class relationships we can create relationships between 
 | rm:mixes | rdfs:subPropertyOf | openwemi:relatedExpression |
 | rm:releaseOf | rdfs:subPropertyOf | openwemi:instantiates |
 
-
-An analysis for music recording metadata using WEMI concepts might look like:
-
- <img src="https://github.com/dcmi/openwemi/assets/1564129/77ee7e5c-f945-4bc7-9f25-3503542003da" alt="music metadata diagram" style="width:500px;"> 
-
-Alternately, because there is no prohibition against adding new classes or properties to the basic model, one could create other classes and properties that do not have an equivalent in openWEMI.
-
-| openWEMI class| recorded music  class|
-|-|-|
-| openwemi:Work | rm:Work  |
-| openwemi:Expression | rm:Session  |
-|  | rm: Mix |
-| openwemi:Manifestation | rm:Product  |
-
-| openWEMI property| recorded music  property|
-|--|--|
-| openwemi:expresses | rm:records  |
-|  | rm:mixes |
-
-Whether one subdefines all elements to an openWEMI element or adds elements beyond those of the openWEMI model depends on the use cases one is addressing. If it is desirable to search on the broad openWEMI elements then defining elements with subordinate relationships to openWEMI in the vocabulary is useful.
-
 ### Direct use of openWEMI in RDF data
 
 Elements of the openWEMI vocabulary can be implemented into or used alongside other metadata vocabularies, such as [Schema.org](https://schema.org), and incorporated directly into existing metadata. The snippets below present two approaches for aligning `openwemi:Work` with `schema:CreativeWork` and `openwemi:Item` with `schema:IndividualProduct` in simple JSON-LD examples for *Let It Be*.
