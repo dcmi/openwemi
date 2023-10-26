@@ -126,11 +126,6 @@ Taking into account the class relationships we can create relationships between 
 | rm:mixes | rdfs:subPropertyOf | openwemi:relatedExpression |
 | rm:releaseOf | rdfs:subPropertyOf | openwemi:instantiates |
 
-We can also create sub-property relationships between the openWEMI properties and local properties, to be consistent with the relationships between the openWEMI entities.
-| openWEMI property| recorded music subproperty |
-|- |- |
-| openwemi:expresses | rm:records  |
-| openwemi:expresses | rm:mixes |
 
 An analysis for music recording metadata using WEMI concepts might look like:
 
