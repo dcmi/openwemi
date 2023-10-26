@@ -92,10 +92,7 @@ In addition to these relationships there are properties that can be used to indi
 There are no ranges or domains for these properties so that they could be used without making a class inference about either resource. They can be used to describe relationships between resources or resource representations that do not otherwise make use of the WEMI concepts.
 
 ## Modeling decisions
-### Vocabulary method
-It is not expected that most uses of openWEMI will use the classes and properties directly although that is not in any way prohibited. The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-elements in the metadata vocabulary that are specific to the resources being described. Metadata describing recorded music might define subclasses such as:
-
-![songWEMI1](https://github.com/dcmi/openwemi/assets/1564129/9b17ccd8-c5aa-47ba-ad59-a3997a48f470)
+It is possible to use openWEMI in two ways. The first is to refine openWEMI by creating subclasses and subproperties for specific uses. The second is to use classes and properties from openWEMI in instance data alongside those from any other vocabulary.
 
 ### Refining openWEMI for specific uses
 The openWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-classes and sub-properties in the metadata vocabulary that are specific to the resources being described. It is not required that there be a one-to-one relationship with openWEMI terms. openWEMI is a starting point on which one can define additional concepts for the metadata in question. 
