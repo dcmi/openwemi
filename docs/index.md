@@ -161,7 +161,7 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
 }</pre>
 </details>
 
-Additionally, if RDF instance data can be related to another resource, but the explicit type or structure of either record is unknown or not specified, the openWEMI common relationships can be used to express that two or more instances are related through a common resource. For example, the snippet below demonstrates use of the `openwemi:commonWork` property to link a specific recording and product offering of *Let it Be* ([ASIN B097CKL5BT](https://www.amazon.com/Let-Be-Special-LP-Beatles/dp/B097CKL5BT)) to its common work in [MusicBrainz](https://musicbrainz.org/work/ef5b9074-84d2-3e46-81ba-cdbe57898033).
+Additionally, if RDF instance data can be related to another resource, but the WEMI type or structure of either record is unknown or not specified, the openWEMI common relationships can be used to express that two or more instances are related through a common resource. For example, the snippet below demonstrates use of the `openwemi:commonWork` property to link a specific recording and product offering of *Let it Be* ([ASIN B097CKL5BT](https://www.amazon.com/Let-Be-Special-LP-Beatles/dp/B097CKL5BT)) to its common work in [MusicBrainz](https://musicbrainz.org/work/ef5b9074-84d2-3e46-81ba-cdbe57898033).
 
 <details>
   <summary>Example 3: Let it Be (openwemi:commonWork)</summary>
