@@ -161,6 +161,26 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
 }</pre>
 </details>
 
+Additionally, if RDF instance data can be related to another resource, but the explicit type or structure of either record is unknown or not specified, the openWEMI common relationships can be used to express that two or more instances are related through a common resource. For example, the snippet below demonstrates use of the `openwemi:commonWork` property to link a specific recording and product offering of *Let it Be* ([ASIN B097CKL5BT](https://www.amazon.com/Let-Be-Special-LP-Beatles/dp/B097CKL5BT)) to its common work in [MusicBrainz](https://musicbrainz.org/work/ef5b9074-84d2-3e46-81ba-cdbe57898033).
+
+<details>
+  <summary>Example 3: Let it Be (openwemi:commonWork)</summary>
+  
+  <pre>{
+  "@context": {
+    "openwemi": "https://dcmi.github.io/openwemi/ns#",
+    "schema": "https://schema.org/"
+  },
+  "@type": [
+    "openwemi:Item",
+    "schema:IndividualProduct"
+  ],
+  "schema:name": "Let It Be",
+  "schema:asin": "B097CKL5BT",
+   "openwemi:commonWork": "https://musicbrainz.org/work/ef5b9074-84d2-3e46-81ba-cdbe57898033"
+}</pre>
+</details>
+
 ## References
 
 * IFLA Study Group on the Functional Requirements for Bibliographic Records. (2009) Functional Requirements for Bibliographic Records. Den Haag. http://archive.ifla.org/VII/s13/frbr/frbr_2008.pdf
