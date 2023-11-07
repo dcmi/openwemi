@@ -182,7 +182,7 @@ openWEMI "common" properties can be used to state that any two metadata instance
    "openwemi:commonWork": "https://musicbrainz.org/work/ef5b9074-84d2-3e46-81ba-cdbe57898033"
 }</pre>
 </details>
-</br>
+<br/>
 Additional RDF examples can be found in the [openWEMI Cookbook](https://github.com/dcmi/openwemi/wiki). 
 
 
