@@ -9,30 +9,25 @@ This document and the related resources are the work of the Dublin Core Metadata
 
 ## Introduction
 
-openWEMI is an RDF vocabulary based on the concepts of Work, Expression, Manifestation, and Item that were first introduced in the Functional Requirements for Bibliographic Records (FRBR) document that was produced by a working group of the International Federation of Library Associations (IFLA). 
+openWEMI is an RDF vocabulary based on the concepts of Work, Expression, Manifestation, and Item (WEMI) that were first introduced in the [Functional Requirements for Bibliographic Records (FRBR)](http://archive.ifla.org/VII/s13/frbr/frbr_2008.pdf) document that was produced by a working group of the International Federation of Library Associations (IFLA). 
 
 For the purposes of this draft, the vocabulary is using the namespace https://dcmi.github.io/openwemi/ns#. It is anticipated that a true namespace will be assigned after review by the DCMI Usage Board.
 
 * Human-friendly documentation: [https://dcmi.github.io/openwemi/ns/openWEMI.html](https://dcmi.github.io/openwemi/ns/openWEMI.html)
 * Vocabulary in turtle: [https://dcmi.github.io/openwemi/ns/openWEMI.ttl](https://dcmi.github.io/openwemi/ns/openWEMI.ttl)
 
-The concepts introduced in FRBR document have been employed in metadata for resources quite different from those in the library bibliographic catalog, and often ignoring some of the restrictions built in to the original definition. (More in this [article](https://journal.code4lib.org/articles/16491) and see the [bibliography](bibliography.md)). This is evidence that a definition of similar classes that are more general than those developed for library usage would benefit metadata developers broadly. 
+## Background
 
-This DCMI work product proposes a minimally constrained set of classes and relationships that could form the basis for a useful model of created works that defines WEMI as RDF classes with few constraints. These classes can be used together or separately in metadata to characterize aspects of creations. 
+The original analysis by the FRBR Working Group produced a 4-entity model of metadata that could be applied to every library catalog entry. *Work* is the most abstract layer that represents the conceptual aspect of a creation. *Expression* is a perceptible version using some form of communication like text, sound, or a visual display. *Manifestation* is the realization, which can be a manufactured product in multiple copies or a single object. *Item* is an individual instance of the creation, often having a location in the world, including electronic locations.
 
-openWEMI classes are purposely defined very broadly. Experience shows that metadata models are likely to use openWEMI classes as superclasses to the more specific materials being described. The proposal includes the superclass Endeavor, which is not part of the FRBR group of entities but was added by the authors of FRBR core and is deemed to be needed to create a coherent grouping of the entities. It also would be useful should any new high-order entities be added in the future. 
+The concepts introduced in the FRBR document have been employed in metadata for resources quite different from those in the library bibliographic catalog, and often ignoring some of the restrictions built in to the original definition. (More in this [article](https://journal.code4lib.org/articles/16491) and see the [bibliography](bibliography.md)). This is evidence that a definition of similar classes that are more general than those developed for library usage would benefit metadata developers broadly. openWEMI retains the basic concepts defined in FRBR, but expanded beyond the bibliographic application.
 
-## What is WEMI?
+## openWEMI
 
-openWEMI defines a non-constrained version of FRBR's Work, Expression, Manifestation, Item. In particular it removes any disjoint rules between the WEMI entities and removes any reference to bibliographic entities from their definitions. It is loosely based on the [FRBR Core](http://purl.org/vocab/frbr/core) created by Ian Davis and Richard Newman, with contributions by Bruce D'Arcus, and which is used in several non-library RDF implementations. 
+openWEMI defines a minimally constrained version of FRBR's Work, Expression, Manifestation, Item. It removes any disjoint rules between the WEMI entities and removes any reference to bibliographic entities from their definitions. It also allows relationships between the classes that are not present in library FRBR. openWEMI is loosely based on the [FRBR Core](http://purl.org/vocab/frbr/core) created by Ian Davis and Richard Newman, with contributions by Bruce D'Arcus, and which is used in several non-library RDF implementations. The openWEMI vocabulary includes the superclass Endeavor, which is not part of the FRBR group of entities but was added by the authors of FRBR core and serves to create a coherent grouping of the entities. An *Endeavor* is a creation that may be described by any of the WEMI classes, as appropriate to the nature of the creation and the use cases addressed by the metadata. It also can be useful should any new high-order entities be added in the future. 
 
-The original analysis by the FRBR Working Group produced of a 4-layer model of metadata that could be applied to every library catalog entry. openWEMI retains these concepts, expanded beyond the bibliographic application.
-
-*Work* is the most abstract layer that represented the conceptual aspect of a creation. Expression is a perceptible version using some form of communication like text, sound, or a visual display. *Manifestation* is the realization, which can be a manufactured product in multiple copies or a single object. *Item* is an individual instance of the creation, often having a location in the world, including electronic locations
-
-This proposal includes one other class which is a super-class over each of the WEMI classes and serves to provide them. *Endeavor* is a creation that may be described by any of the WEMI classes, as appropriate to the nature of the creation and the use cases addressed by the metadata
-
-## The proposal
+openWEMI classes are purposely defined very broadly and the property relationships are flexible while retaining the basic semantics of general (Work) to specific (Item). Experience shows that metadata models are likely to use openWEMI classes as superclasses to the more specific resources being described, such as *MusicWork* or *FashionDesign*. The openWEMI classes can be used together or separately in metadata to characterize aspects of creations.  
+ 
 ### Classes
 The minimal WEMI set has these classes and subclasses:
 * Endeavor
