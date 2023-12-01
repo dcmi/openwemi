@@ -158,9 +158,11 @@ Elements of the openWEMI vocabulary can be implemented into or used alongside ot
 }</pre>
 </details>
 <br/>
+<img src="images/commonwork-letitbe-v2.png" style="height:auto;width:780px;"/>
+<br/>
 openWEMI "common" properties can be used to state that any two metadata instance have one of the WEMI concepts in common, regardless of their metadata formats. In practice this requires that the metadata instances have identifiers that can be used in the statement. For example, the snippet below demonstrates use of the `openwemi:commonWork` property to link a specific recording and product offering of *Let it Be* ([ASIN B097CKL5BT](https://www.amazon.com/Let-Be-Special-LP-Beatles/dp/B097CKL5BT)) to its common work in [MusicBrainz](https://musicbrainz.org/work/ef5b9074-84d2-3e46-81ba-cdbe57898033).
 
-<img src="images/commonwork-letitbe.png" style="height:250px;width:auto;"/>
+<br/>
 
 <details>
   <summary>Example 3: Let it Be (openwemi:commonWork)</summary>
