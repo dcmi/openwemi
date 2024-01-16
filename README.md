@@ -11,6 +11,7 @@ openWEMI classes are purposely defined very broadly. Experience shows that metad
 This is work to create a non-constrained version of FRBR's Work, Expression, Manifestation, Item. In particular it removes any disjoint rules between the WEMI entities. It is based on the [FRBR Core](http://purl.org/vocab/frbr/core) created by Ian Davis and Richard Newman, with contributions by Bruce D'Arcus. 
 
 The minimal WEMI set has these classes and subclasses:
+
 * Endeavor
   * Work
   * Expression
@@ -19,10 +20,13 @@ The minimal WEMI set has these classes and subclasses:
 * ResponsibleEntity
 
 It has these properties which define the primary relationships between WEMI:
-  * expresses (range: Work)
-  * manifests (range: Work or Expression)
-  * instantiates (range: Work or Expression or Manifestation)
+
+* expresses (range: Work)
+* manifests (range: Work or Expression)
+* instantiates (range: Work or Expression or Manifestation)
+
 Which is expressed in this diagram:
+
 ```mermaid
 flowchart LR
 subgraph Work
@@ -44,7 +48,9 @@ Manifestation-->|realizes|Work
 Manifestation-->|realizes|Expression
 Expression-->|expresses|Work
 ```
+
 It also includes a same-entity relationship property for each entity:
+
 * Work/Work
 * Expression/Expression
 * Manifestation/Manifestation
@@ -53,6 +59,7 @@ It also includes a same-entity relationship property for each entity:
 This proposal does not include the FRBR Group2 or Group3 entities (responsible bodies and subjects). It does include the superclass Endeavor, which is not part of the FRBR group of entities but was added by the authors of FRBR core. 
 
 ## Examples
+
 See the [Examples](examples) directory for examples of possible uses of openWEMI.
 
 ## Files
@@ -60,6 +67,7 @@ See the [Examples](examples) directory for examples of possible uses of openWEMI
 * openWEMI.ttl (May, 2023) - this defines the WEMI classes as being sub-classes of "/Endeavor/". Endeavor encompasses the entire creation. Endeavor was introduced in [frbrCore](https://vocab.org/frbr/core). It also includes property "relatedEndeavor" from that vocabulary which is a general relationship between endeavors and "ResponsibleEntity", a general class to define the agent responsible for the creation.  
 
 ## Documents
+
 * [openWEMI](docs/index.md)
 * [Bibliography](docs/bibliography.md)
 * [FAQ](FAQ.md)
@@ -68,13 +76,13 @@ See the [Examples](examples) directory for examples of possible uses of openWEMI
 
 This [DCMI Community Group](https://www.dublincore.org/groups/openwemi/) has the following goals:
 
- *   an analysis of existing uses of WEMI which could benefit from an unconstrained vocabulary for those classes
- *   a gathering of issues and questions regarding the possibilities for such a vocabulary
- *   production of an unconstrained WEMI vocabulary with a specific proposal for the DCMI usage board
- *   a repository of documentation and examples
+*   an analysis of existing uses of WEMI which could benefit from an unconstrained vocabulary for those classes
+*   a gathering of issues and questions regarding the possibilities for such a vocabulary
+*   production of an unconstrained WEMI vocabulary with a specific proposal for the DCMI usage board
+*   a repository of documentation and examples
  
 Most work will take place here on github.
 
 **Join the group mailing list** for updates and announcements
 
-https://lists.dublincore.org/mailman/listinfo/openwemi
+<https://lists.dublincore.org/mailman/listinfo/openwemi>
