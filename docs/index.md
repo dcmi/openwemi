@@ -37,7 +37,6 @@ The minimal WEMI set has these classes and subclasses:
   * Expression
   * Manifestation
   * Item
-* ResponsibleEntity
 
 ![Screenshot 2023-09-07 at 8 55 42 AM](https://github.com/dcmi/openwemi/assets/1564129/fa993378-921f-42b4-8585-c149fae574a1)
 
@@ -47,7 +46,6 @@ These are defined in the vocabulary as:
 * Expression: "A perceivable form of the creation"
 * Manifestation: "The physical embodiment of a creation"
 * Item: "An exemplar of a creation."
-* ResponsibleEntity: "An agent with some responsibility related to a creation."
 
 ### Relationship properties
 These properties define the primary relationships between WEMI:
