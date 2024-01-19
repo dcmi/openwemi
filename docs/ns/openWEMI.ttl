@@ -8,7 +8,7 @@
 openwemi: a owl:Ontology ;
    dct:title "openWEMI vocabulary" ;
    dct:creator "Dublin Core Metadata Initiative, openWEMI Working Group" ;
-   dct:date "2023/09/26" ;
+   dct:date "2024/01/19" ;
    dct:description "openWEMI is a minimally constrained vocabulary for describing created resources using the concepts of Work, Expression, Manifestation, Item." .
 
 
@@ -49,14 +49,6 @@ openwemi:Item
   rdfs:isDefinedBy openwemi: ;
   dct:description "An Item is a single instance of the creation, something that can have a place on a shelf or a location online."@en ;
   rdfs:subClassOf openwemi:Endeavor .
-
-openwemi:responsibleEntity
-  a rdf:Property ;
-  rdfs:label "responsible entity"@en ;
-  rdfs:comment "One responsible for the creation, production, distribution, maintenance, or ownership of a created entity."@en ;
-  rdfs:isDefinedBy openwemi: ;
-  dct:description "It is assumed that creations have been affected by an agent with the ability to act. The types of agents is very broad and not constrained by this property."@en ;
-  rdfs:domain openwemi:Endeavor .
       
 openwemi:relatedWork
   a rdf:Property ;
