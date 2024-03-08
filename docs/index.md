@@ -20,7 +20,7 @@ For the purposes of this draft, the vocabulary is using the namespace https://dc
 
 ## Background
 
-The original analysis by the FRBR Working Group produced a 4-entity model of metadata that could be applied to every library catalog entry. *Work* is the most abstract layer that represents the conceptual aspect of a creation. *Expression* is a perceptible version using some form of communication like text, sound, or a visual display. *Manifestation* is the realization, which can be a manufactured product in multiple copies or a single object. *Item* is an individual instance of the creation, often having a location in the world, including electronic locations.
+The original analysis by the FRBR Working Group produced a 4-layer model of metadata that could be applied to every library catalog entry. *Work* is the most abstract layer that represents the conceptual aspect of a creation. *Expression* is a perceptible version using some form of communication like text, sound, or a visual display. *Manifestation* is the realization, which can be a manufactured product in multiple copies or a single object. *Item* is an individual instance of the creation, often having a location in the world, including electronic locations.
 
 The concepts introduced in the FRBR document have been employed in metadata for resources quite different from those in the library bibliographic catalog, and often ignoring some of the restrictions built in to the original definition. (More in this [article](https://journal.code4lib.org/articles/16491) and see the [bibliography](bibliography.md)). This is evidence that a definition of similar classes that are more general than those developed for library usage would benefit metadata developers broadly. openWEMI retains the basic concepts defined in FRBR, but expanded beyond the bibliographic application.
 
@@ -77,7 +77,7 @@ Depending on ones' need, these could be considered related works. Some artworks 
 In the fashion industry, designs are re-purposed by different brands, creating what could be seen as related works.
  <img src="https://github.com/dcmi/openwemi/assets/1564129/2e8ec556-e43e-422f-aace-435a7052ab73" alt="fashion glasses" style="width:500px;"> 
 
-In addition to these relationships there are properties that can be used to indicate that two resources represent or contain the same openWEMI entity:
+In addition to these relationships there are properties that can be used to indicate that two resources represent or contain the same endeavor:
 * commonEndeavor
 * commonWork
 * commonExpression
@@ -97,7 +97,7 @@ For example, metadata describing recorded music might define subclasses such as:
 ![Four classes: Song, Session, Mix and Single are shown as related entities.](images/wemi4rm-rm.png)
 
 
-This is a very simplified example showing that a song may be recorded in a session; that recorded session may be used in a mix and a single may be released based on that mix. Other typical properties for the each of the entity types might be:
+This is a very simplified example showing that a song may be recorded in a session; that recorded session may be used in a mix and a single may be released based on that mix. Other typical properties on these different abstraction levels might be:
 
 * for Song: title, composer, lyrics.
 * for Expression: band, session engineer, output format (e.g. analog or digital), date and time.
@@ -106,7 +106,7 @@ This is a very simplified example showing that a song may be recorded in a sessi
 
 The additional properties are out of scope for openWEMI, but hopefully the give some indication of why these specific entities might be important within the recording industry.
 
-In order to use openWemi one would relate the recorded music entity types and the properties that link them to those from openWEMI as sub-classes and sub-properties. There may be more than one view on what are the best relationships; for example is a Mix a new Work based on one or more session recordings, or is it another Expression of the same work: in the diagram below we illustrate the latter option.
+In order to use openWemi one would relate the music types and the properties that link them on each abstraction level to those from openWEMI as sub-classes and sub-properties. There may be more than one view on what are the best relationships; for example is a Mix a new Work based on one or more session recordings, or is it another Expression of the same work: in the diagram below we illustrate the latter option.
 
 ![Song is shown as a rdfs:subClassOf openwemi:Work, Session and Mix are rdfs:subClassOf openwemi:Expression and Single is a rdfs:subClassOf openwemi:Manifestation](images/wemi4rm-ClassRelations.png)
 
