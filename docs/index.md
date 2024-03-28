@@ -77,7 +77,7 @@ Depending on ones' need, these could be considered related works. Some artworks 
 In the fashion industry, designs are re-purposed by different brands, creating what could be seen as related works.
  <img src="https://github.com/dcmi/openwemi/assets/1564129/2e8ec556-e43e-422f-aace-435a7052ab73" alt="fashion glasses" style="width:500px;"> 
 
-In addition to these relationships there are properties that can be used to indicate that two resources represent or contain the same OpenWEMI entity:
+In addition to these relationships there are properties that can be used to indicate that two resources represent or belong to the same openwemi class:
 * commonEndeavor
 * commonWork
 * commonExpression
@@ -97,7 +97,7 @@ For example, metadata describing recorded music might define subclasses such as:
 ![Four classes: Song, Session, Mix and Single are shown as related entities.](images/wemi4rm-rm.png)
 
 
-This is a very simplified example showing that a song may be recorded in a session; that recorded session may be used in a mix and a single may be released based on that mix. Other typical properties for the each of the entity types might be:
+This is a very simplified example showing that a song may be recorded in a session; that recorded session may be used in a mix and a single may be released based on that mix. For example, here are some properties that might be associated with these classes:
 
 * for Song: title, composer, lyrics.
 * for Expression: band, session engineer, output format (e.g. analog or digital), date and time.
@@ -106,11 +106,11 @@ This is a very simplified example showing that a song may be recorded in a sessi
 
 The additional properties are out of scope for OpenWEMI, but hopefully the give some indication of why these specific entities might be important within the recording industry.
 
-In order to use OpenWEMI one would relate the recorded music entity types and the properties that link them to those from OpenWEMI as sub-classes and sub-properties. There may be more than one view on what are the best relationships; for example is a Mix a new Work based on one or more session recordings, or is it another Expression of the same work: in the diagram below we illustrate the latter option.
+In order to use OpenWEMI one would relate the recorded music classes and the properties that link them to those from OpenWEMI as sub-classes and sub-properties. There may be more than one view on what are the best relationships; for example is a Mix a new Work based on one or more session recordings, or is it another Expression of the same work: in the diagram below we illustrate the latter option.
 
 ![Song is shown as a rdfs:subClassOf openwemi:Work, Session and Mix are rdfs:subClassOf openwemi:Expression and Single is a rdfs:subClassOf openwemi:Manifestation](images/wemi4rm-ClassRelations.png)
 
-Taking into account the class relationships we can create relationships between the recorded music properties and those in OpenWEMI:
+Taking into account the class relationships we can create relationships between the recorded music properties and the properties defined in OpenWEMI:
 
 | Recorded Music | relationship | OpenWEMI |
 |--------------|-----------------------|-----------|
