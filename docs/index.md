@@ -47,6 +47,8 @@ These are defined in the vocabulary as:
 * Manifestation: "The physical embodiment of a creation"
 * Item: "An exemplar of a creation."
 
+Note: We do not expect implementers to use the Endeavor class. It is used as a convenience for the ontology in order to allow us to talk about all four OpenWEMI classes without enumerating them all. It may also be useful for very broad searching of datasets.
+
 ### Relationship properties
 These properties define the primary relationships between WEMI:
   * expresses (range: Work)
