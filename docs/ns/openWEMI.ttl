@@ -6,10 +6,10 @@
 @prefix openwemi: <https://dcmi.github.io/openwemi/ns#> .
 
 openwemi: a owl:Ontology ;
-   dct:title "openWEMI vocabulary" ;
-   dct:creator "Dublin Core Metadata Initiative, openWEMI Working Group" ;
-   dct:date "2023/09/26" ;
-   dct:description "openWEMI is a minimally constrained vocabulary for describing created resources using the concepts of Work, Expression, Manifestation, Item." .
+   dct:title "OpenWEMI vocabulary" ;
+   dct:creator "Dublin Core Metadata Initiative, OpenWEMI Working Group" ;
+   dct:date "2024/01/19" ;
+   dct:description "OpenWEMI is a minimally constrained vocabulary for describing created resources using the concepts of Work, Expression, Manifestation, Item." .
 
 
 openwemi:Endeavor
@@ -49,14 +49,6 @@ openwemi:Item
   rdfs:isDefinedBy openwemi: ;
   dct:description "An Item is a single instance of the creation, something that can have a place on a shelf or a location online."@en ;
   rdfs:subClassOf openwemi:Endeavor .
-
-openwemi:responsibleEntity
-  a rdf:Property ;
-  rdfs:label "responsible entity"@en ;
-  rdfs:comment "One responsible for the creation, production, distribution, maintenance, or ownership of a created entity."@en ;
-  rdfs:isDefinedBy openwemi: ;
-  dct:description "It is assumed that creations have been affected by an agent with the ability to act. The types of agents is very broad and not constrained by this property."@en ;
-  rdfs:domain openwemi:Endeavor .
       
 openwemi:relatedWork
   a rdf:Property ;
@@ -192,7 +184,7 @@ openwemi:commonEndeavor
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Endeavor"@en ;
     rdfs:comment "Relates any two resources that are or contain the same endeavor." ;
-    dct:description "commonEndeavour is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
+    dct:description "commonEndeavour is intended to define a relationship between two resources that may or may not be modeled as . This makes it possible to assert that a resource modeled using a vocabulary that does not use the  entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
     owl:equivalentProperty <http://open.vocab.org/terms/commonEndeavour> .
     
 openwemi:commonWork
@@ -200,7 +192,7 @@ openwemi:commonWork
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Work"@en ;
     rdfs:comment "Relates any two resources that are or contain the same Work." ;
-    dct:description "commonWork is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Work as another resource."@en ;
+    dct:description "commonWork is intended to define a relationship between two resources that may or may not be modeled as OpenWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the OpenWEMI entity model explicitly is describing the same Work as another resource."@en ;
         owl:equivalentProperty <http://open.vocab.org/terms/commonWork> .
         
 openwemi:commonExpression
@@ -208,7 +200,7 @@ openwemi:commonExpression
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Expression"@en ;
     rdfs:comment "Relates any two resources that are or contain the same Expression." ;
-    dct:description "commonExpression is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the Expression as another resource."@en ;
+    dct:description "commonExpression is intended to define a relationship between two resources that may or may not be modeled as OpenWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the OpenWEMI entity model explicitly is describing the Expression as another resource."@en ;
     owl:equivalentProperty <http://open.vocab.org/terms/commonExpression> .
 
 openwemi:commonManifestation
@@ -216,7 +208,7 @@ openwemi:commonManifestation
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Manifestation"@en ;
     rdfs:comment "Relates any two resources that are or contain the same Manifestation." ;
-    dct:description "commonManifestation is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Manifestation as another resource."@en ;
+    dct:description "commonManifestation is intended to define a relationship between two resources that may or may not be modeled as OpenWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the OpenWEMI entity model explicitly is describing the same Manifestation as another resource."@en ;
     owl:equivalentProperty <http://open.vocab.org/terms/commonManifestation> .
 
 openwemi:commonItem
@@ -224,5 +216,5 @@ openwemi:commonItem
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Item"@en ;
     rdfs:comment "Relates any two resources that are or contain the same Item." ;
-    dct:description "commonItem is intended to define a relationship between two resources that may or may not be modeled as openWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the openWEMI entity model explicitly is describing the same Item as another resource."@en ;
+    dct:description "commonItem is intended to define a relationship between two resources that may or may not be modeled as OpenWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the OpenWEMI entity model explicitly is describing the same Item as another resource."@en ;
     owl:equivalentProperty <http://open.vocab.org/terms/commonItem> .
