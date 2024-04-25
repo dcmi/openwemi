@@ -23,7 +23,7 @@ openwemi:Work
   rdfs:label "Work"@en ;
   rdfs:comment "An abstract notion of an artistic or intellectual creation."@en ;
   rdfs:isDefinedBy openwemi: ;
-  dct:description "A work is an abstraction that represents the concepts behind a creation. Each metadata community will have a different definition of Work, but it should be the broadest definition of the creations being described."@en ;
+  dct:description "A work is an abstraction that represents the concepts behind an Endeavor. Each metadata community will have a different definition of Work, but it should be the broadest definition of the Endeavors being described."@en ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:Expression
@@ -31,7 +31,7 @@ openwemi:Expression
   rdfs:label "Expression"@en ;
   rdfs:comment "A perceivable form of the creation."@en ;
   rdfs:isDefinedBy openwemi: ;
-  dct:description "Creations are made tangible through some kind of expression, such as text, sound, or a visual form. There may be more than one expression of a work of the same type or of different types."@en ;
+  dct:description "Endeavors are made tangible through some kind of expression, such as text, sound, or a visual form. There may be more than one expression of a work of the same type or of different types."@en ;
   rdfs:subClassOf openwemi:Endeavor .
 
 openwemi:Manifestation
@@ -39,7 +39,7 @@ openwemi:Manifestation
   rdfs:label "Manifestation"@en ;
   rdfs:comment "The physical embodiment of a creation."@en ;
   rdfs:isDefinedBy openwemi: ;
-  dct:description "A manifestation is a creation that has been realized in some physical or digital form. A manifestation may be a single realization or a realization that is produced in multiple copies such as the publication of a music compact disk or the manufacture of a shirt."@en ;
+  dct:description "A manifestation is an Endeavor that has been realized in some physical or digital form. A manifestation may be a single realization or a realization that is produced in multiple copies such as the publication of a music compact disk or the manufacture of a shirt."@en ;
   rdfs:subClassOf openwemi:Endeavor .
   
 openwemi:Item
@@ -47,7 +47,7 @@ openwemi:Item
   rdfs:label "Item"@en ;
   rdfs:comment "An exemplar of a creation."@en ;
   rdfs:isDefinedBy openwemi: ;
-  dct:description "An Item is a single instance of the creation, something that can have a place on a shelf or a location online."@en ;
+  dct:description "An Item is a single instance of an Endeavor, something that can have a place on a shelf or a location online."@en ;
   rdfs:subClassOf openwemi:Endeavor .
       
 openwemi:relatedWork

@@ -42,10 +42,10 @@ The minimal WEMI set has these classes and subclasses:
 
 These are defined in the vocabulary as:
 * Endeavor: "A creation"
-* Work: "An abstract notion of an artistic or intellectual creation."
-* Expression: "A perceivable form of the creation"
-* Manifestation: "The physical embodiment of a creation"
-* Item: "An exemplar of a creation."
+* Work: "An abstract notion of an Endeavor."
+* Expression: "A perceivable form of an Endeavor."
+* Manifestation: "A realization of an Endeavor in physical, digital, or experiential form."
+* Item: "An instantiation of an Endeavor."
 
 Note: We do not expect implementers to use the Endeavor class. It is used as a convenience for the ontology in order to allow us to talk about all four OpenWEMI classes without enumerating them all. It may also be useful for very broad searching of datasets.
 
