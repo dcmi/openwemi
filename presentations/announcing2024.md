@@ -12,7 +12,7 @@ These are incorporated into the Library Reference Model (LRM) where they are def
 
 The general concepts of Work, Expression, Manifestation, and Item (WEMI) have been found useful by metadata creators unrelated to the library catalog use case. Some developers have borrowed the WEMI concepts and integrated them into their own applications.[3] These uses usually do not follow the definitions and constraints of the LRM model, nor are there formal vocabulary relations between these uses and the library vocabulary.
 
-To facilitate the use of the metadata concepts in WEMI outside of the LRM vocabulary, a more general vocabulary that encodes WEMI with minimal constraints and very general definitions is needed. OpenWEMI [4] has been developed to fill this need. This is a project supported by the Dublin Core Management Initiative (DCMI).[5]
+To facilitate the use of the metadata concepts in WEMI outside of the LRM vocabulary, a more general vocabulary that encodes WEMI with minimal constraints and very general definitions is needed. OpenWEMI [4] has been developed to fill this need. This is a project supported by the Dublin Core Metadata Initiative (DCMI).[5]
 
 The RDF vocabulary of OpenWEMI consists of classes for `Work`, `Expression`, `Manifestation` and `Item`, as well as a super-class, `Endeavor`, that groups these. Relationships between the classes are defined as properties that maintain the direction of general-to-specific of WEMI but that allow various combinations of classes to be employed. The vocabulary also includes four properties that can be used to express that any two resources are related through one or more WEMI  classes, e.g. `commonWork`.
 
