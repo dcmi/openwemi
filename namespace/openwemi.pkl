@@ -1,0 +1,124 @@
+amends "https://ns.dublincore.org/config/0.1.0/namespace.pkl"
+
+/// DCMI Namespace Configuration File for openWEMI
+/// Configuration version to prevent breaking changes in the future
+
+config_version = "0.1.0"
+
+/// last modified date of the configuration
+
+last_modified = "2024-07-01"
+
+/// The title of the namespace
+
+title = "openWEMI"
+
+/// A description of the namespace
+
+description = """
+A minimally constrained vocabulary for Work, Expression, Manifestation, and Item
+"""
+
+/// Version string of the vocabulary
+/// Can be ignored if the vocabulary is not versioned
+/// Helps the namespace maintainer keep track of versions
+
+version = "0.1"
+
+/// DC namespace base of the vocabulary
+
+ns_base = "https://ns.dublincore.org/openwemi/"
+ns_path = "/openwemi"
+
+/// Resolver type, this can be either "wildcard" or "strict"
+
+resolver_type = "wildcard"
+
+/// Main website of the namespace or vocabulary
+website = "https://dcmi.github.io/openwemi"
+
+/// Mailing list of the namespace or vocabulary
+mailing_list = "https://lists.dublincore.org/mailman/listinfo/openwemi"
+
+/// Github repository of the namespace or vocabulary
+github = "https://github.com/dcmi/openwemi"
+
+/// information of the namespace or vocaluary maintainers
+/// this can be a list of contacts, not required any specific format,
+/// only for the information
+
+contact {
+    "DCMI Usage Board"
+    "Karen Coyle <kcoyle.net>"
+    "DCMI webmanager"
+}
+
+/// An email address, conformant to the RFC5322 mailbox specification.
+/// Can be in the form of an address spec, or a named address.
+/// <https://www.rfc-editor.org/rfc/rfc5322#section-3.4>
+/// This is the primary contact for the namespace, and will not be published.
+
+maintainer_email = "OpenWEMI Group <openwemi@lists.dublincore.org>"
+
+/// base path of the vocabulary,
+/// this will be overriden by the media types
+/// if the accept type is present in the request
+
+base = "https://dcmi.github.io/openwemi/ns/openWEMI.html"
+
+/// content types
+/// stictly follow the IANA media types
+/// <https://www.iana.org/assignments/media-types/media-types.xhtml>
+
+default_media_type = "text/html"
+
+/// list all the media types that are supported by the namespace
+/// for content negotiation. For each media type, the following
+/// properties are required:
+/// - url: the URL of the vocabulary in that media type
+/// - fragment: a boolean indicating whether the final URI should include a fragment
+/// - priority: an integer indicating the priority of the media type
+///   (lower numbers are higher priority)
+///
+/// The keys of this object should be a strict IANA media type Template
+/// <https://www.iana.org/assignments/media-types/media-types.xhtml>
+
+media_types {
+
+    ["text/html"] {
+        url = "https://dcmi.github.io/openwemi/ns/openWEMI.html"
+        fragment = true
+        priority = 1
+    }
+
+    ["text/turtle"] {
+        url = "https://dcmi.github.io/openwemi/ns/openWEMI.ttl"
+        fragment = true
+        priority = 2
+    }
+
+}
+
+/// A list of permitted media types, this can be empty,
+/// if all media types are allowed from the media_types
+
+permitted_media_types = Set(
+    "text/html",
+    "text/turtle"
+)
+
+/// seperator for the suffix, in the resolved URI
+/// Here we assume that the suffix is a fragment
+/// For a non-fragment suffix, this can be changed to "/"
+
+seperator = "#"
+
+/// Default status code
+status_code =  302
+
+/// Custom configurations should be added inside this object,
+/// there is no specific structure for this object
+custom {}
+
+/// Any future or experimental configurations, may be added inside future object
+future {}
