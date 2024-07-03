@@ -1,4 +1,4 @@
-# OpenWEMI Primer
+# OpenWEMI
 **A minimally constrained vocabulary for Work, Expression, Manifestation, and Item**
 
 ## DCMI OpenWEMI Community Group
@@ -15,8 +15,6 @@ This document and the related resources are the work of the Dublin Core Metadata
 * [The OpenWEMI Cookbook](https://github.com/dcmi/openwemi/wiki) has use cases and examples of uses of OpenWEMI.
 
 The [vocabulary document](https://dcmi.github.io/openwemi/ns/openWEMI.ttl) is the normative document for this work product. Should there be any factual differences between documents, that document must be used to resolve the conflict. 
-
-> NOTE: For the purposes of this draft, the RDF vocabulary is using the namespace https://dcmi.github.io/openwemi/ns#. It is anticipated that a true namespace will be assigned after review by the DCMI Usage Board.
 
 ## Background
 
@@ -129,7 +127,7 @@ Elements of the OpenWEMI vocabulary can be implemented into or used alongside ot
   
   <pre>{
   "@context": {
-    "openwemi": "https://dcmi.github.io/openwemi/ns#",
+    "openwemi": "https://ns.dublincore.org/openwemi/",
     "schema": "https://schema.org/"
   },
   "@type": [
@@ -146,7 +144,7 @@ Elements of the OpenWEMI vocabulary can be implemented into or used alongside ot
   
   <pre>{
   "@context": {
-    "openwemi": "https://dcmi.github.io/openwemi/ns#",
+    "openwemi": "https://ns.dublincore.org/openwemi/",
     "schema": "https://schema.org/"
   },
   "@type": [
@@ -169,7 +167,7 @@ OpenWEMI "common" properties can be used to state that any two metadata instance
   
   <pre>{
   "@context": {
-    "openwemi": "https://dcmi.github.io/openwemi/ns#",
+    "openwemi": "https://ns.dublincore.org/openwemi/",
     "schema": "https://schema.org/"
   },
   "@type": [
