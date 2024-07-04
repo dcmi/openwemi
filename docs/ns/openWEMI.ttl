@@ -3,14 +3,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix openwemi: <https://dcmi.github.io/openwemi/ns#> .
+@prefix openwemi: <https://ns.dublincore.org/openwemi/> .
 
 openwemi: a owl:Ontology ;
    dct:title "OpenWEMI vocabulary" ;
    dct:creator "Dublin Core Metadata Initiative, OpenWEMI Working Group" ;
    dct:date "2024/01/19" ;
    dct:description "OpenWEMI is a minimally constrained vocabulary for describing created resources using the concepts of Work, Expression, Manifestation, Item." .
-
 
 openwemi:Endeavor
   a rdfs:Class, owl:Class ;
