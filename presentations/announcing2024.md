@@ -18,7 +18,7 @@ The RDF vocabulary of OpenWEMI consists of classes for `Work`, `Expression`, `Ma
 
 The OpenWEMI vocabulary can be used directly but the practical assumption is that it will be used as a general model for the definition of context-specific metadata vocabularies. For example, a subclass of the OpenWEMI Work could be a "MusicWork", an "ArtWork", or an "ArchitectureWork". All of the OpenWEMI classes and properties can be used in this way. Anyone wishing to make use of the concepts of WEMI can now do so, utilizing the OpenWEMI vocabulary as a meta-model for their data. 
 
-Please see the documentation for OpenWEMI [4]. The RDF vocabulary file is available in turtle format. [6] Examples and other document, including github issues, are publicly available. [7]
+Please see the documentation for OpenWEMI [4]. The RDF vocabulary file is available in turtle format. [6] Examples and other documents, including github issues, are publicly available. [7]
 
 [1] IFLA Study Group on the Functional Requirements for Bibliographic Records. (2009) Functional Requirements for Bibliographic Records. Den Haag. http://archive.ifla.org/VII/s13/frbr/frbr_2008.pdf
 [2] Riva, P., Le Boeuf, P., Žumer, M. (2017) IFLA Library Reference Model: A Conceptual Model for Bibliographic Information. Den Haag, IFLA. https://repository.ifla.org/handle/123456789/40
