@@ -20,10 +20,10 @@ The OpenWEMI vocabulary can be used directly but the practical assumption is tha
 
 Please see the documentation for OpenWEMI [4]. The RDF vocabulary file is available in turtle format. [6] Examples and other documents, including github issues, are publicly available. [7]
 
-[1] IFLA Study Group on the Functional Requirements for Bibliographic Records. (2009) Functional Requirements for Bibliographic Records. Den Haag. http://archive.ifla.org/VII/s13/frbr/frbr_2008.pdf
-[2] Riva, P., Le Boeuf, P., Žumer, M. (2017) IFLA Library Reference Model: A Conceptual Model for Bibliographic Information. Den Haag, IFLA. https://repository.ifla.org/handle/123456789/40
-[3] Coyle, Karen. Works, Expressions, Manifestations, Items: An Ontology. Code4lib Journal, Issue 53, 2022-05-09. https://journal.code4lib.org/articles/16491
-[4] https://dcmi.github.io/openwemi/
-[5] https://dublincore.org/
-[6] https://dcmi.github.io/openwemi/ns/openWEMI.ttl
-[7] https://github.com/dcmi/openwemi/tree/main
+[1] IFLA Study Group on the Functional Requirements for Bibliographic Records. (2009) Functional Requirements for Bibliographic Records. Den Haag. http://archive.ifla.org/VII/s13/frbr/frbr_2008.pdf  
+[2] Riva, P., Le Boeuf, P., Žumer, M. (2017) IFLA Library Reference Model: A Conceptual Model for Bibliographic Information. Den Haag, IFLA. https://repository.ifla.org/handle/123456789/40  
+[3] Coyle, Karen. Works, Expressions, Manifestations, Items: An Ontology. Code4lib Journal, Issue 53, 2022-05-09. https://journal.code4lib.org/articles/16491  
+[4] https://dcmi.github.io/openwemi/  
+[5] https://dublincore.org/  
+[6] https://dcmi.github.io/openwemi/ns/openWEMI.ttl  
+[7] https://github.com/dcmi/openwemi/tree/main  
