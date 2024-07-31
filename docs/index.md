@@ -9,12 +9,10 @@ This document and the related resources are the work of the Dublin Core Metadata
 
 ## The OpenWEMI documents
 
-* Human-friendly documentation: [https://dcmi.github.io/openwemi/ns/openWEMI.html](https://dcmi.github.io/openwemi/ns/openWEMI.html)
-* Vocabulary in turtle: [https://dcmi.github.io/openwemi/ns/openWEMI.ttl](https://dcmi.github.io/openwemi/ns/openWEMI.ttl)
-* OpenWEMI Primer: (this document)
-* [The OpenWEMI Cookbook](https://github.com/dcmi/openwemi/wiki) has use cases and examples of uses of OpenWEMI.
-
-The [vocabulary document](https://dcmi.github.io/openwemi/ns/openWEMI.ttl) is the normative document for this work product. Should there be any factual differences between documents, that document must be used to resolve the conflict. 
+* Specification (this document) (note: needs DCMI URL) https://dcmi.github.io/openwemi/
+* Vocabulary page: [https://ns.dublincore.org/openwemi/](https://ns.dublincore.org/openwemi/)
+* Vocabulary in turtle: [https://dcmi.github.io/openwemi/ns/openWEMI.ttl](https://dcmi.github.io/openwemi/ns/openWEMI.ttl) (Normative)
+* [The OpenWEMI Cookbook](https://github.com/dcmi/openwemi/wiki) an ongoing gathering of use cases and examples.
 
 ## Background
 
