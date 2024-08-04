@@ -34,7 +34,7 @@ The minimal WEMI set has these classes and subclasses:
   * Manifestation
   * Item
  
-![openwemiClasses](https://github.com/dcmi/openwemi/assets/1564129/1ef0176e-8ac2-4acb-9de1-acf04838d7c9)  
+![Openwemi Classes](images/openwemiClasses.png)  
 
 These are defined in the vocabulary as:
 * Endeavor: "A creation"
@@ -54,7 +54,7 @@ These properties define the primary relationships between WEMI:
   * instantiates (range: Work or Expression or Manifestation)
   * instantiatedBy (range: Item)
 Which is expressed in this diagram:
-![relationships](https://github.com/dcmi/openwemi/assets/1564129/74b70a1f-ccd1-4294-827c-1c6703fc495e)
+![Relationships between classes](images/relationships.jpeg)
 
 The primary relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the Work to the Item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from Work to Expression to Manifestation to Item, OpenWEMI allows all relationships that maintain the overall semantics of the classes.
 
@@ -65,15 +65,13 @@ The model also provides properties expressing relationships between entities of 
 * relatedItem (range: Item)
 
 What counts as "related" depends entirely on the area of the metadata description and the needs of the constituents. For example, famous works of art are often copied in different and even quite varied forms, like this:
-<!-- ![‎thewave](https://github.com/dcmi/openwemi/assets/1564129/53322a03-4611-46eb-ad01-a48c32f4c00d) -->
- <img src="https://github.com/dcmi/openwemi/assets/1564129/53322a03-4611-46eb-ad01-a48c32f4c00d" alt="Examples of The Wave" style="width:500px;"> 
-
+![The wave as print and Lego kit](images/thewave.jpeg)
 
 Depending on ones' need, these could be considered related works. Some artworks are created in multiple copies that are considered distinct. These might be viewed as related manifestations, or even as related copies.
-![Screenshot 2023-09-10 at 9 21 33 AM](https://github.com/dcmi/openwemi/assets/1564129/2aaff76f-da7b-42aa-a231-8de0fea7697e)
+![Prints of The Wave](images/thewaveprints.png)
 
 In the fashion industry, designs are re-purposed by different brands, creating what could be seen as related works.
- <img src="https://github.com/dcmi/openwemi/assets/1564129/2e8ec556-e43e-422f-aace-435a7052ab73" alt="fashion glasses" style="width:500px;"> 
+ <img src="images/glasses.jpeg" alt="Fashion glasses" style="width:500px;"> 
 
 In addition to these relationships there are properties that can be used to indicate that two resources represent or belong to the same openwemi class:
 * commonEndeavor
