@@ -172,7 +172,9 @@ OpenWEMI "common" properties can be used to state that any two metadata instance
   ],
   "schema:name": "Let It Be",
   "schema:asin": "B097CKL5BT",
-   "openwemi:commonWork": "https://musicbrainz.org/work/ef5b9074-84d2-3e46-81ba-cdbe57898033"
+  "openwemi:commonWork": {
+    "@id": "https://musicbrainz.org/work/ef5b9074-84d2-3e46-81ba-cdbe57898033" 
+  }
 }</pre>
 </details>
 <br/>
