@@ -1,188 +1,27 @@
-# OpenWEMI
-**A minimally constrained vocabulary for Work, Expression, Manifestation, and Item**
+# OpenWEMI [Drafting Site]
+
+OpenWEMI is a minimally constrained RDF vocabulary defining classes for Work, Expression, Manifestation, and Item (WEMI) and properties for the relationships between them. It is based on concepts that were originally developed out of library cataloging practice. Unlike the library usage of these terms, OpenWEMI is not defined by any particular community type and can be used as a scaffolding for metadata describing any type of resource.
+
+**This site provides access to drafts, works in progress, and other non-normative resources relating to the specification. Please do not cite resources on this site when the [canonical versions on the Dublin Core website](https://www.dublincore.org/specifications/openwemi/) can be used.**
+
+## The OpenWEMI documents
+
+* [Draft Specification](draft/specification) on this site. This has been Published, please used the published version on the Dublin Core site.
+  * [Published version](https://www.dublincore.org/specifications/openwemi/specification/) on the Dublin Core site.
+* [Draft Vocabulary page](https://dcmi.github.io/openwemi/ns/openWEMI.html) on this site (Status Published) 
+  * Currently the Draft and Published versions are identical.
+  * The namespace URI https://ns.dublincore.org/openwemi/ redirects to this representation of the vocabulary if HTML is requested.
+* [Draft Vocabulary in turtle](https://dcmi.github.io/openwemi/ns/openWEMI.ttl) (Normative)
+  * Currently the Draft and Published versions are identical.
+  * The namespace URI https://ns.dublincore.org/openwemi/ redirects to this representation of the vocabulary if Turtle is requested.
+* [Draft JSON-LD Context file](draft/context.json) Status: unstable draft.
+  * Note that this file has not been fully tested. Its location and content may change. Do not use for production purposes. We recommend that instead the content of this file is copied, tested and used from a URI that you control.
+* [The OpenWEMI Cookbook](https://github.com/dcmi/openwemi/wiki) 
+  * This is an ongoing work-in-progress, gathering use cases and examples.
+
 
 ## DCMI OpenWEMI Community Group
 This document and the related resources are the work of the Dublin Core Metadata Initiative's OpenWEMI Community Group. The group uses github for its work, and welcomes comments on the work. All resources are open for viewing and github issues can be created by anyone with a github account. The email list is self-subscribe. 
 
 * The [OpenWEMI mailing list](https://lists.dublincore.org/mailman/listinfo/openwemi)
 * [OpenWEMI on github](https://github.com/dcmi/openwemi)
-
-## The OpenWEMI documents
-
-* Specification (this document)
-* Vocabulary page: [https://ns.dublincore.org/openwemi/](https://ns.dublincore.org/openwemi/)
-* Vocabulary in turtle: [https://dcmi.github.io/openwemi/ns/openWEMI.ttl](https://dcmi.github.io/openwemi/ns/openWEMI.ttl) (Normative)
-* [The OpenWEMI Cookbook](https://github.com/dcmi/openwemi/wiki) an ongoing gathering of use cases and examples.
-
-## Background
-
-OpenWEMI is an RDF vocabulary based on the concepts of Work, Expression, Manifestation, and Item (WEMI) that were first introduced in the [Functional Requirements for Bibliographic Records (FRBR)](http://archive.ifla.org/VII/s13/frbr/frbr_2008.pdf) document that was produced by a working group of the International Federation of Library Associations (IFLA). The original analysis by the FRBR Working Group produced a 4-entity model of metadata that could be applied to every library catalog entry. *Work* is the most abstract layer that represents the conceptual aspect of a creation. *Expression* is a creation using some form of communication like text, sound, or a visual display. *Manifestation* is the realization, which can be a manufactured product in multiple copies or a single object. *Item* is an individual instance of the creation, often having a location in the world, including electronic locations.
-
-The concepts introduced in the FRBR document have been employed in metadata for resources quite different from those in the library bibliographic catalog, and often ignoring some of the restrictions built in to the original definition. (More in this [article](https://journal.code4lib.org/articles/16491) and see the [bibliography](bibliography.md)). This is evidence that a definition of similar classes that are more general than those developed for library usage would benefit metadata developers broadly. OpenWEMI retains the basic concepts defined in FRBR, but expanded beyond the bibliographic application.
-
-## OpenWEMI
-
-OpenWEMI defines a minimally constrained version of FRBR's Work, Expression, Manifestation, Item. It removes any disjoint rules between the WEMI entities and removes any reference to bibliographic entities from their definitions. It also allows relationships between the classes that are not present in library FRBR. OpenWEMI is loosely based on the [FRBR Core](http://purl.org/vocab/frbr/core) created by Ian Davis and Richard Newman, with contributions by Bruce D'Arcus, and which is used in several non-library RDF implementations. The OpenWEMI vocabulary includes the superclass Endeavor, which is not part of the FRBR group of entities but was added by the authors of FRBR core and serves to create a coherent grouping of the entities. 
-
-OpenWEMI classes are purposely defined very broadly and the property relationships are flexible while retaining the basic semantics of general (Work) to specific (Item). Experience shows that metadata models are likely to use OpenWEMI classes as superclasses to the more specific resources being described, such as *MusicWork* or *FashionDesign*. The OpenWEMI classes can be used together or separately in metadata to characterize aspects of creations.  
- 
-### Classes
-The minimal WEMI set has these classes and subclasses:
-* Endeavor
-  * Work
-  * Expression
-  * Manifestation
-  * Item
- 
-![Openwemi Classes](images/openwemiClasses.png)  
-
-These are defined in the vocabulary as:
-* Endeavor: "A creation"
-* Work: "An abstract notion of an Endeavor."
-* Expression: "A perceivable form of an Endeavor."
-* Manifestation: "A realization of an Endeavor in physical, digital, or experiential form."
-* Item: "An instantiation of an Endeavor."
-
-Note: We do not expect implementers to use the Endeavor class. It is used as a convenience for the ontology in order to allow us to talk about all four OpenWEMI classes without enumerating them all. It may also be useful for very broad searching of datasets.
-
-### Relationship properties
-These properties define the primary relationships between WEMI:
-  * expresses (range: Work)
-  * expressedBy (range: Expression)
-  * manifests (range: Work or Expression)
-  * manifestedBy (range Manifestation)
-  * instantiates (range: Work or Expression or Manifestation)
-  * instantiatedBy (range: Item)
-Which is expressed in this diagram:
-![Relationships between classes](images/relationships.jpeg)
-
-The primary relationship properties are as open as possible while still maintaining the logical progression between the most general concept of the Work to the Item. Unlike these relationships in FRBR and in the Library Reference Model which are strictly linear, from Work to Expression to Manifestation to Item, OpenWEMI allows all relationships that maintain the overall semantics of the classes.
-
-The model also provides properties expressing relationships between entities of the same type
-* relatedWork (range: Work)
-* relatedExpression (range: Expression)
-* relatedManifestation (range: Manifestation)
-* relatedItem (range: Item)
-
-What counts as "related" depends entirely on the area of the metadata description and the needs of the constituents. For example, famous works of art are often copied in different and even quite varied forms, like this:
-![The wave as print and Lego kit](images/thewave.jpeg)
-
-Depending on ones' need, these could be considered related works. Some artworks are created in multiple copies that are considered distinct. These might be viewed as related manifestations, or even as related copies.
-![Prints of The Wave](images/thewaveprints.png)
-
-In the fashion industry, designs are re-purposed by different brands, creating what could be seen as related works.
- <img src="images/glasses.jpeg" alt="Fashion glasses" style="width:500px;"> 
-
-In addition to these relationships there are properties that can be used to indicate that two resources represent or belong to the same openwemi class:
-* commonEndeavor
-* commonWork
-* commonExpression
-* commonManifestation
-* commonItem
-  
-There are no ranges or domains for these properties so they could be used without making a class inference about either resource. They can be used to describe relationships between resources or resource representations that do not otherwise make use of the WEMI concepts.
-
-## Modeling decisions
-It is possible to use OpenWEMI in two ways. The first is to refine OpenWEMI by creating subclasses and subproperties for specific uses. The second is to use classes and properties from OpenWEMI in instance data alongside those from any other vocabulary.
-
-### Refining OpenWEMI for specific uses
-The OpenWEMI elements are defined very broadly with the intention of encouraging reuse in a wide variety of circumstances, by defining sub-classes and sub-properties in the metadata vocabulary that are specific to the resources being described. It is not required that there be a one-to-one relationship with OpenWEMI terms. OpenWEMI is a starting point on which one can define additional concepts for the metadata in question. 
-
-For example, metadata describing recorded music might define subclasses such as:
-
-![Four classes: Song, Session, Mix and Single are shown as related entities.](images/wemi4rm-rm.png)
-
-
-This is a very simplified example showing that a song may be recorded in a session; that recorded session may be used in a mix and a single may be released based on that mix. For example, here are some properties that might be associated with these classes:
-
-* for Song: title, composer, lyrics.
-* for Expression: band, session engineer, output format (e.g. analog or digital), date and time.
-* for Mix: mixing engineer, output format (e.g. analog or digital), data and time.
-* for Single: publisher, cover art, date.
-
-The additional properties are out of scope for OpenWEMI, but hopefully the give some indication of why these specific entities might be important within the recording industry.
-
-In order to use OpenWEMI one would relate the recorded music classes and the properties that link them to those from OpenWEMI as sub-classes and sub-properties. There may be more than one view on what are the best relationships; for example is a Mix a new Work based on one or more session recordings, or is it another Expression of the same work: in the diagram below we illustrate the latter option.
-
-![Song is shown as a rdfs:subClassOf openwemi:Work, Session and Mix are rdfs:subClassOf openwemi:Expression and Single is a rdfs:subClassOf openwemi:Manifestation](images/wemi4rm-ClassRelations.png)
-
-Taking into account the class relationships we can create relationships between the recorded music properties and the properties defined in OpenWEMI:
-
-| Recorded Music | relationship | OpenWEMI |
-|--------------|-----------------------|-----------|
-| rm:records | rdfs:subPropertyOf | openwemi:expresses |
-| rm:mixes | rdfs:subPropertyOf | openwemi:relatedExpression |
-| rm:releaseOf | rdfs:subPropertyOf | openwemi:instantiates |
-
-### Direct use of OpenWEMI in RDF data
-
-Elements of the OpenWEMI vocabulary can be implemented into or used alongside other metadata vocabularies, such as [Schema.org](https://schema.org), and incorporated directly into existing metadata. The snippets below present two approaches for aligning `openwemi:Work` with `schema:CreativeWork` and `openwemi:Item` with `schema:IndividualProduct` in simple JSON-LD examples for *Let It Be*.
-
-<details>
-  <summary>Example 1: Let it Be (openwemi:Work/schema:CreativeWork)</summary>
-  
-  <pre>{
-  "@context": {
-    "openwemi": "https://ns.dublincore.org/openwemi/",
-    "schema": "https://schema.org/"
-  },
-  "@type": [
-    "openwemi:Work",
-    "schema:CreativeWork"
-  ],
-  "schema:name": "Let It Be"
-}</pre>
-
-</details>
-
-<details>
-  <summary>Example 2: Let it Be (openwemi:Item/schema:IndividualProduct)</summary>
-  
-  <pre>{
-  "@context": {
-    "openwemi": "https://ns.dublincore.org/openwemi/",
-    "schema": "https://schema.org/"
-  },
-  "@type": [
-    "openwemi:Item",
-    "schema:IndividualProduct"
-  ],
-  "schema:name": "Let It Be",
-  "schema:asin": "B097CKL5BT"
-}</pre>
-</details>
-<br/>
-<img src="images/commonwork-letitbe-v2.png" style="height:auto;width:780px;"/>
-<br/>
-OpenWEMI "common" properties can be used to state that any two metadata instance have one of the WEMI concepts in common, regardless of their metadata formats. In practice this requires that the metadata instances have identifiers that can be used in the statement. For example, the snippet below demonstrates use of the `openwemi:commonWork` property to link a specific recording and product offering of *Let it Be* ([ASIN B097CKL5BT](https://www.amazon.com/Let-Be-Special-LP-Beatles/dp/B097CKL5BT)) to its common work in [MusicBrainz](https://musicbrainz.org/work/ef5b9074-84d2-3e46-81ba-cdbe57898033).
-
-<br/>
-
-<details>
-  <summary>Example 3: Let it Be (openwemi:commonWork)</summary>
-  
-  <pre>{
-  "@context": {
-    "openwemi": "https://ns.dublincore.org/openwemi/",
-    "schema": "https://schema.org/"
-  },
-  "@type": [
-    "openwemi:Item",
-    "schema:IndividualProduct"
-  ],
-  "schema:name": "Let It Be",
-  "schema:asin": "B097CKL5BT",
-  "openwemi:commonWork": {
-    "@id": "https://musicbrainz.org/work/ef5b9074-84d2-3e46-81ba-cdbe57898033" 
-  }
-}</pre>
-</details>
-<br/>
-Additional RDF examples can be found in the [OpenWEMI Cookbook](https://github.com/dcmi/openwemi/wiki). 
-
-
-## References
-
-* IFLA Study Group on the Functional Requirements for Bibliographic Records. (2009) Functional Requirements for Bibliographic Records. Den Haag. [http://archive.ifla.org/VII/s13/frbr/frbr_2008.pdf](http://archive.ifla.org/VII/s13/frbr/frbr_2008.pdf)
-* Coyle, Karen. (2022) Works, Expressions, Manifestations, Items: An Ontology. Code4lib Journal, Issue 53, 2022-05-09. [https://journal.code4lib.org/articles/16491](https://journal.code4lib.org/articles/16491)
-* Davis, Ian and Richard Newman. (2005) FRBR Core [http://purl.org/vocab/frbr/core](http://purl.org/vocab/frbr/core)
