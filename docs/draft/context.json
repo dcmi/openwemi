@@ -1,34 +1,35 @@
 {
+    "_COMMENT_": "Note that this file has not been fully tested. Its location and content may change. Do not use for production purposes. We recommend that instead the content of this file is copied, tested and used from a URI that you control.",
     "@context": {
-        "wemi": "https://dcmi.github.io/openwemi/ns#",
-        "wemi:relatedWork" : {
+        "openwemi": "https://ns.dublincore.org/openwemi/",
+        "openwemi:relatedWork" : {
             "@type": "@id"
         },
-        "wemi:relatedExpression" : {
+        "openwemi:relatedExpression" : {
             "@type": "@id"
         },
-        "wemi:relatedManifestation" : {
+        "openwemi:relatedManifestation" : {
             "@type": "@id"
         },
-        "wemi:relatedItem" : {
+        "openwemi:relatedItem" : {
             "@type": "@id"
         },
-        "wemi:expresses" : {
+        "openwemi:expresses" : {
             "@type": "@id"
         },
-        "wemi:expressedBy" : {
+        "openwemi:expressedBy" : {
             "@type": "@id"
         },
-        "wemi:manifests" : {
+        "openwemi:manifests" : {
             "@type": "@id"
         },
-        "wemi:manifestedBy" : {
+        "openwemi:manifestedBy" : {
             "@type": "@id"
         },
-        "wemi:instantiates" : {
+        "openwemi:instantiates" : {
             "@type": "@id"
         },
-        "wemi:instantiatedBy" : {
+        "openwemi:instantiatedBy" : {
             "@type": "@id"
         }
     }
