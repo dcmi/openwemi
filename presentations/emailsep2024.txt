@@ -1,0 +1,20 @@
+*OpenWEMI - A minimally constrained vocabulary for Work, Expression, Manifestation, Item*
+
+To facilitate the use of the metadata concepts in  Work, Expression, Manifestation, and Item (WEMI) outside of the FRBR/LRM vocabulary, a more general vocabulary that encodes WEMI with minimal constraints and very general definitions is needed. OpenWEMI [1] has been developed to fill this need. This is a project supported by the Dublin Core Metadata Initiative (DCMI).[2] The vocabulary is defined under a DCMI namespace: https://ns.dublincore.org/openwemi/.
+
+The RDF vocabulary of OpenWEMI consists of classes for Work, Expression, Manifestation and Item, as well as a super-class, Endeavor, that groups these concepts. The classes are not defined as disjoint, as they are in library data. Relationships between the classes are defined as properties that maintain the direction of general-to-specific of WEMI but that allow various combinations of classes to be employed. The vocabulary also includes four properties that can be used to express that any two resources are related through one or more WEMI classes: commonWork, commonExpression, commonManifestation and commonItem.
+
+The OpenWEMI vocabulary can be used directly but the practical assumption is that it will be used as a general model for the definition of context-specific metadata vocabularies. For example, a subclass of the OpenWEMI Work could be a "MusicWork", an "ArtWork", or an "ArchitectureWork". Anyone wishing to make use of the concepts of WEMI can now do so, utilizing the OpenWEMI vocabulary as a meta-model for their data.
+
+The documentation for OpenWEMI is on the Dublin Core web site.[1] The RDF vocabulary file is available in Turtle format.[3] Examples and other documents, including GitHub issues, are publicly available.[4] 
+
+Background
+
+In 1998 a working group of the International Federation of Library Associations published a new and innovative model for library catalog data, Functional Requirements for Bibliographic Data (FRBR).[5] It included the four WEMI entities. The general concepts of WEMI have been found useful by metadata creators unrelated to the library catalog use case. Some developers have borrowed the WEMI concepts and integrated them into their own applications.[6] These uses usually do not employ the definitions and constraints of the LRM model, nor are there formal vocabulary relations between these uses and the library vocabulary.
+
+[1] https://www.dublincore.org/specifications/openwemi/
+[2] https://dublincore.org/
+[3] https://dcmi.github.io/openwemi/ns/openWEMI.ttl 
+[4] https://github.com/dcmi/openwemi/
+[5] IFLA Study Group on the Functional Requirements for Bibliographic Records. (2009) Functional Requirements for Bibliographic Records. Den Haag. http://archive.ifla.org/VII/s13/frbr/frbr_2008.pdf 
+[6] Coyle, Karen. Works, Expressions, Manifestations, Items: An Ontology. Code4lib Journal, Issue 53, 2022-05-09. https://journal.code4lib.org/articles/16491
