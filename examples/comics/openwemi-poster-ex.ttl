@@ -2,21 +2,21 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix gcd: <https://www.comics.org/issue/> .
 @prefix openwemi: <https://ns.dublincore.org/openwemi/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 [ 
   a openwemi:Work ;
   dcterms:title "Daredevil (1964) #67" ; 
   openwemi:manifestedBy gcd:23651 ;
+  openwemi:expressedBy gcd:505288 ;
 ] .
 
 gcd:23651 a openwemi:Work, openwemi:Manifestation ;
-  openwemi:expressedBy gcd_issue:505288 .
+  openwemi:instantiatedBy [
+    dcterms:identifier "0198524001" ;
+    rdf:type openwemi:Item ;
+  ] .
 
-gcd:505288 a openwemi:Work, openwemi:Expression, openwemi:Manifestation ;
+gcd:505288 a openwemi:Work, openwemi:Expression ;
   dcterms:title "Diabólico (1964) #67" .
 
-gcd:23651 a openwemi:Work, openwemi:Manifestation ;
-  openwemi:instantiatedBy [
-    dcterms:identifier "0198524001"
-    rdfs:type openwemi:Item
-  ] .
