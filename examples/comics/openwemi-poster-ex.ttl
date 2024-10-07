@@ -1,0 +1,22 @@
+@base <http://example.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix gcd: <https://www.comics.org/issue/> .
+@prefix openwemi: <https://ns.dublincore.org/openwemi/> .
+
+[ 
+  a openwemi:Work ;
+  dcterms:title "Daredevil (1964) #67" ; 
+  openwemi:manifestedBy gcd:23651 ;
+] .
+
+gcd:23651 a openwemi:Work, openwemi:Manifestation ;
+  openwemi:expressedBy gcd_issue:505288 .
+
+gcd:505288 a openwemi:Work, openwemi:Expression, openwemi:Manifestation ;
+  dcterms:title "Diabólico (1964) #67" .
+
+gcd:23651 a openwemi:Work, openwemi:Manifestation ;
+  openwemi:instantiatedBy [
+    dcterms:identifier "0198524001"
+    rdfs:type openwemi:Item
+  ] .
