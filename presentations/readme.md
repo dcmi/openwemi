@@ -9,3 +9,8 @@ In this talk I emphasize the change in technology from FRBR (early 1990's) and t
 Note that this slide deck is licensed as CC-BY, so you are free to make use of all or part of it, preferably with attribution.
 * [openWEMIBib.pdf](openWEMIBib.pdf)
 * [openWEMIBib.pptx](openWEMIBib.pptx)
+
+## Poster presentation for DCMI2024
+
+This is two posters, each 24x36 inches (expand to read) that were created for the Dublin Core 2024 conference in Toronto.
+* [posterdcmi2024.pdf](posterdcmi2024.pdf)
