@@ -1,0 +1,114 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> . 
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix openwemi: <https://ns.dublincore.org/openwemi/> .
+@prefix quilt: <https://example.com/quilt/> .
+
+quilt: a owl:Ontology ;
+   dct:title "Quilt vocabulary" ;
+   dct:description "This quilt vocabulary is subclassed to OpenWEMI to make use of the concepts of Work, Expression, Manifestation, Item." .
+  
+quilt:DesignConcept
+  a rdfs:Class, owl:Class ;
+  rdfs:label "Design concept"@en ;
+  rdfs:comment "A conceptual design for a quilt."@en ;
+  rdfs:isDefinedBy quilt: ;
+  dct:description "A conceptual design, possibly, but not necessarily, based on a block pattern."@en ;
+  rdfs:subClassOf openwemi:Work .
+
+quilt:DesignDiagram
+  a rdfs:Class, owl:Class ;
+  rdfs:label "Design diagram"@en ;
+  rdfs:comment "A diagram that shows the quilt design."@en ;
+  rdfs:isDefinedBy quilt: ;
+  dct:description "The quilt design diagram is usually in the form of a drawing that gives the structure of the quilt and/or quilt blocks. Different expressions can indicate options such as quilt size, addition of borders, and fabric suggestions."@en ;
+  rdfs:subClassOf openwemi:Expression .
+
+quilt:Pattern
+  a rdfs:Class, owl:Class ;
+  rdfs:label "Quilt pattern"@en ;
+  rdfs:comment "A quilt pattern that is available in some tangible form, such as printed in a document or for download."@en ;
+  rdfs:isDefinedBy quilt: ;
+  dct:description "The quilt:Pattern generally includes all of the information needed for a person to make the quilt. There are fabric needs (yardage), cutting instructions, and piecing instructions. There may also be size options, fabric suggestions, and other useful information."@en ;
+  rdfs:subClassOf openwemi:Manifestation .
+  
+quilt:CompletedQuilt
+  a rdfs:Class, owl:Class ;
+  rdfs:label "Completed quilt"@en ;
+  rdfs:comment "An actual (physical) quilt that 1) instantiates the quilt:Expression and 2) may be the direct application of a quilt:Manifestation."@en ;
+  rdfs:isDefinedBy quilt: ;
+  dct:description "The quilt:CompletedQuilt may be a direct creation following the quilt:Pattern, but variations visible in the quilt:CompletedQuilt do not generally create a new work. Such variations may be in terms of color and fabric choice, and use of borders. Other variations, such as using a different quilt block design, may be considered a new work."@en ;
+  rdfs:subClassOf openwemi:Item .
+     
+
+quilt:designOf
+  a rdf:Property ;
+  rdfs:label "Design of"@en ;
+  rdfs:comment "An Endeavor that expresses a quilt:DesignConcept."@en ;
+  rdfs:isDefinedBy quilt: ;
+  rdfs:subPropertyOf openwemi:expresses ;
+  rdfs:domain quilt:Expression ;
+  dct:description "A relationship asserted from a DesignDiagram to the DesignConcept that it describes."@en ;
+  rdfs:range quilt:DesignConcept .
+
+quilt:patternOf
+  a rdf:Property ;
+  rdfs:label "Pattern of"@en ;
+  rdfs:comment "A quilt:Pattern that implements a quilt:DesignPattern."@en ;
+  rdfs:isDefinedBy quilt: ;
+  rdfs:subPropertyOf openwemi:manifests ;
+  rdfs:domain quilt:DesignPattern ;
+  dct:description "A relationship asserted from a quilt:Pattern to a quilt:DesignDiagram."@en ;
+  rdfs:range quilt:Pattern . 
+
+quilt:creates
+  a rdf:Property ;
+  rdfs:label "Creates"@en ;
+  rdfs:comment "A completed quilt based on a quilt pattern."@en ;
+  rdfs:isDefinedBy quilt: ;
+  rdfs:subPropertyOf openwemi:instantiates ;
+  rdfs:domain quilt:Item ;
+  dct:description "A completed quilt for this quilt pattern."@en ;
+  rdfs:range quilt:CompletedQuilt.
+
+  quilt:relatedDesignConcept
+    a rdf:Property ;
+    rdfs:label "Related design"@en ;
+    rdfs:comment "A quilt:DesignConcept that is related in some way to another quilt:DesignConcept."@en ;
+    rdfs:isDefinedBy quilt: ;
+    rdfs:subPropertyOf openwemi:relatedWork ;
+    rdfs:domain quilt:DesignConcept ;
+    dct:description "This provides a non-specific relationship between two quilt:DesignConcepts. If needed, the specific relationship type can be defined as a sub-property of quilt:relatedDesignConcept."@en ;
+    rdfs:range quilt:DesignConcept .
+
+  quilt:relatedDesignDiagram
+    a rdf:Property ;
+    rdfs:label "related Expression"@en ;
+    rdfs:comment "A quilt:DesignDiagram that is related in some way to another quilt:DesignDiagram."@en ;
+    rdfs:isDefinedBy quilt: ;
+    rdfs:subPropertyOf openwemi:relatedExpression ;
+    rdfs:domain quilt:Expression ;
+    dct:description "This provides a non-specific relationship between two DesignDiagrams. If needed, the specific relationship type can be defined as a sub-property of relatedDesignDiagram."@en ;
+    rdfs:range quilt:DesignDiagram .
+
+  quilt:relatedPattern
+    a rdf:Property ;
+    rdfs:label "related Pattern"@en ;
+    rdfs:comment "A quilt:Pattern that is related in some way to another quilt:Pattern."@en ;
+    rdfs:isDefinedBy quilt: ;
+    rdfs:subPropertyOf openwemi:relatedManifestation ;
+    rdfs:domain quilt:Manifestation ;
+    dct:description "This provides a non-specific relationship between two Patterns. If needed, the specific relationship type can be defined as a sub-property of relatedPattern."@en ;
+    rdfs:range quilt:Pattern .
+
+  quilt:relatedCompletedQuilt
+    a rdf:Property ;
+    rdfs:label "related Item"@en ;
+    rdfs:comment "A quilt:CompletedQuilt that is related in some way to another quilt:CompletedQuilt."@en ;
+    rdfs:isDefinedBy quilt: ;
+    rdfs:subPropertyOf openwemi:relatedItem ;
+    rdfs:domain quilt:Item ;
+    dct:description "This provides a non-specific relationship between two quilt:CompletedQuilt. The specific relationship type can be defined as a sub-property of quilt:CompletedQuilt."@en ;
+    rdfs:range quilt:CompletedQuilt .
