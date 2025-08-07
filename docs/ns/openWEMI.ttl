@@ -183,7 +183,7 @@ openwemi:commonEndeavor
     rdfs:isDefinedBy openwemi: ;
     rdfs:label "common Endeavor"@en ;
     rdfs:comment "Relates any two resources that are or contain the same endeavor." ;
-    dct:description "commonEndeavour is intended to define a relationship between two resources that may or may not be modeled as . This makes it possible to assert that a resource modeled using a vocabulary that does not use the  entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
+    dct:description "commonEndeavour is intended to define a relationship between two resources that may or may not be modeled as OpenWEMI. This makes it possible to assert that a resource modeled using a vocabulary that does not use the  entity model explicitly is describing the same Work, Expression, Manifestation, and/or Item as another resource."@en ;
     owl:equivalentProperty <http://open.vocab.org/terms/commonEndeavour> .
     
 openwemi:commonWork
