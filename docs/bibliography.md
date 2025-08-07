@@ -3,6 +3,7 @@
 ## openWEMI
 
 Coyle, Karen. Works, Expressions, Manifestations, Items: An Ontology. Code4lib Journal, Issue 53, 2022-05-09. https://journal.code4lib.org/articles/16491
+Coyle, Karen. OpenWEMI: A Minimally Constrained Vocabulary for Work, Expression, Manifestation, and Item. Code4lib Journal, Issue 60, 2025-04-14. https://journal.code4lib.org/articles/18412
 
 ## FRBR and LRM (library models)
 
